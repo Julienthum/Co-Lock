@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-07T13:12:56.530Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="DgLmuQK8HRDs6GmjG1vR" version="15.4.3" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-10-07T13:13:17.191Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="oXW1hfoKwszdBd5jwHFL" version="15.4.3" type="github" pages="4">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel dx="1038" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -618,9 +618,6 @@
         </mxCell>
         <mxCell id="TSdeb8TSLL2Ijhmt7mgY-4" value="consulter prestataires" style="ellipse;whiteSpace=wrap;html=1;" parent="450I2jvUaUmtoyAgRjkF-0" vertex="1">
           <mxGeometry x="270" y="1300" width="120" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="6D9aVgMJ64qcFUY2Emet-0" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="450I2jvUaUmtoyAgRjkF-0">
-          <mxGeometry x="150" y="1250" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="450I2jvUaUmtoyAgRjkF-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=none;endFill=0;strokeColor=default;" parent="_1lMrd184p0aN324ZPrS-1" source="450I2jvUaUmtoyAgRjkF-2" target="450I2jvUaUmtoyAgRjkF-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
