@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'propriologin',
+    loadChildren: () => import('./propriologin/propriologin.module').then( m => m.PropriologinPageModule)
+  },
+  {
+    path: 'formuleproprio',
+    loadChildren: () => import('./formuleproprio/formuleproprio.module').then( m => m.FormuleproprioPageModule)
+  },
+  {
+    path: 'planproprio',
+    loadChildren: () => import('./planproprio/planproprio.module').then( m => m.PlanproprioPageModule)
+  },
 ];
 
 @NgModule({
