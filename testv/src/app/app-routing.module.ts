@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'planproprio',
     loadChildren: () => import('./planproprio/planproprio.module').then( m => m.PlanproprioPageModule)
+  },  {
+    path: 'slide',
+    loadChildren: () => import('./slide/slide.module').then( m => m.SlidePageModule)
   },
+
 ];
 
 @NgModule({
