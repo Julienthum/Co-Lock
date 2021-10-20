@@ -35,6 +35,7 @@
     left: 0;
     right: 0;
     top: 10%;
+    color: black;
   }
   
   p
@@ -43,6 +44,7 @@
     left: 0;
     right: 0;
     top: 60%;
+    color: black;
   }
   
   .haut {
@@ -57,4 +59,14 @@
     left: 0;
     right: 0;
     top: 90%;
+  }
+
+.imgslide2{
+  position: relative;
+  top: -10%;
+}
+
+  .imgslide3{
+    position: relative;
+    top: -15%
   }
