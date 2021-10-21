@@ -1,7 +1,10 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Navigation</ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
@@ -9,7 +12,7 @@
   <!--création d'une boucle avec ngFor-->
 
   <ion-list inset="true" *ngFor="let loop of listeBiens">
-  <ion-item href ="/monbien">
+  <ion-item [routerLink]="['/monbien']" >
     <ion-thumbnail class="ion-margin-end">
       <ion-img src="{{bienImmo.imageURL}}"></ion-img>
     </ion-thumbnail>
