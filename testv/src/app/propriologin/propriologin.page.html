@@ -1,3 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true">
   <div class="logo">
     <ion-icon color="vert" name="people-circle-outline"></ion-icon>
@@ -49,7 +58,7 @@
     Le mot de passe doit etre valide.
   </span>
 
-  <ion-button color= "gris" href="/formuleproprio" expand="block" >Inscription</ion-button>
+  <ion-button color= "vert" [routerLink]="['/formuleproprio']" expand="block" >Inscription</ion-button>
   <ion-button color= "vert" expand="block" type="submit" >Connexion</ion-button> <!--le expand block pemret d'avoir un bouton qui prend toute la largeur-->
   </form>
 

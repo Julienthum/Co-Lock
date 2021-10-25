@@ -1,9 +1,10 @@
+
 <ion-header>
   <ion-toolbar>
-    <ion-button color= "tertiary" href="/propriologin"  slot="start">
-      <ion-icon  name="arrow-back-circle-outline"></ion-icon>
-    </ion-button>
-    <ion-title class="gras">Choisissez votre formule</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -29,7 +30,7 @@
         <ion-item>caractéristique 2</ion-item>
         <ion-item>caractéristique 3</ion-item>
       </ion-list>
-      <ion-button href="/planproprio" class="colorb" size ="small" fill="outline" expand="block">
+      <ion-button [routerLink]="['/planproprio']" class="colorb" size ="small" fill="outline" expand="block">
         en savoir plus
       </ion-button>
       <ion-button color= "vert" class="colorb" expand="block">

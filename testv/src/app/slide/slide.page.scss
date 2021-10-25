@@ -43,7 +43,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 60%;
+    top: 70%;
     color: black;
   }
   
@@ -51,22 +51,36 @@
     position: absolute;
     left: 65%;
     right: 0;
-    top: 2%;
+    top: 5%;
   }
   
   .bas {
     position: absolute;
     left: 0;
     right: 0;
-    top: 90%;
+    top: 85%;
   }
 
 .imgslide2{
   position: relative;
-  top: -10%;
+  top: 0%;
 }
 
   .imgslide3{
     position: relative;
-    top: -15%
+    top: 0%;
   }
+
+.imgslide1{
+  position: relative;
+  top: -10%;
+}
+
+.titre{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15%;
+  --ion-card-background: black;
+}
+
