@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-02T10:24:38.017Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="xu9TVsuToLcqk-IiZDS1" version="15.6.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-11-02T10:28:47.609Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="grTeGLZ5luLQghFIkAec" version="15.6.5" type="github" pages="4">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel dx="1426" dy="826" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -786,9 +786,6 @@
             <mxPoint x="1160" y="1015" as="sourcePoint" />
             <mxPoint x="1250" y="1015" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="iMJLCC0hXKrx09fLfqg9-0" value="se connecter" style="ellipse;whiteSpace=wrap;html=1;" parent="450I2jvUaUmtoyAgRjkF-0" vertex="1">
-          <mxGeometry x="330" y="613" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="450I2jvUaUmtoyAgRjkF-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=none;endFill=0;strokeColor=default;exitX=0.568;exitY=0.639;exitDx=0;exitDy=0;exitPerimeter=0;" parent="_1lMrd184p0aN324ZPrS-1" source="ic0GN346B41c5aWoy_H6-2" target="450I2jvUaUmtoyAgRjkF-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
