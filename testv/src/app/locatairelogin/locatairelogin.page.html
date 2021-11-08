@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="logo">
+    <ion-icon color="vert" name="people-circle-outline"></ion-icon>
+  </div>
+
+  <ion-card>
+  <form [formGroup]="essaieForm" (ngSubmit)="submitForm()" novalidate>
+  <ion-item>
+    <ion-label position="floating" >Nom</ion-label>
+    <ion-input formControlName="name" type="text" required placeholder="Nom"></ion-input>
+  </ion-item>
+  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
+    le nom est obligatoire.
+  </span>
+  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.minlength">
+    Le nom doit contenir minimum 2 caracteres.
+  </span>
+
+  <ion-item>
+    <ion-label position="floating">Prénom</ion-label>
+    <ion-input formControlName="prenom" type="text" placeholder="Prénom"></ion-input>
+  </ion-item>
+  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.prenom.errors?.required">
+    Le prénom est obligatoire.
+  </span>
+  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.prenom.errors?.minlength">
+    Le prénom doit contenir minimum 2 caracteres.
+  </span>
+
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input formControlName="email" type="email" required placeholder="adresse mail"></ion-input>
+  </ion-item>
+  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
+    L'email est obligatoire.
+  </span>
+  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+    L'email doit etre valide.
+  </span>
+
+  <ion-item>
+    <ion-label position="floating">Mot de passe</ion-label>
+    <ion-input formControlName="password" type="password" placeholder="Mot de passe"></ion-input>
+  </ion-item>
+  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
+    Le mot de passe est obligatoire.
+  </span>
+  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.pattern">
+    Le mot de passe doit etre valide.
+  </span>
+
+  <ion-button color= "vert" expand="block" type="submit" >Connexion</ion-button> <!--le expand block permet d'avoir un bouton qui prend toute la largeur-->
+  <ion-button color= "vert" [routerLink]="['/formuleproprio']" expand="block" >Inscription</ion-button>
+
+  </form>
+
+
+  </ion-card>
+
+</ion-content>

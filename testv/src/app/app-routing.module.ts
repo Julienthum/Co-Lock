@@ -42,6 +42,10 @@ const routes: Routes = [
     path: 'biens',
     loadChildren: () => import('./biens/biens.module').then( m => m.BiensPageModule)
   },
+  {
+    path: 'locatairelogin',
+    loadChildren: () => import('./locatairelogin/locatairelogin.module').then( m => m.LocataireloginPageModule)
+  },
 
 ];
 
