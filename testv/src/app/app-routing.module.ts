@@ -46,6 +46,10 @@ const routes: Routes = [
     path: 'locatairelogin',
     loadChildren: () => import('./locatairelogin/locatairelogin.module').then( m => m.LocataireloginPageModule)
   },
+  {
+    path: 'profil-p',
+    loadChildren: () => import('./profil-p/profil-p.module').then( m => m.ProfilPPageModule)
+  },
 
 ];
 
