@@ -1,21 +1,34 @@
-.full-width{
-  position: relative;
-  top: 15%;
-  --background : #455F51 ;
-  }
-
-
-.titre{
-  position: relative;
-  top: -4%;
-  left: 17%;
-
-}
-
-p{
+ion-header{
   position: absolute;
-  color: black;
 }
+
+ion-toolbar{
+  --ion-background-color: transparent;
+  --opacity : 0;
+}
+
+.no-shadow{
+  box-shadow: none;
+}
+
+.primary_btn{
+  --border-radius: 15px;
+  --background : #455F51;
+  margin: 10px;
+}
+
+.secondary_btn{
+  --border-radius: 15px;
+  --color: #455F51;
+  --border-color: #455F51;
+  margin: 10px;
+}
+
+#homepage-logo{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
 
 .regist{
   position: relative;
@@ -25,12 +38,6 @@ p{
 
 .lien{
   color:dimgrey;
-}
-
-.bonjour{
-  position: relative;
-  top: -10%;
-  left: 30%;
 }
 
 .sli{

@@ -3,30 +3,24 @@ ion-header{
 }
 
 ion-toolbar{
-  --ion-background-color: white;
-  --opacity : 0;
-}
-
-
-.hello-cmpt{
-  box-shadow: none;
-  margin-top: 50px;
+  --ion-background-color: transparent;
+  --opacity :0;
 }
 
 .hello-text{
   text-align: center;
-  font-size: 28px;
-  letter-spacing: 5px;
-  font-weight: bold;
-  margin-bottom: -10px;
+  font-size: 32px;
+  letter-spacing: 7px;
+  line-height: 1.6;
   color: black;
+  font-weight: 700;
+  padding : 10px;
 }
 
-.hello-text2{
-  text-align: center;
-  font-size: 15px;
-  letter-spacing: 2px;
-  font-weight: 300;
+ion-card{
+  margin-top: 110px;
+  margin-bottom: 40px;
+  box-shadow: none;
 }
 
 ion-item{

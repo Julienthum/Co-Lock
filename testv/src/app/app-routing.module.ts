@@ -22,7 +22,8 @@ const routes: Routes = [
   {
     path: 'planproprio',
     loadChildren: () => import('./planproprio/planproprio.module').then( m => m.PlanproprioPageModule)
-  },  {
+  },
+  {
     path: 'slide',
     loadChildren: () => import('./slide/slide.module').then( m => m.SlidePageModule)
   },
@@ -49,6 +50,16 @@ const routes: Routes = [
   {
     path: 'profil-p',
     loadChildren: () => import('./profil-p/profil-p.module').then( m => m.ProfilPPageModule)
+  },
+
+
+  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'signin',
+    loadChildren: () => import('./signin/signin.module').then( m => m.SigninPageModule)
   },
 
 ];

@@ -1,11 +1,71 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
+
     <ion-buttons slot="start">
-      <ion-back-button>
-      </ion-back-button>
+      <ion-back-button text="retour" defaultHref="/signup"></ion-back-button>
     </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
+
+
+<ion-content>
+
+  <ion-card class="hello-cmpt">
+    <ion-text>
+      <h1 class="hello-text">Bievenue chez <br> CÔ-LOCK</h1> <br>
+      <h2 class="hello-text2"> Créez-vous un compte en toutes simplicité</h2>
+    </ion-text>
+  </ion-card>
+
+
+  <form>
+
+    <div>
+      <ion-item>
+        <ion-input type="text" name="name" placeholder="Nom" >
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" name="surname" placeholder="Prénom"  >
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" name="email" placeholder="email"  >
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" name="password" placeholder="*******" >
+          <ion-icon name="lock-closed-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="tel" name="tel" placeholder="Numéro de téléphone" >
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" name="code" placeholder="Votre code d'activation" >
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+    </div>
+
+    <ion-button class="primary_btn" expand="block" fill="solid">S'inscrire</ion-button>
+
+  </form>
+
+  </ion-content>
+
+<!--
 
 <ion-content [fullscreen]="true">
   <div class="logo">
@@ -58,7 +118,7 @@
     Le mot de passe doit etre valide.
   </span>
 
-  <ion-button color= "vert" expand="block" type="submit" >Connexion</ion-button> <!--le expand block permet d'avoir un bouton qui prend toute la largeur-->
+  <ion-button color= "vert" expand="block" type="submit" >Connexion</ion-button>  le expand block permet d'avoir un bouton qui prend toute la largeur
   <ion-button color= "vert" [routerLink]="['/profil-p']" expand="block" >Inscription</ion-button>
 
   </form>
@@ -67,3 +127,5 @@
   </ion-card>
 
 </ion-content>
+
+-->

@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/member-ordering */
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { AuthModule, getAuth, createUserWithEmailAndPassword } from '@angular/fire/auth';
 
 
 @Component({
@@ -7,9 +9,11 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
   templateUrl: './locatairelogin.page.html',
   styleUrls: ['./locatairelogin.page.scss'],
 })
+
+
 export class LocataireloginPage implements OnInit {
 
-  essaieForm: FormGroup;
+    essaieForm: FormGroup;
     defaultDate = '1987-06-30';
     isSubmitted = false;
 
@@ -39,5 +43,7 @@ export class LocataireloginPage implements OnInit {
     return this.essaieForm.controls;
 
   }
-
 }
+
+
+

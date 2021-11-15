@@ -5,12 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyC6pqX7VrXe5sEKmQ-_1lHSQJmI9wZ5Xns',
-    authDomain: 'co-lock.firebaseapp.com',
-    projectId: 'co-lock',
-    storageBucket: 'co-lock.appspot.com',
-    messagingSenderId: '1065644873738',
-    appId: '1:1065644873738:web:d96238039dc634ce0927f3'
+    apiKey: "AIzaSyC6pqX7VrXe5sEKmQ-_1lHSQJmI9wZ5Xns",
+    authDomain: "co-lock.firebaseapp.com",
+    databaseURL: "https://co-lock-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "co-lock",
+    storageBucket: "co-lock.appspot.com",
+    messagingSenderId: "1065644873738",
+    appId: "1:1065644873738:web:d96238039dc634ce0927f3"
   },
 };
 

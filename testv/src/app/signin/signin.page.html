@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Acceuil" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="hello-cmpt">
+    <ion-text>
+      <h1 class="hello-text">Bienvenue <br> chez <br> CÔ-LOCK</h1>
+    </ion-text>
+  </ion-card>
+
+  <form>
+
+    <div>
+      <ion-item>
+        <ion-input type="text" name="email" placeholder="email" [(ngModel)]="email" >
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" name="password" placeholder="*******" [(ngModel)]="password">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+    </div>
+
+    <ion-button class="primary_btn" expand="block" fill="solid"  routerLink="/navbar">Se connecter</ion-button>
+
+  </form>
+
+
+</ion-content>

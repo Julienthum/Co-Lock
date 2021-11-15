@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { AuthModule, getAuth, createUserWithEmailAndPassword } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-propriologin',
@@ -7,6 +8,7 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
   styleUrls: ['./propriologin.page.scss'],
 })
 export class PropriologinPage implements OnInit {
+
 
   essaieForm: FormGroup;
   defaultDate = '1987-06-30';
