@@ -1,0 +1,42 @@
+ion-header{
+  position: absolute;
+}
+
+ion-toolbar{
+  --ion-background-color: transparent;
+  --opacity : 0;
+}
+
+.no-shadow{
+  box-shadow: none;
+}
+
+.primary_btn{
+  --border-radius: 15px;
+  --background : #455F51;
+  margin: 10px;
+}
+
+.secondary_btn{
+  --border-radius: 15px;
+  --color: #455F51;
+  --border-color: #455F51;
+  margin: 10px;
+}
+
+#homepage-logo{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.sli{
+  position: relative;
+  top: 25%;
+  left: 20%;
+}
+
+.regist{
+  position: relative;
+  top: 20%;
+  left: 10%;
+}

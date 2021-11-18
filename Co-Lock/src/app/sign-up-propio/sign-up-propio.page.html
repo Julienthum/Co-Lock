@@ -1,0 +1,59 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button text="retour" defaultHref="/connexion-page"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card class="hello-cmpt">
+  <ion-text>
+    <h1 class="hello-text">Bievenue chez <br> CÔ-LOCK</h1> <br>
+    <h2 class="hello-text2"> Créez-vous un compte en toutes simplicité</h2>
+  </ion-text>
+</ion-card>
+
+
+<form>
+
+  <div>
+    <ion-item>
+      <ion-input type="text" name="name" placeholder="Nom" [(ngModel)]="name" >
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" name="surname" placeholder="Prénom" [(ngModel)]="surname" >
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" name="email" placeholder="email" [(ngModel)]="email" >
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" name="password" placeholder="*******" [(ngModel)]="password">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="tel" name="tel" placeholder="Numéro de téléphone" [(ngModel)]="tel" >
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+  </div>
+
+  <ion-button class="primary_btn" expand="block" fill="solid" (click)="login()">S'inscrire</ion-button>
+
+</form>
+
+</ion-content>
