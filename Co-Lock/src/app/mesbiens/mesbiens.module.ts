@@ -8,12 +8,15 @@ import { MesbiensPageRoutingModule } from './mesbiens-routing.module';
 
 import { MesbiensPage } from './mesbiens.page';
 
+import { ComponentsModule } from '../components/components.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MesbiensPageRoutingModule
+    MesbiensPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [MesbiensPage]
 })
