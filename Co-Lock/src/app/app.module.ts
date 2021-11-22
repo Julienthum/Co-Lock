@@ -17,6 +17,11 @@ import { getAuth, provideAuth} from '@angular/fire/auth';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
+
+
+
 
 
 
@@ -30,6 +35,9 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore (() => getFirestore()),
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
     FormsModule,
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
