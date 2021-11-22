@@ -43,21 +43,14 @@ export class SignUpPropioPage implements OnInit {
     });
   }
 
-  login(){
-    createUserWithEmailAndPassword(auth, this.email, this.password).then((userCredential) => {
-      // Signed in
-      const user = userCredential.user;
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // ..
-    });
+  login(value){
+    // eslint-disable-next-line max-len
+    const user = this.auth.createUserWithEmailAndPassword(value.email, value.password).then(cred => this.firestore.collection('users').doc(cred.user.uid).set(value));
+    return { user };
     console.log('Bienvenue', this.name, 'vous etes bien inscrit.');
     }
 
-    signupTable(value){
+  signupTable(value){
       // eslint-disable-next-line arrow-body-style
       const user = this.auth.createUserWithEmailAndPassword(value.email, value.password).then(cred => {
         return this.firestore.collection('users').doc(cred.user.uid).set(value);

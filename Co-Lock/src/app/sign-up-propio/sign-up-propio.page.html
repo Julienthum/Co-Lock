@@ -18,76 +18,41 @@
 </ion-card>
 
 
-<form>
+<form [formGroup]="essaieForm" (ngSubmit)="signupTable(essaieForm.value)" novalidate>
 
   <div>
     <ion-item>
-      <ion-input type="text" name="name" placeholder="Nom" [(ngModel)]="name" >
+      <ion-input formControlName="name" type="text" required placeholder="Nom">
         <ion-icon name="mail-outline"></ion-icon>
       </ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input type="text" name="surname" placeholder="Prénom" [(ngModel)]="surname" >
+      <ion-input formControlName="prenom" type="text" required placeholder="Prénom">
         <ion-icon name="mail-outline"></ion-icon>
       </ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input type="text" name="email" placeholder="email" [(ngModel)]="email" >
+      <ion-input formControlName="email" type="email" required placeholder="email">
         <ion-icon name="mail-outline"></ion-icon>
       </ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input type="password" name="password" placeholder="*******" [(ngModel)]="password">
+      <ion-input formControlName="password" type="password" placeholder="*******">
         <ion-icon name="lock-closed-outline"></ion-icon>
       </ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input type="tel" name="tel" placeholder="Numéro de téléphone" [(ngModel)]="tel" >
+      <ion-input formControlName="mobile" type="tel" required placeholder="Numéro de téléphone">
         <ion-icon name="mail-outline"></ion-icon>
       </ion-input>
     </ion-item>
   </div>
 
-  <ion-button class="primary_btn" expand="block" fill="solid" (click)="login()">S'inscrire</ion-button>
-
-</form>
-<form [formGroup]="essaieForm" (ngSubmit)="signupTable(essaieForm.value)" novalidate>
-
-  <ion-item lines="full">
-    <ion-label position="floating">prenom</ion-label>
-    <ion-input formControlName="prenom" type="text" required></ion-input>
-  </ion-item>
-
-  <ion-item lines="full">
-    <ion-label position="floating">nom</ion-label>
-    <ion-input formControlName="name" type="text" required></ion-input>
-  </ion-item>
-
-  <ion-item lines="full">
-    <ion-label position="floating">Email</ion-label>
-    <ion-input formControlName="email" type="email" required></ion-input>
-  </ion-item>
-
-  <ion-item lines="full">
-    <ion-label position="floating">mobile</ion-label>
-    <ion-input formControlName="mobile" type="tel" required></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating">Mot de passe</ion-label>
-    <ion-input formControlName="password" type="password" placeholder="Mot de passe"></ion-input>
-  </ion-item>
-
-
-  <ion-row>
-    <ion-col>
-      <ion-button type="submit" color="danger" expand="block">Submit</ion-button>
-    </ion-col>
-  </ion-row>
+  <ion-button class="primary_btn" expand="block" fill="solid" type="submit">S'inscrire</ion-button>
 
 </form>
 
