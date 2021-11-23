@@ -26,6 +26,7 @@
     "@capacitor/keyboard": "1.1.2",
     "@capacitor/status-bar": "1.0.5",
     "@firebase/auth": "^0.19.0",
+    "@ionic-native/camera": "^5.36.0",
     "@ionic/angular": "^5.5.2",
     "firebase": "^9.3.0",
     "rxfire": "^6.0.3",

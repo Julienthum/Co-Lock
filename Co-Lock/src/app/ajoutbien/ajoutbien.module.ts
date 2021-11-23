@@ -8,11 +8,14 @@ import { AjoutbienPageRoutingModule } from './ajoutbien-routing.module';
 
 import { AjoutbienPage } from './ajoutbien.page';
 
+import { ComponentsModule } from '../components/components.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     AjoutbienPageRoutingModule
   ],
   declarations: [AjoutbienPage]

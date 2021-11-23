@@ -13,6 +13,7 @@ export class AjoutbienPage implements OnInit {
   users: Observable<any[]>;
   firebaseData = {
     nomDuBien: '',
+    description: '',
     rue: '',
     numero: '',
     ville: '',
@@ -20,6 +21,7 @@ export class AjoutbienPage implements OnInit {
     province: '',
     superficie: '',
     nbrePlace: '',
+    prix: '',
     image: ''
   };
 
@@ -41,12 +43,12 @@ export class AjoutbienPage implements OnInit {
   async presentAlert() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
-      header: 'Alert',
-      subHeader: 'Subtitle',
+      header: 'Bien Ajouté !',
       message: 'Votre bien à correctement été ajouté.',
       buttons: ['Continuer']
     });
 
     await alert.present();
   };
+
 }

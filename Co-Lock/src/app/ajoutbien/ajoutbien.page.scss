@@ -26,11 +26,11 @@ ion-icon{
 ion-text{
   margin-left: 20px;
   margin-bottom: 10px;
-  font-weight: 700;
+  letter-spacing: 2px;
+  font-weight: 500;
   font-style: italic;
   color: black;
 }
-
 
 
 .image{
@@ -50,4 +50,8 @@ ion-text{
   --background : #455F51;
   margin: 10px;
   margin-top: 30px;
+}
+
+#description{
+  width: 30px;
 }
