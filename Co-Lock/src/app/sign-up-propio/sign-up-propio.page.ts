@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AuthModule, getAuth, createUserWithEmailAndPassword } from '@angular/fire/auth';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-
-
 
 
 @Component({
@@ -15,17 +11,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class SignUpPropioPage implements OnInit {
 
-  name: string;
-  surname: string;
-  email: string;
-  password: string;
-  tel: string;
-  state: 'propriétaire';
   essaieForm: FormGroup;
-  mobile: string;
-
-
-
 
   constructor(public formBuilder: FormBuilder,
     public firestore: AngularFirestore,
@@ -47,18 +33,5 @@ export class SignUpPropioPage implements OnInit {
     // eslint-disable-next-line max-len
     const user = this.auth.createUserWithEmailAndPassword(value.email, value.password).then(cred => this.firestore.collection('users').doc(cred.user.uid).set(value));
     return { user };
-    console.log('Bienvenue', this.name, 'vous etes bien inscrit.');
     }
-
-  signupTable(value){
-      // eslint-disable-next-line arrow-body-style
-      const user = this.auth.createUserWithEmailAndPassword(value.email, value.password).then(cred => {
-        return this.firestore.collection('users').doc(cred.user.uid).set(value);
-        });
-        return { user };
-    }
-
-}
-
-
-const auth = getAuth();
+};

@@ -9,6 +9,8 @@ export class AcceuilPage implements OnInit {
 
   constructor() { }
 
+
+
   ngOnInit() {
   }
 

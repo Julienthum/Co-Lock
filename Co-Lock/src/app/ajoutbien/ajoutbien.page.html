@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="retour" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Ajouter un bien</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item>
+      <ion-input class='image' [(ngModel)]="firebaseData.image" placeholder="Ajouter une image"></ion-input>
+    </ion-item>
+
+    <ion-text> Nom du bien</ion-text>
+
+    <ion-item class="enditem">
+      <ion-input [(ngModel)]="firebaseData.nomDuBien" placeholder="Mon Bien"></ion-input>
+    </ion-item>
+
+
+    <ion-text> Adresse du bien</ion-text>
+
+    <ion-item>
+      <ion-input [(ngModel)]="firebaseData.rue" placeholder="Rue"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type='number' [(ngModel)]="firebaseData.numero" placeholder="Numéro"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input [(ngModel)]="firebaseData.ville" placeholder="Ville"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input [(ngModel)]="firebaseData.codepostal" placeholder="Code postal"></ion-input>
+    </ion-item>
+
+    <ion-item class="enditem">
+      <ion-input [(ngModel)]="firebaseData.province" placeholder="Province"></ion-input>
+    </ion-item>
+
+
+    <ion-text> Information du bien</ion-text>
+
+    <ion-item>
+      <ion-input type='number' [(ngModel)]="firebaseData.superficie" placeholder="Superficie"></ion-input>
+    </ion-item>
+
+    <ion-item class="enditem">
+      <ion-input type='number' [(ngModel)]="firebaseData.nbrePlace" placeholder="Nombre de place disponible"></ion-input>
+    </ion-item>
+
+    <ion-button class="primary_btn" expand="block" fill="solid" (click)="presentAlert()">Ajouter</ion-button>
+
+
+</ion-content>

@@ -64,6 +64,10 @@ const routes: Routes = [
     path: 'acceuil',
     loadChildren: () => import('./acceuil/acceuil.module').then( m => m.AcceuilPageModule)
   },
+  {
+    path: 'ajoutbien',
+    loadChildren: () => import('./ajoutbien/ajoutbien.module').then( m => m.AjoutbienPageModule)
+  },
 ];
 
 @NgModule({
