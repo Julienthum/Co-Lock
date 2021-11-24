@@ -67,7 +67,19 @@ const routes: Routes = [
   {
     path: 'ajoutbien',
     loadChildren: () => import('./ajoutbien/ajoutbien.module').then( m => m.AjoutbienPageModule)
+  },  {
+    path: 'acceuilproprio',
+    loadChildren: () => import('./acceuilproprio/acceuilproprio.module').then( m => m.AcceuilproprioPageModule)
   },
+  {
+    path: 'profil-l',
+    loadChildren: () => import('./profil-l/profil-l.module').then( m => m.ProfilLPageModule)
+  },
+  {
+    path: 'id-generator',
+    loadChildren: () => import('./id-generator/id-generator.module').then( m => m.IdGeneratorPageModule)
+  },
+
 ];
 
 @NgModule({
