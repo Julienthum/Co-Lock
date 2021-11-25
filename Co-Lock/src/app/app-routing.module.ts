@@ -79,6 +79,10 @@ const routes: Routes = [
     path: 'id-generator',
     loadChildren: () => import('./id-generator/id-generator.module').then( m => m.IdGeneratorPageModule)
   },
+  {
+    path: 'accueillocataire',
+    loadChildren: () => import('./accueillocataire/accueillocataire.module').then( m => m.AccueillocatairePageModule)
+  },
 
 ];
 
