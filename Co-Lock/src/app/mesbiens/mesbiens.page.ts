@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { user } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
+import { getAuth, signOut } from 'firebase/auth';
+import { Router } from '@angular/router';
 
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
@@ -13,10 +15,12 @@ import 'firebase/auth';
 })
 export class MesbiensPage implements OnInit {
   biens: Observable<any[]>;
-  query: true;
+
+  erreur: string;
 
   constructor(
     public firestore: AngularFirestore,
+    public router: Router,
   ) {
 
   }
@@ -33,5 +37,6 @@ export class MesbiensPage implements OnInit {
     } else {
       console.log('ca marche bien ');
   }
-  }
+  };
+
 }

@@ -30,12 +30,11 @@ export class LoginPage implements OnInit {
       // Signed in
       const user = userCredential.user;
       this.router.navigate(['mesbiens']);
-      // ...
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-
+      this.erreur = errorMessage;
       if(errorMessage === 'Firebase: Error (auth/user-not-found).'){
         return (this.erreur = 'Email inconnu');
       }
@@ -47,9 +46,13 @@ export class LoginPage implements OnInit {
         // eslint-disable-next-line max-len
         return (this.erreur = 'L\'accès à ce compte a été temporairement désactivé en raison de nombreuses tentatives de connexion infructueuses. Vous pouvez le rétablir immédiatement en réinitialisant votre mot de passe ou vous pouvez réessayer plus tard.');
       }
+      if(errorMessage === 'Firebase: Error (auth/missing-email).'){
+        return (this.erreur = 'Veillez entrer un email et un mot de passe');
+      }
       else{
         return(this.erreur = 'Une erreur s\'est produite');
       }
+
     });
   }
 };
