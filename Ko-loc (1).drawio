@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-30T11:25:19.079Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="MRraj4a_lDJTeDR46hWZ" version="15.8.6" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2021-11-30T20:20:36.394Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="bt-uCVjH7g4AsjSquTK3" version="15.8.6" type="github" pages="6">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -552,7 +552,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Shf1PIuUm4xIgwXxTlma" name="Use Case">
-    <mxGraphModel dx="2520" dy="1269" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="2769" dy="1269" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="_1lMrd184p0aN324ZPrS-0" />
         <mxCell id="_1lMrd184p0aN324ZPrS-1" parent="_1lMrd184p0aN324ZPrS-0" />
