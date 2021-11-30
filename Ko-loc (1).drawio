@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-30T20:20:36.394Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="bt-uCVjH7g4AsjSquTK3" version="15.8.6" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2021-11-30T20:39:52.205Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="Vf14AhDOY6td6sAmkUKy" version="15.8.6" type="github" pages="6">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1125,11 +1125,26 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e2U_4L_Uc0UZnkNTMuHk" name="Page-6">
-    <mxGraphModel dx="2142" dy="1079" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <diagram id="e2U_4L_Uc0UZnkNTMuHk" name="Faire une requête">
+    <mxGraphModel dx="2087" dy="1079" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="4FnnVqdCoPJqPLyLUks5-0" />
         <mxCell id="4FnnVqdCoPJqPLyLUks5-1" parent="4FnnVqdCoPJqPLyLUks5-0" />
+        <mxCell id="IgT5QsKJjPnPi5cm5gFl-6" value="Propriétaire" style="swimlane;fontSize=14;strokeColor=#000000;fillColor=#FFFFFF;startSize=23;" vertex="1" parent="4FnnVqdCoPJqPLyLUks5-1">
+          <mxGeometry x="40" y="50" width="350" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="IgT5QsKJjPnPi5cm5gFl-7" value="Système" style="swimlane;fontSize=14;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="4FnnVqdCoPJqPLyLUks5-1">
+          <mxGeometry x="390" y="50" width="360" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="IgT5QsKJjPnPi5cm5gFl-9" value="Locataire" style="swimlane;fontSize=14;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="4FnnVqdCoPJqPLyLUks5-1">
+          <mxGeometry x="750" y="50" width="360" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="IgT5QsKJjPnPi5cm5gFl-11" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fontSize=14;fillColor=#000000;strokeColor=#FF3333;" vertex="1" parent="IgT5QsKJjPnPi5cm5gFl-9">
+          <mxGeometry x="150" y="60" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="IgT5QsKJjPnPi5cm5gFl-12" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Le locataire rencontre un problème&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="IgT5QsKJjPnPi5cm5gFl-9">
+          <mxGeometry x="50" y="30" width="240" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
