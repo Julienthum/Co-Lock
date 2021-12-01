@@ -26,4 +26,8 @@ export class MonbienPage implements OnInit {
     console.log(id);
   }
 
+  deleteResto() {
+    this.data.deleteItem('biens', this.bien.id);
+  }
+
 }
