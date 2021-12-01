@@ -83,6 +83,10 @@ const routes: Routes = [
     path: 'accueillocataire',
     loadChildren: () => import('./accueillocataire/accueillocataire.module').then( m => m.AccueillocatairePageModule)
   },
+  {
+    path: 'requetes',
+    loadChildren: () => import('./requetes/requetes.module').then( m => m.RequetesPageModule)
+  },
 
 ];
 
