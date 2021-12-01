@@ -95,6 +95,10 @@ const routes: Routes = [
     path: 'docbiens',
     loadChildren: () => import('./docbiens/docbiens.module').then( m => m.DocbiensPageModule)
   },
+  {
+    path: 'requetes',
+    loadChildren: () => import('./requetes/requetes.module').then( m => m.RequetesPageModule)
+  },
 
 
 ];
