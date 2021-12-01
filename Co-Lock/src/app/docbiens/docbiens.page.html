@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>docbiens</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="essaieForm" (ngSubmit)="addMike()" novalidate>
+
+    <ion-item>
+      <ion-input type="file" class='image' formControlName="doc" placeholder="Ajouter un document" (change)="uploadPhoto($event)" accept=".png,.jpg,.docx, .pdf" multiple="true">
+      </ion-input>
+    </ion-item>
+
+    <div *ngIf="barStatus">
+      Uploading.....
+    </div>
+
+    <ion-text> Description du documents </ion-text>
+
+    <ion-item>
+      <ion-input formControlName="name" placeholder="Nom du document"></ion-input>
+    </ion-item>
+
+    <ion-item class="enditem">
+      <ion-input id='description' formControlName="description" placeholder="Description"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" class="primary_btn" expand="block" fill="solid" (click)="presentAlert()">Ajouter</ion-button>
+
+  </form>
+
+
+  <ion-card *ngFor="let doc of docs | async">
+    <img [src]= 'doc.url'>
+    <div>
+      <ion-text class="title"> {{ doc.name }}</ion-text>
+      <br>
+      <ion-text class="content"> {{doc.description}}</ion-text>
+    </div>
+  </ion-card>
+
+
+</ion-content>

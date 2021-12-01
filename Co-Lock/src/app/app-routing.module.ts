@@ -67,7 +67,8 @@ const routes: Routes = [
   {
     path: 'ajoutbien',
     loadChildren: () => import('./ajoutbien/ajoutbien.module').then( m => m.AjoutbienPageModule)
-  },  {
+  },
+  {
     path: 'acceuilproprio',
     loadChildren: () => import('./acceuilproprio/acceuilproprio.module').then( m => m.AcceuilproprioPageModule)
   },
@@ -83,6 +84,18 @@ const routes: Routes = [
     path: 'accueillocataire',
     loadChildren: () => import('./accueillocataire/accueillocataire.module').then( m => m.AccueillocatairePageModule)
   },
+
+  {
+    path: 'monbien/:id',
+    loadChildren: () =>
+      import('./monbien/monbien.module').then(
+        (m) => m.MonbienPageModule
+      ),
+  },  {
+    path: 'docbiens',
+    loadChildren: () => import('./docbiens/docbiens.module').then( m => m.DocbiensPageModule)
+  },
+
 
 ];
 

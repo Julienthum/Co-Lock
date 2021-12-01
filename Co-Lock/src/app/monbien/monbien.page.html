@@ -18,11 +18,11 @@
   </ion-header>
   <br>
 
-  <ion-card>
-    <img src="assets/cuisine.jpg"/>
+  <ion-card *ngIf="bien">
+    <img [src]="bien.image"/>
     <ion-card-header>
       <ion-card-subtitle>Description du bien</ion-card-subtitle>
-      <ion-card-title>Maison : 64 avenue de la Chasse</ion-card-title>
+      <ion-card-title>Maison : {{bien.name}} </ion-card-title>
     </ion-card-header>
 
     <ion-card-content>

@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-mesbiens',
@@ -21,22 +22,13 @@ export class MesbiensPage implements OnInit {
   constructor(
     public firestore: AngularFirestore,
     public router: Router,
+    private data: DataService
   ) {
-
+    this.biens = this.data.getRestos();
   }
 
 
   ngOnInit() {
-    const id = firebase.auth().currentUser.uid;
-    const biens = this.firestore.collection('biens');
-    const query = biens.ref.where('moi', '==', id);
-    if(query){
-      console.log(id);
-      this.biens = this.firestore.collection('biens',  (ref) =>
-        ref.where('moi', '==', id)).valueChanges();
-    } else {
-      console.log('ca marche bien ');
-  }
   };
 
 }
