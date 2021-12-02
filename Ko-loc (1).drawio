@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-01T19:55:12.871Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="zVsjroLLFLdeHf0YknaS" version="15.8.6" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2021-12-02T13:13:15.560Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="YCflzDKDvLdDZwX_6aFN" version="15.8.6" type="github" pages="8">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -552,7 +552,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Shf1PIuUm4xIgwXxTlma" name="Use Case">
-    <mxGraphModel dx="1601" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1281" dy="633" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="_1lMrd184p0aN324ZPrS-0" />
         <mxCell id="_1lMrd184p0aN324ZPrS-1" parent="_1lMrd184p0aN324ZPrS-0" />
@@ -1126,7 +1126,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="e2U_4L_Uc0UZnkNTMuHk" name="Faire une requête">
-    <mxGraphModel dx="1601" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1281" dy="633" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="4FnnVqdCoPJqPLyLUks5-0" />
         <mxCell id="4FnnVqdCoPJqPLyLUks5-1" parent="4FnnVqdCoPJqPLyLUks5-0" />
@@ -1176,7 +1176,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Régler la requête" id="xwPaD5fzchMRzmg7swor">
-    <mxGraphModel dx="1601" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1532" dy="633" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="W2l0sGHgCA5iIa-g2eqn-0" />
         <mxCell id="W2l0sGHgCA5iIa-g2eqn-1" parent="W2l0sGHgCA5iIa-g2eqn-0" />
@@ -1310,7 +1310,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fStM0deNS-2vfcIvlyAi" name="Consulter informations du bien">
-    <mxGraphModel dx="1601" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="961" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="kfP_-s6xxSPjrz9gFPp0-0" />
         <mxCell id="kfP_-s6xxSPjrz9gFPp0-1" parent="kfP_-s6xxSPjrz9gFPp0-0" />
@@ -1342,7 +1342,7 @@
           <mxGeometry x="115" y="390" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="b9ymRv3hVcUzROBCNz6o-2" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fontSize=14;fillColor=#000000;strokeColor=#FF3333;" vertex="1" parent="PHX2kLX9zPGX3idT9VV4-5">
-          <mxGeometry x="155" y="520" width="40" height="40" as="geometry" />
+          <mxGeometry x="155" y="510" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="b9ymRv3hVcUzROBCNz6o-3" value="&lt;span style=&quot;font-size: 12px&quot;&gt;Le locataire a consulté les informations du bien&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="PHX2kLX9zPGX3idT9VV4-5">
           <mxGeometry x="65" y="560" width="240" height="20" as="geometry" />
