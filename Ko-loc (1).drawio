@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-03T10:16:41.027Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="5rpYvmtK3Y7U7fnkeciW" version="15.8.6" type="github" pages="11">
+<mxfile host="app.diagrams.net" modified="2021-12-03T10:33:07.170Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="ebMMU7NQRVQne8UlMJtl" version="15.8.6" type="github" pages="11">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1439,12 +1439,10 @@
         <mxCell id="bN-92SJGXMYupbHsQBX7-0" />
         <mxCell id="bN-92SJGXMYupbHsQBX7-1" parent="bN-92SJGXMYupbHsQBX7-0" />
         <mxCell id="bN-92SJGXMYupbHsQBX7-2" value="Locataire" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-1">
-          <mxGeometry x="60" y="110" width="480" height="650" as="geometry" />
+          <mxGeometry x="60" y="110" width="510" height="700" as="geometry" />
         </mxCell>
-        <mxCell id="rqxUdokoMWzVAVuSoqVW-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.444;entryY=-0.048;entryDx=0;entryDy=0;fontSize=12;entryPerimeter=0;" edge="1" parent="bN-92SJGXMYupbHsQBX7-2" source="dqNwVG8Ze60K1-QZnHPI-0" target="dt28YpS0WXVOtQQjllUj-0">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="240" y="150" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="bN-92SJGXMYupbHsQBX7-2" source="dqNwVG8Ze60K1-QZnHPI-0" target="nqXhfDMx-DVaUxUIJNgv-4">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dqNwVG8Ze60K1-QZnHPI-0" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fontSize=14;fillColor=#000000;strokeColor=#FF3333;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-2">
           <mxGeometry x="220" y="70" width="40" height="40" as="geometry" />
@@ -1452,22 +1450,104 @@
         <mxCell id="Ju5Wz1Kf-rYetN2PeEDZ-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le locataire n&#39;a pas encore payé son loyer&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-2">
           <mxGeometry x="120" y="40" width="240" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="dt28YpS0WXVOtQQjllUj-0" value="acceder paiement" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-2">
-          <mxGeometry x="60" y="160" width="120" height="60" as="geometry" />
+        <mxCell id="dt28YpS0WXVOtQQjllUj-0" value="Cliquer pour réaliser son paiement" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-2">
+          <mxGeometry x="60" y="230" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="dt28YpS0WXVOtQQjllUj-3" value="acceder paiement" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-2">
-          <mxGeometry x="290" y="240" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="bN-92SJGXMYupbHsQBX7-3" value="Système" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-1">
-          <mxGeometry x="540" y="110" width="480" height="650" as="geometry" />
-        </mxCell>
-        <mxCell id="dt28YpS0WXVOtQQjllUj-1" value="acceder paiement" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-3">
-          <mxGeometry x="100" y="140" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="dt28YpS0WXVOtQQjllUj-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="bN-92SJGXMYupbHsQBX7-1" source="dqNwVG8Ze60K1-QZnHPI-0" target="dt28YpS0WXVOtQQjllUj-1">
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="bN-92SJGXMYupbHsQBX7-2" source="nqXhfDMx-DVaUxUIJNgv-2" target="nqXhfDMx-DVaUxUIJNgv-13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dt28YpS0WXVOtQQjllUj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="bN-92SJGXMYupbHsQBX7-1" source="dt28YpS0WXVOtQQjllUj-1" target="dt28YpS0WXVOtQQjllUj-3">
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-2" value="Effectuer son paiement sur son application bancaire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-2">
+          <mxGeometry x="210" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="bN-92SJGXMYupbHsQBX7-2" source="nqXhfDMx-DVaUxUIJNgv-4" target="dt28YpS0WXVOtQQjllUj-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="200" />
+              <mxPoint x="120" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-11" value="[est en avance]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="nqXhfDMx-DVaUxUIJNgv-8">
+          <mxGeometry x="-0.0493" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-4" value="" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-2">
+          <mxGeometry x="225" y="160" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-13" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fontSize=14;fillColor=#000000;strokeColor=#FF3333;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-2">
+          <mxGeometry x="250" y="620" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-14" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le paiement est réalisé&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-2">
+          <mxGeometry x="150" y="670" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="bN-92SJGXMYupbHsQBX7-2" source="nqXhfDMx-DVaUxUIJNgv-15" target="dt28YpS0WXVOtQQjllUj-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-15" value="Consulter notification&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-2">
+          <mxGeometry x="340" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bN-92SJGXMYupbHsQBX7-3" value="Système" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-1">
+          <mxGeometry x="570" y="110" width="530" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="dt28YpS0WXVOtQQjllUj-1" value="Générer notification de retard de paiement" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-3">
+          <mxGeometry x="110" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-0" value="Rediriger le locataire vers son application bancaire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-3">
+          <mxGeometry x="60" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-19" value="Générer notification pour dire que la date d&#39;échéance approche" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="bN-92SJGXMYupbHsQBX7-3">
+          <mxGeometry x="340" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="bN-92SJGXMYupbHsQBX7-1" source="dt28YpS0WXVOtQQjllUj-0" target="nqXhfDMx-DVaUxUIJNgv-0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="540" />
+              <mxPoint x="680" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="bN-92SJGXMYupbHsQBX7-1" source="nqXhfDMx-DVaUxUIJNgv-4" target="dt28YpS0WXVOtQQjllUj-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="320" />
+              <mxPoint x="740" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-12" value="[est en retard de paiement]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="nqXhfDMx-DVaUxUIJNgv-10">
+          <mxGeometry x="-0.4358" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="bN-92SJGXMYupbHsQBX7-1" source="dt28YpS0WXVOtQQjllUj-1" target="nqXhfDMx-DVaUxUIJNgv-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="bN-92SJGXMYupbHsQBX7-1" source="nqXhfDMx-DVaUxUIJNgv-4" target="nqXhfDMx-DVaUxUIJNgv-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="310" />
+              <mxPoint x="970" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-22" value="[est proche de l&#39;échéance]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="nqXhfDMx-DVaUxUIJNgv-21">
+          <mxGeometry x="0.5111" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="bN-92SJGXMYupbHsQBX7-1" source="nqXhfDMx-DVaUxUIJNgv-19" target="nqXhfDMx-DVaUxUIJNgv-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="970" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqXhfDMx-DVaUxUIJNgv-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="bN-92SJGXMYupbHsQBX7-1" source="nqXhfDMx-DVaUxUIJNgv-0" target="nqXhfDMx-DVaUxUIJNgv-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
