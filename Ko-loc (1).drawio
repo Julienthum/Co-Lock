@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-03T16:38:43.250Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="WgAszHFVHOOglC8h5DrH" version="15.8.6" type="github" pages="15">
+<mxfile host="app.diagrams.net" modified="2021-12-03T17:06:35.579Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="-yPOchqP48LqSklDUWnV" version="15.8.6" type="github" pages="17">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -426,7 +426,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Shf1PIuUm4xIgwXxTlma" name="Use Case">
-    <mxGraphModel dx="2007" dy="837" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1437" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="_1lMrd184p0aN324ZPrS-0" />
         <mxCell id="_1lMrd184p0aN324ZPrS-1" parent="_1lMrd184p0aN324ZPrS-0" />
@@ -1455,7 +1455,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Xn57_vURIpzPOT6uY5gm" name="Envoyer code">
-    <mxGraphModel dx="1505" dy="628" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1078" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="1YoyUmnQHP1-ATVIWI0j-0" />
         <mxCell id="1YoyUmnQHP1-ATVIWI0j-1" parent="1YoyUmnQHP1-ATVIWI0j-0" />
@@ -1694,6 +1694,22 @@
             </Array>
           </mxGeometry>
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="KUVQwD4XLFe1EjQhvRSC" name="Editer locataire">
+    <mxGraphModel dx="1078" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="FvYUCZMey6Hru4u2MT2y-0" />
+        <mxCell id="FvYUCZMey6Hru4u2MT2y-1" parent="FvYUCZMey6Hru4u2MT2y-0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="mEO5ci3Plu-g_9Lqsa9H" name="Ajouter locataire">
+    <mxGraphModel dx="1078" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="ybwF3ySPhP57nkEsxuCy-0" />
+        <mxCell id="ybwF3ySPhP57nkEsxuCy-1" parent="ybwF3ySPhP57nkEsxuCy-0" />
       </root>
     </mxGraphModel>
   </diagram>
