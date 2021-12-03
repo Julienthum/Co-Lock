@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-03T16:36:40.525Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="RLsY3WP3GaA_SEDJ6Rbd" version="15.8.6" type="github" pages="15">
+<mxfile host="app.diagrams.net" modified="2021-12-03T16:38:43.250Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="WgAszHFVHOOglC8h5DrH" version="15.8.6" type="github" pages="15">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1613,11 +1613,20 @@
         <mxCell id="DkqaKHOfLJ0mp65gP5sg-18" value="Vérifier que les champs obligatoires sont remplis et enregistrer le bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="J5m-JwJaBose2PmdBf5O-2">
           <mxGeometry x="20" y="511" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="5CR87lryuJWILbNcVO3I-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="J5m-JwJaBose2PmdBf5O-2" source="DkqaKHOfLJ0mp65gP5sg-21" target="5CR87lryuJWILbNcVO3I-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="DkqaKHOfLJ0mp65gP5sg-21" value="Envoyer notification au propriétaire de confirmation d&#39;ajout du bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="J5m-JwJaBose2PmdBf5O-2">
           <mxGeometry x="20" y="611" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="5CR87lryuJWILbNcVO3I-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="J5m-JwJaBose2PmdBf5O-2" source="DkqaKHOfLJ0mp65gP5sg-23" target="5CR87lryuJWILbNcVO3I-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="DkqaKHOfLJ0mp65gP5sg-23" value="Envoyer notification au propriétaire de confirmation de modification du bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="J5m-JwJaBose2PmdBf5O-2">
           <mxGeometry x="240" y="611" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5CR87lryuJWILbNcVO3I-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="J5m-JwJaBose2PmdBf5O-2" source="DkqaKHOfLJ0mp65gP5sg-24" target="5CR87lryuJWILbNcVO3I-2">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="DkqaKHOfLJ0mp65gP5sg-24" value="Envoyer notification au propriétaire de confirmation de suppression du bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="J5m-JwJaBose2PmdBf5O-2">
           <mxGeometry x="380" y="611" width="120" height="60" as="geometry" />
