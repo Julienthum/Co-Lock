@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-03T15:54:24.423Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="M0ov7WNQ6wYhlhPH_y29" version="15.8.6" type="github" pages="15">
+<mxfile host="app.diagrams.net" modified="2021-12-03T16:02:38.924Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36" etag="4MDjYKDbE0cD8fZLbGNT" version="15.8.6" type="github" pages="15">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1291,7 +1291,7 @@
         <mxCell id="W6J24IK72z0Ez2wzmTgT-0" />
         <mxCell id="W6J24IK72z0Ez2wzmTgT-1" parent="W6J24IK72z0Ez2wzmTgT-0" />
         <mxCell id="W6J24IK72z0Ez2wzmTgT-2" value="Propriétaire" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="W6J24IK72z0Ez2wzmTgT-1">
-          <mxGeometry x="100" y="60" width="500" height="640" as="geometry" />
+          <mxGeometry x="100" y="60" width="500" height="730" as="geometry" />
         </mxCell>
         <mxCell id="xayqhrTroW8BnfiMZfmm-0" value="Cliquer sur ajouter un bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="W6J24IK72z0Ez2wzmTgT-2">
           <mxGeometry x="190" y="140" width="120" height="60" as="geometry" />
@@ -1312,7 +1312,7 @@
           <mxGeometry x="140" y="30" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="W6J24IK72z0Ez2wzmTgT-3" value="système" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="W6J24IK72z0Ez2wzmTgT-1">
-          <mxGeometry x="600" y="60" width="500" height="640" as="geometry" />
+          <mxGeometry x="600" y="60" width="500" height="730" as="geometry" />
         </mxCell>
         <mxCell id="S5Qj7u5odkvrOYHJD_KM-1" value="Donner accès à la page d&#39;encodage de bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="W6J24IK72z0Ez2wzmTgT-3">
           <mxGeometry x="190" y="140" width="120" height="60" as="geometry" />
@@ -1323,12 +1323,8 @@
         <mxCell id="S5Qj7u5odkvrOYHJD_KM-3" value="Vérifier les données" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="W6J24IK72z0Ez2wzmTgT-3">
           <mxGeometry x="190" y="250" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1oSvfw12bkCc1CGolJJf-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="W6J24IK72z0Ez2wzmTgT-3" source="S5Qj7u5odkvrOYHJD_KM-4" target="1oSvfw12bkCc1CGolJJf-7">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="370" y="565" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="BTjaddzQJaCHdI4d-i_u-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="W6J24IK72z0Ez2wzmTgT-3" source="S5Qj7u5odkvrOYHJD_KM-4" target="BTjaddzQJaCHdI4d-i_u-0">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="S5Qj7u5odkvrOYHJD_KM-4" value="Enregistrer le bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="W6J24IK72z0Ez2wzmTgT-3">
           <mxGeometry x="310" y="430" width="120" height="60" as="geometry" />
@@ -1354,10 +1350,20 @@
           <mxGeometry x="70" y="430" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="1oSvfw12bkCc1CGolJJf-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le bien a été correctement enregistré&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="W6J24IK72z0Ez2wzmTgT-3">
-          <mxGeometry x="130" y="600" width="240" height="20" as="geometry" />
+          <mxGeometry x="130" y="680" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="1oSvfw12bkCc1CGolJJf-7" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=12;" vertex="1" parent="W6J24IK72z0Ez2wzmTgT-3">
-          <mxGeometry x="235" y="550" width="30" height="30" as="geometry" />
+          <mxGeometry x="235" y="640" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BTjaddzQJaCHdI4d-i_u-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="W6J24IK72z0Ez2wzmTgT-3" source="BTjaddzQJaCHdI4d-i_u-0" target="1oSvfw12bkCc1CGolJJf-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="655" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BTjaddzQJaCHdI4d-i_u-0" value="Envoyer notification de confirmation au propriétaire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="W6J24IK72z0Ez2wzmTgT-3">
+          <mxGeometry x="310" y="540" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="S5Qj7u5odkvrOYHJD_KM-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="W6J24IK72z0Ez2wzmTgT-1" source="xayqhrTroW8BnfiMZfmm-0" target="S5Qj7u5odkvrOYHJD_KM-1">
           <mxGeometry relative="1" as="geometry" />
@@ -1520,11 +1526,43 @@
         <mxCell id="J5m-JwJaBose2PmdBf5O-0" value="Propriétaire" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;startSize=23;" vertex="1" parent="opcdLRtGwJ1gsNORYRcx-1">
           <mxGeometry x="20" y="19" width="540" height="790" as="geometry" />
         </mxCell>
+        <mxCell id="c4JwGOdtnotf0JQPm1Gp-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="J5m-JwJaBose2PmdBf5O-0" source="-c84bmblQM63-jIciyfa-0" target="c4JwGOdtnotf0JQPm1Gp-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="-c84bmblQM63-jIciyfa-0" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fontSize=14;fillColor=#000000;strokeColor=#FF3333;" vertex="1" parent="J5m-JwJaBose2PmdBf5O-0">
           <mxGeometry x="240" y="81" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="HChT_QPs0dS949UpgX2E-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le propriétaire souhaite éditer ses biens&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="J5m-JwJaBose2PmdBf5O-0">
-          <mxGeometry x="130" y="51" width="240" height="20" as="geometry" />
+          <mxGeometry x="140" y="51" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="35eeOzg9dwcD15UoI154-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="J5m-JwJaBose2PmdBf5O-0" source="c4JwGOdtnotf0JQPm1Gp-0" target="35eeOzg9dwcD15UoI154-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c4JwGOdtnotf0JQPm1Gp-0" value="Accéder à la page des biens" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="J5m-JwJaBose2PmdBf5O-0">
+          <mxGeometry x="200" y="161" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="35eeOzg9dwcD15UoI154-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="J5m-JwJaBose2PmdBf5O-0" source="35eeOzg9dwcD15UoI154-0" target="35eeOzg9dwcD15UoI154-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="321" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="35eeOzg9dwcD15UoI154-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="J5m-JwJaBose2PmdBf5O-0" source="35eeOzg9dwcD15UoI154-0" target="35eeOzg9dwcD15UoI154-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="321" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="35eeOzg9dwcD15UoI154-0" value="" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="J5m-JwJaBose2PmdBf5O-0">
+          <mxGeometry x="245" y="251" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="35eeOzg9dwcD15UoI154-1" value="Cliquer sur ajouter un bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="J5m-JwJaBose2PmdBf5O-0">
+          <mxGeometry x="70" y="291" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="35eeOzg9dwcD15UoI154-2" value="Cliquer sur le bien qu&#39;il veut modifier" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="J5m-JwJaBose2PmdBf5O-0">
+          <mxGeometry x="330" y="291" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="J5m-JwJaBose2PmdBf5O-2" value="Système" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="opcdLRtGwJ1gsNORYRcx-1">
           <mxGeometry x="560" y="19" width="540" height="790" as="geometry" />
