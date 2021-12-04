@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-04T18:01:06.685Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="sYb1KPVchKQv6BD_9INV" version="15.9.1" type="github" pages="21">
+<mxfile host="app.diagrams.net" modified="2021-12-04T18:02:11.656Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="bRHy8gsxrzHiI0ZF8C7s" version="15.9.1" type="github" pages="21">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel dx="946" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -2176,7 +2176,7 @@
         <mxCell id="-qsgAKRdbszGv-V479pd-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="cpnFq7p6cLgTuHNEpf-4-1" source="-qsgAKRdbszGv-V479pd-11" target="-qsgAKRdbszGv-V479pd-22" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-qsgAKRdbszGv-V479pd-11" value="Donner accès au bine correspondant" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="cpnFq7p6cLgTuHNEpf-4-1" vertex="1">
+        <mxCell id="-qsgAKRdbszGv-V479pd-11" value="Donner accès au bien correspondant" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="cpnFq7p6cLgTuHNEpf-4-1" vertex="1">
           <mxGeometry x="130" y="480" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-qsgAKRdbszGv-V479pd-22" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=12;" parent="cpnFq7p6cLgTuHNEpf-4-1" vertex="1">
@@ -2345,7 +2345,7 @@
         <mxCell id="yGXUvHjGb8Bd0bkuxwYA-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" parent="W2l0sGHgCA5iIa-g2eqn-2" source="yGXUvHjGb8Bd0bkuxwYA-7" target="W2l0sGHgCA5iIa-g2eqn-24" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="yGXUvHjGb8Bd0bkuxwYA-7" value="" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#000000;" parent="W2l0sGHgCA5iIa-g2eqn-2" vertex="1">
+        <mxCell id="yGXUvHjGb8Bd0bkuxwYA-7" value="" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="W2l0sGHgCA5iIa-g2eqn-2" vertex="1">
           <mxGeometry x="165" y="280" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yGXUvHjGb8Bd0bkuxwYA-8" value="Proposer prestataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="W2l0sGHgCA5iIa-g2eqn-2" vertex="1">
