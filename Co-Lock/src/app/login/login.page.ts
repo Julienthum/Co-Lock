@@ -29,7 +29,7 @@ export class LoginPage implements OnInit {
     signInWithEmailAndPassword(auth, this.email, this.password).then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      this.router.navigate(['/navbar']);
+      this.router.navigate(['/navbar/acceuil']);
     })
     .catch((error) => {
       const errorCode = error.code;

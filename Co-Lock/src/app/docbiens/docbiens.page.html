@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>docbiens</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -30,16 +33,6 @@
     <ion-button type="submit" class="primary_btn" expand="block" fill="solid" (click)="presentAlert()">Ajouter</ion-button>
 
   </form>
-
-
-  <ion-card *ngFor="let doc of docs | async">
-    <img [src]= 'doc.url'>
-    <div>
-      <ion-text class="title"> {{ doc.name }}</ion-text>
-      <br>
-      <ion-text class="content"> {{doc.description}}</ion-text>
-    </div>
-  </ion-card>
 
 
 </ion-content>

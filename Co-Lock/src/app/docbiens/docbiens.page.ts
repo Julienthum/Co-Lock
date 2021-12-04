@@ -9,6 +9,8 @@ import 'firebase/auth';
 import { DataService } from '../services/data.service';
 import { getStorage, ref } from 'firebase/storage';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { Router} from '@angular/router';
+
 
 
 @Component({
@@ -28,6 +30,7 @@ export class DocbiensPage implements OnInit {
     doc: ''
   };
   essaieForm: any;
+  activatedRoute: any;
 
 
   constructor(
@@ -36,7 +39,8 @@ export class DocbiensPage implements OnInit {
     public alertController: AlertController,
     public formBuilder: FormBuilder,
     private dataService: DataService,
-    private storage: AngularFireStorage
+    private storage: AngularFireStorage,
+    public router: Router,
   ) {
     this.docs = this.firestore.collection('documents').valueChanges();
   }
@@ -69,12 +73,14 @@ export class DocbiensPage implements OnInit {
     const name = this.essaieForm.value.name;
     const description = this.essaieForm.value.description;
     const url = this.url;
+    const idBien = this.dataService.docId;
     this.firestore.collection('documents').add({
       moi,
       name,
       description,
       spaceRef,
       url,
+      idBien
     });
 
     console.log('ca marche');
@@ -97,5 +103,7 @@ export class DocbiensPage implements OnInit {
     }
     );
     }
+
+  ///////////////
 
 }

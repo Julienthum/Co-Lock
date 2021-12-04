@@ -18,6 +18,7 @@ import { ComponentsModule } from '../components/components.module';
     ComponentsModule,
     MonbienPageRoutingModule
   ],
+  exports: [MonbienPage],
   declarations: [MonbienPage]
 })
 export class MonbienPageModule {}

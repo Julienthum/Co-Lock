@@ -28,12 +28,20 @@ export interface Users {
   prenom: string;
 }
 
+export interface Docs {
+  name: string;
+  url: number;
+  description: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
   location = 'documents/';
+  activatedRoute: any;
+  docId = '';
 
   constructor(
     private firestore: AngularFirestore,
@@ -103,7 +111,7 @@ export class DataService {
     return this.firestore.collection(collection).doc(id).update(newItem);
   }
 
-  /////////////////
+  ///////////////// Récuperation informations USER //////////////////////
 
 
   public getUser(): Observable<Users[]> {
@@ -117,6 +125,31 @@ export class DataService {
         map((actions) =>
           actions.map((a) => {
             const data = a.payload.doc.data() as Users;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
+  }
+
+  ///////////// Documents ID ///////////////
+
+  getDocId(id){
+    this.docId = id;
+    console.log(this.docId);
+  }
+
+  public getDocs(): Observable<Docs[]> {
+    return this.firestore
+      .collection<Docs>('documents', (ref) =>
+        ref
+          .where('idBien', '==', this.docId)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Docs;
             const id = a.payload.doc.id;
             return { id, ...data };
           })
