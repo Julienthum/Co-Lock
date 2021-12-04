@@ -5,11 +5,10 @@
 </ion-header>
 
 <ion-content>
-  <app-navbar></app-navbar>
 
   <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/ajoutbien">Ajouter un bien</ion-button>
 
-  <ion-card *ngFor="let bien of biens | async" [routerLink]="'../monbien/' + bien.id"  >
+  <ion-card *ngFor="let bien of biens | async" [routerLink]="'../../monbien/' + bien.id"  >
     <img [src]="bien.image" alt="image du bien">
     <div>
       <ion-text class="title"> {{ bien.name }}</ion-text>

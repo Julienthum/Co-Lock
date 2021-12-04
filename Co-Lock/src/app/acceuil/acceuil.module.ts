@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { AcceuilPageRoutingModule } from './acceuil-routing.module';
 
 import { AcceuilPage } from './acceuil.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AcceuilPageRoutingModule
+    AcceuilPageRoutingModule,
+    ComponentsModule,
   ],
   declarations: [AcceuilPage]
 })
