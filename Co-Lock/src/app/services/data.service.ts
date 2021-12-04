@@ -21,6 +21,13 @@ export interface Biens {
   moi: string;
 }
 
+export interface Users {
+  name: string;
+  email: string;
+  mobile: number;
+  prenom: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -94,6 +101,27 @@ export class DataService {
   }
   public updateItem(collection, id, newItem) {
     return this.firestore.collection(collection).doc(id).update(newItem);
+  }
+
+  /////////////////
+
+
+  public getUser(): Observable<Users[]> {
+    return this.firestore
+      .collection<Users>('users', (ref) =>
+        ref
+          .where('email', '==', firebase.auth().currentUser.email)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Users;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
   }
 
 }

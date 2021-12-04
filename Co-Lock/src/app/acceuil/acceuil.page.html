@@ -6,4 +6,8 @@
 
 <ion-content>
 
+  <ion-card *ngFor="let user of users | async">
+    <ion-card-title> Bonjour {{ user.prenom }}</ion-card-title>
+  </ion-card>
+
 </ion-content>

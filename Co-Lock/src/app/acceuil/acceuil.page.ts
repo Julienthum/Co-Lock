@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import firebase from 'firebase/compat/app';
+import { Observable } from 'rxjs';
+import { DataService } from '../services/data.service';
+
 
 @Component({
   selector: 'app-acceuil',
@@ -7,11 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcceuilPage implements OnInit {
 
-  constructor() { }
+  email: string;
 
+  users: Observable<any[]>;
 
-
-  ngOnInit() {
+  constructor(
+    private data: DataService
+  ) {
+    this.users = this.data.getUser();
   }
+
+
+  ngOnInit() { }
+
 
 }

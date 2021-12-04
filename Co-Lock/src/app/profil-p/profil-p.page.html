@@ -4,9 +4,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngFor="let user of users | async">
   <div class="header">
-    <h2 class="nomPropriétaire"> Propriétaire X</h2>
+    <h2 class="nomPropriétaire"> {{user.prenom}} {{user.name}}</h2>
      <div class="space-between">
        <div class="compteurbiens">
          <ion-badge color="light" mode="ios">5</ion-badge>

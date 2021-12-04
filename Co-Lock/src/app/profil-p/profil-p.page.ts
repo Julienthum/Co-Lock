@@ -4,6 +4,8 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 import firebase from 'firebase/compat/app';
 import { getAuth, signOut } from 'firebase/auth';
+import { DataService } from '../services/data.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-profil-p',
@@ -13,11 +15,15 @@ import { getAuth, signOut } from 'firebase/auth';
 export class ProfilPPage implements OnInit {
 
   erreur: string;
+  users: Observable<any[]>;
 
   constructor(
     public firestore: AngularFirestore,
     public router: Router,
-  ) { }
+    private data: DataService
+  ) {
+    this.users = this.data.getUser();
+  }
 
   ngOnInit() {
   }
