@@ -1,13 +1,15 @@
 .header {
   text-align: center;
   height: 180px;
-  background-color: #455f51;
+  background-color: #F5F5F5;
   padding-top: 1px;
   font-weight: bold ;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .nomPropriétaire{
-  color: white;
+  color: black;
 }
 
 .space-between {
@@ -29,12 +31,12 @@
 }
 
 .compteurbiens p {
-  color: white;
+  color: black;
   margin: 8px 0px 0px 0px;
 }
 
 .compteurlocataires p {
-  color: white;
+  color: black;
   margin: 8px 0px 0px 0px;
 }
 
@@ -46,13 +48,13 @@
 }
 
 .bordureBlanche {
-  border: 4px solid white;
+  border: 4px solid #455f51;
   border-radius: 50%;
   width: fit-content;
 }
 
 .bordureVerte {
-  border: 7px solid #455f51;
+  border: 7px solid #F5F5F5;
   border-radius: 50%;
   width: fit-content;
 }
@@ -72,4 +74,43 @@
   margin-left: 5%;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+
+ion-card{
+  background-color: #bfbfc1;
+  width: 90%;
+  margin: 5%;
+  border-radius: 15px;
+}
+
+ion-card-header{
+  color: #FFF;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: -2.5%;
+}
+
+ion-item{
+  color: #FFF;
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  --background: #99999c;
+  border-radius: 10px;
+}
+
+ion-col{
+  text-align: right;
+}
+
+.update_btn{
+  margin-top: -2.5%;
+  --background: none;
+  --color: white;
+  --box-shadow: none;
+  text-decoration: underline;
 }

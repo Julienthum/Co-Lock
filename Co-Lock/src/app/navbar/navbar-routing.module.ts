@@ -17,8 +17,8 @@ const routes: Routes = [
         loadChildren: () => import('../mesbiens/mesbiens.module').then( m => m.MesbiensPageModule)
       },
       {
-        path: 'docbiens',
-        loadChildren: () => import('../docbiens/docbiens.module').then( m => m.DocbiensPageModule)
+        path: 'requetes',
+        loadChildren: () => import('../requetes/requetes.module').then( m => m.RequetesPageModule)
       },
       {
         path: 'profil-p',

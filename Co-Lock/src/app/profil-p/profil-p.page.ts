@@ -20,14 +20,13 @@ export class ProfilPPage implements OnInit {
   constructor(
     public firestore: AngularFirestore,
     public router: Router,
-    private data: DataService
+    private data: DataService,
   ) {
     this.users = this.data.getUser();
   }
 
   ngOnInit() {
   }
-
 
   signOut(){
     const auth = getAuth();
@@ -36,6 +35,11 @@ export class ProfilPPage implements OnInit {
     }).catch((error) => {
       this.erreur = 'Une erreur s\'est produite... Veillez réessayer';
     });
+  }
+
+  deleteUser(){
+    this.data.deleteUser();
+    this.data.deleteItem('users', firebase.auth().currentUser.uid);
   }
 
 }

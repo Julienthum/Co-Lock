@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
+import { getAuth, deleteUser } from 'firebase/auth';
 
 export interface Biens {
   name: string;
@@ -111,7 +112,7 @@ export class DataService {
     return this.firestore.collection(collection).doc(id).update(newItem);
   }
 
-  ///////////////// Récuperation informations USER //////////////////////
+  ///////////////// USER Managment //////////////////////
 
 
   public getUser(): Observable<Users[]> {
@@ -130,6 +131,19 @@ export class DataService {
           })
         )
       );
+  }
+
+  deleteUser(){
+    const auth = getAuth();
+    const user = auth.currentUser;
+
+    deleteUser(user).then(() => {
+      const action = 'Votre compte a bien été supprimé';
+      alert(action);
+    }).catch((error) => {
+      const erreur = 'Une erreur s\'est produite... Veillez réessayer';
+      alert(erreur);
+    });
   }
 
   ///////////// Documents ID ///////////////
