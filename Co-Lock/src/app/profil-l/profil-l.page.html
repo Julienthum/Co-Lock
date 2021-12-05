@@ -4,15 +4,15 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngFor="let user of users | async">
   <div class="header">
-    <h2 class="nomPropriétaire"> Locataire X</h2>
+    <h2 class="nomPropriétaire"> {{user.prenom}} {{user.name}}</h2>
      <div class="space-between">
        <div class="compteurbiens">
-         <ion-badge color="light" mode="ios">3</ion-badge>
-        <p>notifications</p>
+         <ion-badge color="light" mode="ios">5</ion-badge>
+        <p>Notifications</p>
        </div>
-       
+
 
 
      </div>
@@ -22,43 +22,45 @@
   <div class="bordureVerte">
   <div class="bordureBlanche">
   <div class="photoProfil">
-    <img src="../../assets/user2.png">
+    <img src="../../assets/user.png">
   </div>
 </div>
 </div>
 </div>
 
-
-<h2><b>Mon compte</b></h2>
 <ion-card>
-   <ion-item lines="none" href ="/home">
-    <ion-icon name="settings-sharp" slot="start"></ion-icon>
-     <ion-label>
-       <h2>Setting 1</h2>
-       <p>Setting Description</p>
-      </ion-label>
-    </ion-item>
+  <ion-card-header> Mon compte </ion-card-header>
+  <ion-item> {{ user.name }} {{ user.prenom }} </ion-item>
+  <ion-item> {{ user.email }} </ion-item>
+  <ion-item> {{ user.mobile }} </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button class="update_btn"> Modifier </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-card>
 
 <ion-card>
-  <ion-item lines="none" href ="/home">
-   <ion-icon name="settings-sharp" slot="start"></ion-icon>
-    <ion-label>
-      <h2>Setting 2</h2>
-      <p>Setting Description</p>
-     </ion-label>
-   </ion-item>
+  <ion-card-header> Ma location </ion-card-header>
+  <ion-item> (autre choose) nombre de biens enregistrés {{ user.name }} {{ user.prenom }} </ion-item>
+  <ion-item> {{ user.mail }} </ion-item>
+  <ion-item> ( autre chose ) Nombre de locataire  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button class="update_btn"> Modifier </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-card>
 
-<ion-card>
-  <ion-item lines="none" href ="/home">
-   <ion-icon name="settings-sharp" slot="start"></ion-icon>
-    <ion-label>
-      <h2>Setting 3</h2>
-      <p>Setting Description</p>
-     </ion-label>
-   </ion-item>
-</ion-card>
+<ion-button class="secondary_btn" expand="block" fill="outline" (click)='signOut()'>Se déconnecter</ion-button>
+
+<ion-button class="secondary_btn" expand="block" fill="outline" (click)='deleteUser()' routerLink='/'>Supprimer le compte</ion-button>
+
+
 
 </ion-content>
 

@@ -99,6 +99,18 @@ const routes: Routes = [
     path: 'requetes',
     loadChildren: () => import('./requetes/requetes.module').then( m => m.RequetesPageModule)
   },
+  {
+    path: 'login-selection',
+    loadChildren: () => import('./login-selection/login-selection.module').then( m => m.LoginSelectionPageModule)
+  },
+  {
+    path: 'login-locataire',
+    loadChildren: () => import('./login-locataire/login-locataire.module').then( m => m.LoginLocatairePageModule)
+  },
+  {
+    path: 'navbar-loc',
+    loadChildren: () => import('./navbar-loc/navbar-loc.module').then( m => m.NavbarLocPageModule)
+  },
 
 
 ];
