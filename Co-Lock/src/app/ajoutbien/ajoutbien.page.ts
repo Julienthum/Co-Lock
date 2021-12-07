@@ -28,7 +28,8 @@ export class AjoutbienPage implements OnInit {
     superficie: '',
     nbrePlace: '',
     prix: '',
-    image: ''
+    image: '',
+    code: '',
   };
   essaieForm: any;
 
@@ -58,7 +59,8 @@ export class AjoutbienPage implements OnInit {
       superficie: '',
       nbrePlace: '',
       prix: '',
-      image: ''
+      image: '',
+      code: '',
       });
   }
 
@@ -72,6 +74,20 @@ export class AjoutbienPage implements OnInit {
 
     await alert.present();
   };
+
+  idGenerator(){
+    let code = 0;
+    let code2 = 1;
+    const char ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let index=0;
+    let id ='';
+
+    code = Math.floor((Math.random() * 9000))+1000;
+    code2=Math.floor((Math.random() * 9000))+1000;
+    index=Math.floor(Math.random()*10);
+    id ='LO-'+code+'-'+code2+'-'+char.charAt(index);
+    return (id);
+  }
 
   async addMike(){ // ca ajoute un bien dans la collec biens et ca ajoute aussi l'uid dans les champs
     const user = await firebase.auth().currentUser;
@@ -87,6 +103,7 @@ export class AjoutbienPage implements OnInit {
     const nbrePlace = this.essaieForm.value.nbrePlace;
     const prix = this.essaieForm.value.prix;
     const image = this.essaieForm.value.image;
+    const code = this.idGenerator();
     this.firestore.collection('biens').add({
       moi,
       name,
@@ -100,9 +117,9 @@ export class AjoutbienPage implements OnInit {
       nbrePlace,
       prix,
       image,
+      code,
     });
 
     console.log('ca marche');
   }
-
 }

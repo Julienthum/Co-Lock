@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 import { getAuth, deleteUser } from 'firebase/auth';
+import { doc } from 'rxfire/firestore';
+import { updateDoc } from 'firebase/firestore';
 
 export interface Biens {
   name: string;
@@ -20,6 +22,7 @@ export interface Biens {
   place: number;
   image: string;
   moi: string;
+  code: string;
 }
 
 export interface Users {
@@ -27,6 +30,8 @@ export interface Users {
   email: string;
   mobile: number;
   prenom: string;
+  type: string;
+  code?: string;
 }
 
 export interface Docs {
@@ -86,6 +91,8 @@ export class DataService {
       .valueChanges({ idField: 'id' });
    }
 
+// eslint-disable-next-line @typescript-eslint/member-ordering
+nbrbien = 0;
 
    public getRestos(): Observable<Biens[]> {
     return this.firestore
@@ -97,6 +104,7 @@ export class DataService {
       .pipe(
         map((actions) =>
           actions.map((a) => {
+            this.nbrbien = this.nbrbien + 1;
             const data = a.payload.doc.data() as Biens;
             const id = a.payload.doc.id;
             return { id, ...data };
@@ -110,6 +118,10 @@ export class DataService {
   }
   public updateItem(collection, id, newItem) {
     return this.firestore.collection(collection).doc(id).update(newItem);
+  }
+
+  public addItem(collection, object) {
+    return this.firestore.collection(collection).add(object);
   }
 
   ///////////////// USER Managment //////////////////////
@@ -145,6 +157,7 @@ export class DataService {
       alert(erreur);
     });
   }
+
 
   ///////////// Documents ID ///////////////
 

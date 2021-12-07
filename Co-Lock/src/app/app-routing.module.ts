@@ -99,6 +99,14 @@ const routes: Routes = [
     path: 'requetes',
     loadChildren: () => import('./requetes/requetes.module').then( m => m.RequetesPageModule)
   },
+  {
+    path: 'profilinfo',
+    loadChildren: () => import('./profilinfo/profilinfo.module').then( m => m.ProfilinfoPageModule)
+  },
+  {
+    path: 'bienloc',
+    loadChildren: () => import('./bienloc/bienloc.module').then( m => m.BienlocPageModule)
+  },
 
 
 ];

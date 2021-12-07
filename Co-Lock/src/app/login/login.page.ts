@@ -3,7 +3,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthModule, getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, user } from '@angular/fire/auth';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router, RouterLink } from '@angular/router';
+import { Observable } from 'rxjs';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +17,12 @@ import { Router, RouterLink } from '@angular/router';
 export class LoginPage implements OnInit {
 
   erreur: string;
+  users: Observable<any[]>;
 
   constructor(
     public router: Router,
+    private firestore: AngularFirestore,
+    private data: DataService,
   ) {};
 
   ngOnInit(){
@@ -25,12 +31,14 @@ export class LoginPage implements OnInit {
   email: string;
   password: string;
 
+
   signIn(){
     signInWithEmailAndPassword(auth, this.email, this.password).then((userCredential) => {
       // Signed in
       const user = userCredential.user;
+      console.log(user.uid);
       this.router.navigate(['/navbar/acceuil']);
-    })
+      })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;

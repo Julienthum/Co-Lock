@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { DataService } from '../services/data.service';
+import firebase from 'firebase/compat/app';
 
 
 @Component({
@@ -13,10 +15,13 @@ export class SignUpPropioPage implements OnInit {
 
   essaieForm: FormGroup;
 
-  constructor(public formBuilder: FormBuilder,
+  constructor(
+    public formBuilder: FormBuilder,
     public firestore: AngularFirestore,
     // eslint-disable-next-line @typescript-eslint/no-shadow
-    public auth: AngularFireAuth) { }
+    public auth: AngularFireAuth,
+    private data: DataService
+    ) { }
 
   ngOnInit() {
     this.essaieForm = this.formBuilder.group({

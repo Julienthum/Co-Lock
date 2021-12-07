@@ -16,6 +16,7 @@ export class ProfilPPage implements OnInit {
 
   erreur: string;
   users: Observable<any[]>;
+  nbrbien: any;
 
   constructor(
     public firestore: AngularFirestore,
@@ -23,6 +24,7 @@ export class ProfilPPage implements OnInit {
     private data: DataService,
   ) {
     this.users = this.data.getUser();
+    this.nbrbien = this.data.nbrbien;
   }
 
   ngOnInit() {
