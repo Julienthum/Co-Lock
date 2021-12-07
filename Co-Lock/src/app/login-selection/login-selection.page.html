@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Acceuil" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="hello-cmpt">
+    <ion-img src="../assets/SVGCO-LOCK petit.svg"></ion-img>
+    <ion-text>
+      <h1 class="hello-text">Bonjour !</h1> <br>
+      <h2 class="hello-text"> Qui êtes <br> vous ?</h2>
+    </ion-text>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        Je suis <br> propriétaire
+      </ion-col>
+      <ion-col>
+        Je suis <br> locataire
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button fill="clear" routerLink="/login"><ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button fill="clear" routerLink="/login-locataire"><ion-icon name="arrow-forward-circle-outline" ></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>
