@@ -45,7 +45,7 @@ export class LoginPage implements OnInit {
           this.router.navigate(['/navbar/acceuil']);
         }
         else{
-          this.router.navigate(['/id-generator']);
+          this.router.navigate(['/navbar-loc/acceuil']);
         }
       }));
 

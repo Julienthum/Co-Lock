@@ -108,14 +108,6 @@ const routes: Routes = [
     loadChildren: () => import('./bienloc/bienloc.module').then( m => m.BienlocPageModule)
   },
   {
-    path: 'login-selection',
-    loadChildren: () => import('./login-selection/login-selection.module').then( m => m.LoginSelectionPageModule)
-  },
-  {
-    path: 'login-locataire',
-    loadChildren: () => import('./login-locataire/login-locataire.module').then( m => m.LoginLocatairePageModule)
-  },
-  {
     path: 'navbar-loc',
     loadChildren: () => import('./navbar-loc/navbar-loc.module').then( m => m.NavbarLocPageModule)
   },
