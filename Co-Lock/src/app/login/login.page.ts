@@ -8,6 +8,7 @@ import { Router, RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
 import { DataService } from '../services/data.service';
 import { map } from 'rxjs/operators';
+import firebase from 'firebase/compat/app';
 
 @Component({
   selector: 'app-login',
@@ -38,7 +39,16 @@ export class LoginPage implements OnInit {
       // Signed in
       const user = userCredential.user;
       console.log(user.uid);
-      this.router.navigate(['/navbar/acceuil']);
+
+      firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).get().then(( doc => {
+        if( doc.data().type === 'P'){
+          this.router.navigate(['/navbar/acceuil']);
+        }
+        else{
+          this.router.navigate(['/id-generator']);
+        }
+      }));
+
       })
     .catch((error) => {
       const errorCode = error.code;
@@ -62,6 +72,18 @@ export class LoginPage implements OnInit {
         return(this.erreur = 'Une erreur s\'est produite');
       }
     });
+  }
+
+  test(){
+  firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).get().then(( doc => {
+      if( doc.data().type === 'L'){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }));
+
   }
 
 };
