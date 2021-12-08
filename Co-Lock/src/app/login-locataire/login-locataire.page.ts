@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable @typescript-eslint/member-ordering */
 import { Component, OnInit } from '@angular/core';
-import { AuthModule, getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, user } from '@angular/fire/auth';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { Router, RouterLink } from '@angular/router';
+import { getAuth, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { Router  } from '@angular/router';
 
 @Component({
   selector: 'app-login-locataire',

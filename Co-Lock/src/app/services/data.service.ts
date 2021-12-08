@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { observable, Observable } from 'rxjs';
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 import { getAuth, deleteUser } from 'firebase/auth';
-import { doc } from 'rxfire/firestore';
 import { updateDoc } from 'firebase/firestore';
+
 
 export interface Biens {
   name: string;

@@ -7,6 +7,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router, RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
 import { DataService } from '../services/data.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -60,9 +61,9 @@ export class LoginPage implements OnInit {
       else{
         return(this.erreur = 'Une erreur s\'est produite');
       }
-
     });
   }
+
 };
 
 const auth = getAuth();

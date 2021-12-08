@@ -84,14 +84,14 @@ const routes: Routes = [
     path: 'accueillocataire',
     loadChildren: () => import('./accueillocataire/accueillocataire.module').then( m => m.AccueillocatairePageModule)
   },
-
   {
     path: 'monbien/:id',
     loadChildren: () =>
       import('./monbien/monbien.module').then(
         (m) => m.MonbienPageModule
       ),
-  },  {
+  },
+  {
     path: 'docbiens',
     loadChildren: () => import('./docbiens/docbiens.module').then( m => m.DocbiensPageModule)
   },
@@ -100,14 +100,14 @@ const routes: Routes = [
     loadChildren: () => import('./requetes/requetes.module').then( m => m.RequetesPageModule)
   },
   {
-<<<<<<< HEAD
     path: 'profilinfo',
     loadChildren: () => import('./profilinfo/profilinfo.module').then( m => m.ProfilinfoPageModule)
   },
   {
     path: 'bienloc',
     loadChildren: () => import('./bienloc/bienloc.module').then( m => m.BienlocPageModule)
-=======
+  },
+  {
     path: 'login-selection',
     loadChildren: () => import('./login-selection/login-selection.module').then( m => m.LoginSelectionPageModule)
   },
@@ -118,7 +118,6 @@ const routes: Routes = [
   {
     path: 'navbar-loc',
     loadChildren: () => import('./navbar-loc/navbar-loc.module').then( m => m.NavbarLocPageModule)
->>>>>>> 3efe4f55a70a3ad0a0974ff55f4a5a33bdd7b750
   },
 
 
