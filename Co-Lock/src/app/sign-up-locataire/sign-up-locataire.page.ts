@@ -38,7 +38,10 @@ export class SignUpLocatairePage implements OnInit {
       mobile: ['', [Validators.required, Validators.pattern('^[0-9]+$'), Validators.minLength(10)]],
       password: ['', [Validators.required, Validators.minLength(5)]],
       code: ['', [Validators.required, Validators.minLength(2)]],
+      type: ['']
     });
+    this.essaieForm.controls.type.setValue('L');
+
   }
 
   login(value){
