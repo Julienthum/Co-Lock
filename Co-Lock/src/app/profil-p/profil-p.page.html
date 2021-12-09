@@ -9,7 +9,7 @@
     <h2 class="nomPropriétaire"> {{user.prenom}} {{user.name}}</h2>
      <div class="space-between">
        <div class="compteurbiens">
-         <ion-badge color="light" mode="ios">5</ion-badge>
+         <ion-badge color="light" mode="ios"> {{nbrbien}}</ion-badge>
         <p>biens</p>
        </div>
        <div class="compteurlocataires">
@@ -39,7 +39,7 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-button class="update_btn"> Modifier </ion-button>
+        <ion-button class="update_btn" routerLink='/profilinfo'> Modifier </ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -61,7 +61,7 @@
 
 <ion-button class="secondary_btn" expand="block" fill="outline" (click)='signOut()'>Se déconnecter</ion-button>
 
-<ion-button class="secondary_btn" expand="block" fill="outline" (click)='deleteUser()' routerLink='/'>Supprimer le compte</ion-button>
+<ion-button class="primary_btn" expand="block" fill="block" (click)='deleteUser()' routerLink='/'>Supprimer le compte</ion-button>
 
 
 

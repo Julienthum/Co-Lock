@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LoginSelectionPageRoutingModule } from './login-selection-routing.module';
+import { BienlocPageRoutingModule } from './bienloc-routing.module';
 
-import { LoginSelectionPage } from './login-selection.page';
+import { BienlocPage } from './bienloc.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginSelectionPageRoutingModule
+    BienlocPageRoutingModule
   ],
-  declarations: [LoginSelectionPage]
+  declarations: [BienlocPage]
 })
-export class LoginSelectionPageModule {}
+export class BienlocPageModule {}

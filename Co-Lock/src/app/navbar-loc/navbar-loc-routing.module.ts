@@ -13,8 +13,8 @@ const routes: Routes = [
         loadChildren: () => import('../acceuil/acceuil.module').then( m => m.AcceuilPageModule)
       },
       {
-        path: 'mesbiens',
-        loadChildren: () => import('../mesbiens/mesbiens.module').then( m => m.MesbiensPageModule)
+        path: 'bienloc',
+        loadChildren: () => import('../bienloc/bienloc.module').then( m => m.BienlocPageModule)
       },
       {
         path: 'requetes',

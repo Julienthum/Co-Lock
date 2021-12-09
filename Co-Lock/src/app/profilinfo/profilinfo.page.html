@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profilinfo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngFor="let user of users | async">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="photoProfil">
+          <img src="../../assets/user.png">
+        </div>
+      </ion-col>
+          Modifier vos informations
+      <ion-col>
+        <ion-header> </ion-header>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <form [formGroup]="essaieForm" (ngSubmit)="uptadeItem()" novalidate validationUserMessage>
+    <div>
+      <ion-item>
+        <ion-input formControlName="name" type="text" [value]="user.name" required [placeholder]="user.name">
+          <ion-icon name="happy-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input formControlName="prenom" type="text" required [placeholder]="user.prenom">
+          <ion-icon name="happy-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-input formControlName="mobile" type="tel" required [placeholder]='user.mobile'>
+          <ion-icon name="call-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+    </div>
+
+    <ion-button class="primary_btn" expand="block" fill="solid" type="submit">Modifier les informations</ion-button>
+
+  </form>
+
+
+</ion-content>

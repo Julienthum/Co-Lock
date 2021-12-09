@@ -5,6 +5,10 @@ import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 import { DataService } from '../services/data.service';
 import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
+import { Share } from '@capacitor/share';
+
 
 @Component({
   selector: 'app-monbien',
@@ -20,10 +24,12 @@ export class MonbienPage implements OnInit {
   bien;
   idBien;
 
+
   constructor(
     public firestore: AngularFirestore,
     private activatedRoute: ActivatedRoute,
-    private data: DataService
+    private data: DataService,
+    private http: HttpClient
   ) { }
 
   ngOnInit() {
@@ -35,5 +41,16 @@ export class MonbienPage implements OnInit {
 
   deleteResto() {
     this.data.deleteItem('biens', this.bien.id);
+  }
+
+  async share(){
+    await Share.share({
+      title: 'Acces bien',
+      text: 'Voici le code pour accéder à l\'application CO-LOCK ' + this.bien.code,
+    });
+  }
+
+  lien(url){
+    window.open(url, '_system');
   }
 }

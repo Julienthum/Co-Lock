@@ -84,14 +84,14 @@ const routes: Routes = [
     path: 'accueillocataire',
     loadChildren: () => import('./accueillocataire/accueillocataire.module').then( m => m.AccueillocatairePageModule)
   },
-
   {
     path: 'monbien/:id',
     loadChildren: () =>
       import('./monbien/monbien.module').then(
         (m) => m.MonbienPageModule
       ),
-  },  {
+  },
+  {
     path: 'docbiens',
     loadChildren: () => import('./docbiens/docbiens.module').then( m => m.DocbiensPageModule)
   },
@@ -100,12 +100,12 @@ const routes: Routes = [
     loadChildren: () => import('./requetes/requetes.module').then( m => m.RequetesPageModule)
   },
   {
-    path: 'login-selection',
-    loadChildren: () => import('./login-selection/login-selection.module').then( m => m.LoginSelectionPageModule)
+    path: 'profilinfo',
+    loadChildren: () => import('./profilinfo/profilinfo.module').then( m => m.ProfilinfoPageModule)
   },
   {
-    path: 'login-locataire',
-    loadChildren: () => import('./login-locataire/login-locataire.module').then( m => m.LoginLocatairePageModule)
+    path: 'bienloc',
+    loadChildren: () => import('./bienloc/bienloc.module').then( m => m.BienlocPageModule)
   },
   {
     path: 'navbar-loc',

@@ -26,13 +26,40 @@
   text-decoration: none;
 }
 
+.primary_btn{
+  --border-radius: 15px;
+  --background : #455F51;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
 .secondary_btn{
   --border-radius: 15px;
   --color: #455F51;
   --border-color: #455F51;
   width: 90%;
   margin-left: 5%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+
+ion-card{
+  width: 90%;
+  margin: 5%;
+  border-radius: 15px;
+}
+
+ion-card-subtitle{
+  margin-left: 10px;
+  font-style: italic;
+  font-size: medium;
+}
+
+.docpres{
+  max-height: 50px;
+  size: cover;
+  width: 100%;
 }
 
