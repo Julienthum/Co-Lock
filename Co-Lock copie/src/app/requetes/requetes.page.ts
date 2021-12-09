@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { user } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
-import { getAuth, signOut } from 'firebase/auth';
-import { Router } from '@angular/router';
-
-import firebase from 'firebase/compat/app';
-import 'firebase/auth';
 
 @Component({
   selector: 'app-requetes',
@@ -15,28 +9,47 @@ import 'firebase/auth';
 })
 export class RequetesPage implements OnInit {
 
-  requetes: Observable<any[]>;
-  erreur: string;
+  items : Observable<any[]>;
+  nom : string;
+  description : string;
+  etat:boolean;
+  addreq:boolean;
 
-  constructor( 
 
+  constructor(
     public firestore: AngularFirestore,
-    public router: Router,) { 
+   
+  ) {
+   this.items = this.firestore.collection('requetes').valueChanges();
+   }
+
+
+   addRequete(){
+    this.firestore.collection('requetes').add({
+      nom: this.nom,
+      description:this.description,
     
-  }
+
+    });
+//ces deux lignes permettent de vider le champ après chaque ajout
+    this.nom ='';
+    this.description='';
+   
+    
+   }
+
+   showFormulaire(){
+     this.addreq=!this.addreq;
+     this.nom ='';
+     this.description='';
+   }
+
+   
+
+
+
 
   ngOnInit() {
-
-    const id = firebase.auth().currentUser.uid;
-    const requetes = this.firestore.collection('requêtes');
-    const query = requetes.ref.where('reference', '==', id);
-    if(query){
-      console.log(id);
-      this.requetes = this.firestore.collection('requêtes',  (ref) =>
-        ref.where('reference', '==', id)).valueChanges();
-    } else {
-      console.log('ca marche bien ');
-  }
   }
 
 }
