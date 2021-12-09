@@ -22,6 +22,8 @@ export interface Biens {
   image: string;
   moi: string;
   code: string;
+  cp: number;
+  description: string;
 }
 
 @Component({
@@ -48,14 +50,41 @@ export class BienlocPage implements OnInit {
 
   }
 
-  ngOnInit() {
-   // this.getTest1();
-    //this.getTest().subscribe((res) => (this.bien = res));
-    this.biens = this.getTest();
+   async ngOnInit() { // normalement ne pas mettre de async ici mais blc
+   // this.getTest1(); marche pas
+    //this.getTest().subscribe((res) => (this.bien = res)); marche pas
+    this.biens = await this.getTest(); //ca marche a  1OO% je suis trop fort
+    //(await this.getTest()).subscribe(res => this.bien = res);
+
+    if( await this.donnee() === 'LO-5077-7957-C'){// blc
+      console.log( await this.donnee());
+      return await this.donnee();
+    } else { console.log('ca marche pas ptn ');
+    }
+
 
 
   }
-  public getTest1(): Observable<Biens[]>{
+  async donnee() {//blc
+  const jay = await firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid)
+    .get().then(( doc => doc.data().code));
+    return await jay;
+
+  }
+  public  async  getTest() {//nice
+    const jay = await    firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid)
+    .get().then(( doc => doc.data().code));
+    return this.firestore
+      .collection<Biens>('biens', (ref) => ref
+        .where('code', '==', jay)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) => actions.map((a) => a.payload.doc.data() as Biens)
+        )
+      );
+  }
+  public getTest1(): Observable<Biens[]>{ // marche pas de ouf a test, sert a r en vrai
     return this.firestore.collection<Biens>('biens', (ref) => ref
       .where('code', '==', 'LO-5077-7957-C')
     )
@@ -68,18 +97,5 @@ export class BienlocPage implements OnInit {
   deleteResto() {
     this.data.deleteItem('biens', this.bien.id);
   }
-  public  getTest() {
 
-    return this.firestore
-      .collection<Biens>('biens', (ref) =>
-        ref
-          .where('code', '==', 'LO-5077-7957-C')
-      )
-      .snapshotChanges()
-      .pipe(
-        map((actions) =>
-          actions.map((a) => a.payload.doc.data() as Biens)
-        )
-      );
-  }
 }
