@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mes requetes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-navbar></app-navbar>
+
+
+  <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/ajoutrequete">Ajouter une requête</ion-button>
+
+  <ion-card *ngFor="let requete of requetes | async" [routerLink]="'/requete'" >
+    
+    <div>
+      <ion-text class="title"> {{requete.nom}}</ion-text>
+      <br>
+     
+      <br>
+      <ion-text class="content"> {{requete.description}}</ion-text>
+    </div>
+  </ion-card>
+
+
+</ion-content>

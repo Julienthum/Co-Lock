@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>plainte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let item of items | async">
+    <ion-label>{{ item.description }}</ion-label>
+  </ion-item>
+
+</ion-content>

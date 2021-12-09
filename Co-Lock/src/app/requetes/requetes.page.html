@@ -6,4 +6,50 @@
 
 <ion-content>
 
+  <ion-card>
+    <img src="assets/repair.png"/>
+    <ion-card-header>
+      <ion-card-subtitle>Fonctionnalité</ion-card-subtitle>
+      <ion-card-title>Consultez la liste de vos requêtes en cours</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+  <div *ngIf="addreq">
+  <ion-item lines="none">
+  <ion-input placeholder="Nommez votre requête" [(ngModel)]="nom" type="text"></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+  <ion-input placeholder="Décrivez votre requête" [(ngModel)]="description" type="text"></ion-input>
+  </ion-item>
+  </div>
+
+  <ion-button *ngIf="addreq"(click)="addRequete()" expand="block" color="light" >
+    <ion-icon name="add-circle-outline" slot="start"></ion-icon>
+    Enregistrer la requête
+  </ion-button>
+
+  <ion-button *ngIf="!addreq" (click)="showFormulaire()" expand="block" color="success" class="add-button">
+    <ion-icon name="add" slot="start"></ion-icon>
+    Ajouter une requête
+  </ion-button>
+  
+  <ion-button *ngIf="addreq" (click)="showFormulaire()" expand="block" color="danger" class="add-button">
+    <ion-icon name="close" slot="start"></ion-icon>
+    Annuler l'ajout de la requête
+  </ion-button>
+
+</ion-card>
+
+
+
+
+<ion-card *ngFor="let item of items | async">
+  <ion-item lines="none">
+    <ion-icon name="alert-circle-outline" slot="start"></ion-icon>
+    <ion-label>{{ item.nom }}</ion-label>
+  </ion-item>
+</ion-card>
+
+
 </ion-content>

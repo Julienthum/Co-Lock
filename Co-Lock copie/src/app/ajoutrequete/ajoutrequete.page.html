@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="retour" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Déposer une requête</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="essaieForm" (ngSubmit)="addRequete()" novalidate>
+
+
+    <ion-text> Adresse du bien</ion-text>
+
+    <ion-item>
+      <ion-input formControlName="nom" placeholder="Nom"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="description" placeholder="Description de votre requete"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="reference" placeholder="Référence de la requete"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="type" placeholder="Type de requête"></ion-input>
+    </ion-item>
+
+  </form>
+
+</ion-content>

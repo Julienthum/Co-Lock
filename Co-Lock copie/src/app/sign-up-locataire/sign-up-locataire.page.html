@@ -1,0 +1,64 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button text="retour" defaultHref="/connexion-page"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card class="hello-cmpt">
+  <ion-text>
+    <h1 class="hello-text">Bievenue chez <br> CÔ-LOCK</h1> <br>
+    <h2 class="hello-text2"> Créez-vous un compte en toutes simplicité</h2>
+  </ion-text>
+</ion-card>
+
+
+<form [formGroup]="essaieForm" (ngSubmit)="login(essaieForm.value)" novalidate>
+  <div>
+    <ion-item>
+      <ion-input formControlName="name" type="text" required placeholder="Nom">
+        <ion-icon name="happy-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="prenom" type="text" required placeholder="Prénom">
+        <ion-icon name="happy-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="email" type="email" required placeholder="email">
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="password" type="password" placeholder="*******">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="mobile" type="tel" required placeholder="Numéro de téléphone">
+        <ion-icon name="call-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="code" type="code" required placeholder="Code d'activation">
+        <ion-icon name="finger-print-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+  </div>
+
+  <ion-button class="primary_btn" expand="block" fill="solid" type="submit" routerLink="/accueillocataire">S'inscrire</ion-button>
+
+</form>
+
+</ion-content>

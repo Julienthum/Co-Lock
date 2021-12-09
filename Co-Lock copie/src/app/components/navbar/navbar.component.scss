@@ -1,0 +1,20 @@
+svg{
+  color: white;
+}
+
+td{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+table{
+  position: fixed;
+  bottom: 0;
+  width: 90%;
+  margin-bottom: 10px;
+  margin-left: 5%;
+  background-color: #ccc;
+  border-radius: 20px;
+  z-index: 10;
+}

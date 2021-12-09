@@ -1,0 +1,105 @@
+*{
+    ion-icon{
+        font-size: 3em;
+        color: #455f51;
+    }
+}
+
+.card {
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 15px;
+    color: black;
+}
+
+
+.button {
+    --border-color: black; 
+    --border-radius: 25px;
+    --color: black; 
+    --color-hover: green; 
+
+}
+
+.paiement {
+    color: green;
+    font-weight: bold;
+}
+.paiement:hover
+{
+    font-size:120%;
+}
+
+.plaintes {
+    color:red; 
+    font-weight: bold;
+}
+.plaintes:hover
+{
+    font-size:120%;
+}
+
+.echeance {
+    color: red;
+    font-weight: bold;
+}
+.echeance:hover
+{
+    font-size:120%;
+}
+
+
+.solde {
+    color:green;
+    font-weight: bold;
+}
+.solde:hover
+{
+    font-size:120%;
+}
+
+ion-content {
+    --ion-background-color:#eceff1; 
+  }
+
+ion-card {
+    --ion-background-color: white; 
+  }
+
+.colorb{
+    --color:black;
+}
+
+.arrondi {
+    border-radius: 25px;
+}
+
+.centre {
+    text-align: center;
+}
+
+ion-grid{
+    ion-card{
+        width:100%;
+        margin-top:0 !important;
+        margin-bottom:0 !important;
+        margin-left:0 !important;
+        margin-right:0 !important;
+        ion-card-content{
+            padding: 0 !important; 
+        }
+    }
+}
+
+.nom{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.gras{
+    font-weight: bold;
+}
+
+.zoom:hover {
+    font-size:5em;
+}

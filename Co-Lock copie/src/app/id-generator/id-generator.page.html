@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Générer un ID Locataire</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <img src="assets/device.png"/>
+    <ion-card-header>
+      <ion-card-subtitle>Fonctionnalité</ion-card-subtitle>
+      <ion-card-title>Générer un ID Locataire</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Cette fonctionnalité vous permet de générer un ID/code 
+      unique à transférer à votre locataire 
+      afin qu'il puisse créer son compte et ainsi participer à la gestion de votre bien.
+    </ion-card-content>
+
+    <ion-item button color="success" (click)="createID()" fill="outline">
+      <ion-icon name="key" slot="end" ></ion-icon>
+      <ion-label class="IDgeneration">
+        Générer un ID
+      </ion-label>
+    
+    
+      </ion-item>
+      <ion-item color="light" *ngIf= "Code != 0">{{ID}}</ion-item>
+  
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="copy-outline" slot="start" ></ion-icon>
+      <ion-button color="success"fill="outline" slot="end" (click)="copier(ID)" >copier</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      Une fois votre code généré appuyez sur "Copier" afin de copier l'entièreté de votre code. 
+      Vous pourrez ensuite envoyer ce code à votre locataire pour qu'il aie accès à la plateforme.
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
