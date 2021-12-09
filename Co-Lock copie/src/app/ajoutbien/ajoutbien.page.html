@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="retour" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Ajouter un bien</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <app-navbar></app-navbar>
+
+<form [formGroup]="essaieForm" (ngSubmit)="addMike()" novalidate>
+
+    <ion-item>
+      <ion-input class='image' formControlName="image" placeholder="Ajouter une image"></ion-input>
+    </ion-item>
+
+    <ion-text> Description du bien </ion-text>
+
+    <ion-item>
+      <ion-input formControlName="nomDuBien" placeholder="Mon Bien"></ion-input>
+    </ion-item>
+
+    <ion-item class="enditem">
+      <ion-input id='description' formControlName="description" placeholder="Description"></ion-input>
+    </ion-item>
+
+
+    <ion-text> Adresse du bien</ion-text>
+
+    <ion-item>
+      <ion-input formControlName="rue" placeholder="Rue"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type='number' formControlName="numero" placeholder="Numéro"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="ville" placeholder="Ville"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="codepostal" placeholder="Code postal"></ion-input>
+    </ion-item>
+
+    <ion-item class="enditem">
+      <ion-input formControlName="province" placeholder="Province"></ion-input>
+    </ion-item>
+
+
+    <ion-text> Information du bien</ion-text>
+
+    <ion-item>
+      <ion-input type='number' formControlName="superficie" placeholder="Superficie"></ion-input>
+    </ion-item>
+
+    <ion-item class="enditem">
+      <ion-input type='number' formControlName="nbrePlace" placeholder="Nombre de place disponible"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" class="primary_btn" expand="block" fill="solid" (click)="presentAlert()">Ajouter</ion-button>
+
+  </form>
+
+
+</ion-content>

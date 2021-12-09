@@ -1,0 +1,7 @@
+{
+  "name": "ConnectionFirebase",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

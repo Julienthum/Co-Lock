@@ -1,0 +1,19 @@
+<ion-header>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card class="no-shadow" id="homepage-logo">
+    <ion-img src="../assets/logo_acceuil.png"></ion-img>
+  </ion-card>
+
+  <ion-card class="no-shadow">
+    <ion-button class="primary_btn" expand="block" fill="solid" routerLink="/login">Se connecter</ion-button>
+    <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/connexion-page"> Créer un compte</ion-button>
+</ion-card>
+
+<div class="sli">
+  <p style="font-size: 0.3cm">C'est quoi Cô-Lock? <a class="lien" [routerLink]="['/slide']">Cliquez ici!</a> </p>
+</div>
+
+</ion-content>
