@@ -94,6 +94,8 @@ export class DataService {
 // eslint-disable-next-line @typescript-eslint/member-ordering
 nbrbien = 0;
 
+
+
    public getRestos(): Observable<Biens[]> {
     return this.firestore
       .collection<Biens>('biens', (ref) =>

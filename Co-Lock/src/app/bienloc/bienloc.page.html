@@ -1,9 +1,100 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>bienloc</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" *ngFor="let bien of biens | async">
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Mon bien </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <br>
+
+  <ion-card>
+    <img [src]="bien.image"/>
+    <ion-card-header>
+      <ion-card-title>{{bien.name}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-subtitle>Description du bien</ion-card-subtitle>
+    <ion-card-content> {{bien.description}} </ion-card-content>
+
+    <ion-card-subtitle>Localisation</ion-card-subtitle>
+    <ion-card-content> {{bien.rue}} {{bien.numero}}, {{bien.cp}} {{bien.ville}}, {{bien.province}}</ion-card-content>
+
+    <ion-card-subtitle>Prix et superficie</ion-card-subtitle>
+    <ion-card-content> {{bien.prix}} <br> {{bien.superficie}} m2</ion-card-content>
+
+
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="notifications-outline" slot="start" ></ion-icon>
+      <ion-label>Notifications</ion-label>
+      <ion-button fill="outline" slot="end">consulter</ion-button>
+    </ion-item>
+
+    <ion-card-content>
+      Consultez la/les notification(s) relatives à votre bien via le bouton ci-dessus.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Requetes de vos locataires</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Cette fonctionnalité vous permet de voir les différentes requetes faites par vos locataires.
+    </ion-card-content>
+    <ion-button class="secondary_btn" expand="block" fill="outline">Ajouter une requete</ion-button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Invitez des locataire à rejoindre votre bien</ion-card-title>
+      <ion-card-subtitle> {{ bien.code }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Cette fonctionnalité vous permet de générer un ID/code
+      unique à transférer à votre locataire
+      afin qu'il puisse créer son compte et ainsi participer à la gestion de votre bien.
+    </ion-card-content>
+
+    <ion-button class="secondary_btn" expand="block" fill="outline" >Partager le code</ion-button>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Documents relatifs au bien </ion-card-title>
+      <ion-card-subtitle> Toutes les infos à savoir concernant votre bien </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Cette fonctionnalité vous permet d'ajouter tous les documents utiles pour vos locataires.
+    </ion-card-content>
+
+    <ion-card *ngFor="let doc of docs | async" (click)="lien(doc.url)">
+      <img [src]= 'doc.url' class="docpres">
+      <ion-card-header>
+        <ion-card-title> {{ doc.name }}</ion-card-title>
+        <ion-card-subtitle> {{ doc.description }} </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/docbiens">Ajouter un document</ion-button>
+
+  </ion-card>
+
+
+  <ion-button class="primary_btn" expand="block" fill="solid" (click)='deleteResto()' routerLink="/mesbiens">Supprimer ce bien</ion-button>
+
+
 
 </ion-content>
