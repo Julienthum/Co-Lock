@@ -4,6 +4,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
 import { DataService } from '../services/data.service';
+import { Router, RouterLink } from '@angular/router';
 
 
 @Component({
@@ -27,6 +28,7 @@ export class SignUpLocatairePage implements OnInit {
     public firestore: AngularFirestore,
     // eslint-disable-next-line @typescript-eslint/no-shadow
     public auth: AngularFireAuth,
+    public router: Router,
     private data: DataService,
     ) { }
 
@@ -47,6 +49,7 @@ export class SignUpLocatairePage implements OnInit {
   login(value){
     // eslint-disable-next-line max-len
     const user = this.auth.createUserWithEmailAndPassword(value.email, value.password).then(cred => this.firestore.collection('users').doc(cred.user.uid).set(value));
+    this.router.navigate(['/login']);
     return { user };
     }
 };

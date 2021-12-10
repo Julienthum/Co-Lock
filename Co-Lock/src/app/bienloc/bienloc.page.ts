@@ -25,6 +25,11 @@ export interface Biens {
   cp: number;
   description: string;
 }
+export interface Docs {
+  name: string;
+  url: number;
+  description: string;
+}
 
 @Component({
   selector: 'app-bienloc',
@@ -55,6 +60,8 @@ export class BienlocPage implements OnInit {
     //this.getTest().subscribe((res) => (this.bien = res)); marche pas
     this.biens = await this.getTest(); //ca marche a  1OO% je suis trop fort
     //(await this.getTest()).subscribe(res => this.bien = res);
+    this.docs = await this.getDocs();
+
 
     if( await this.donnee() === 'LO-5077-7957-C'){// blc
       console.log( await this.donnee());
@@ -96,6 +103,25 @@ export class BienlocPage implements OnInit {
   }
   deleteResto() {
     this.data.deleteItem('biens', this.bien.id);
+  }
+  public async getDocs() {
+    const jay = await    firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid)
+    .get().then(( doc => doc.data().code));
+    return this.firestore
+      .collection<Docs>('documents', (ref) =>
+        ref
+          .where('code', '==', jay)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Docs;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
   }
 
 }

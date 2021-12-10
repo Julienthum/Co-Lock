@@ -48,28 +48,15 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title> Requetes de vos locataires</ion-card-title>
+      <ion-card-title> Envoyez une requete a votre propriétairen</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      Cette fonctionnalité vous permet de voir les différentes requetes faites par vos locataires.
+      Cette fonctionnalité vous permet d'envoyer une requete a votre propriétaire.
     </ion-card-content>
     <ion-button class="secondary_btn" expand="block" fill="outline">Ajouter une requete</ion-button>
   </ion-card>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title> Invitez des locataire à rejoindre votre bien</ion-card-title>
-      <ion-card-subtitle> {{ bien.code }}</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      Cette fonctionnalité vous permet de générer un ID/code
-      unique à transférer à votre locataire
-      afin qu'il puisse créer son compte et ainsi participer à la gestion de votre bien.
-    </ion-card-content>
 
-    <ion-button class="secondary_btn" expand="block" fill="outline" >Partager le code</ion-button>
-
-  </ion-card>
 
   <ion-card>
     <ion-card-header>
@@ -77,7 +64,7 @@
       <ion-card-subtitle> Toutes les infos à savoir concernant votre bien </ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      Cette fonctionnalité vous permet d'ajouter tous les documents utiles pour vos locataires.
+      Cette fonctionnalité vous permet de retrouver tous les documents utiles sur votre logement.
     </ion-card-content>
 
     <ion-card *ngFor="let doc of docs | async" (click)="lien(doc.url)">
