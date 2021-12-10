@@ -22,6 +22,7 @@ export class SignUpLocatairePage implements OnInit {
   state: 'propriétaire';
   essaieForm: FormGroup;
   mobile: string;
+  type: string;
 
   constructor(
     public formBuilder: FormBuilder,
@@ -46,9 +47,18 @@ export class SignUpLocatairePage implements OnInit {
 
   }
 
-  login(value){
+  login(){
+    const name = this.essaieForm.value.name;
+    const prenom = this.essaieForm.value.prenom;
+    const email = this.essaieForm.value.email;
+    const mobile = this.essaieForm.value.mobile;
+    const password = this.essaieForm.value.password;
+    const code = this.essaieForm.value.code;
+    const type = this.essaieForm.value.type;
     // eslint-disable-next-line max-len
-    const user = this.auth.createUserWithEmailAndPassword(value.email, value.password).then(cred => this.firestore.collection('users').doc(cred.user.uid).set(value));
+    const user = this.auth.createUserWithEmailAndPassword(email, password).then(cred => this.firestore.collection('users').doc(cred.user.uid).set({
+      name,prenom,email,mobile,code,type
+    }));
     this.router.navigate(['/login']);
     return { user };
     }

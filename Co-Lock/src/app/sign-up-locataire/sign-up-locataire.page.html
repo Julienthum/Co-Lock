@@ -18,7 +18,7 @@
 </ion-card>
 
 
-<form [formGroup]="essaieForm" (ngSubmit)="login(essaieForm.value)" novalidate>
+<form [formGroup]="essaieForm" (ngSubmit)="login()" novalidate>
   <div>
     <ion-item>
       <ion-input formControlName="name" type="text" required placeholder="Nom">
