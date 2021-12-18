@@ -7,6 +7,8 @@ import firebase from 'firebase/compat/app';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { getAuth, updateEmail, updatePassword } from 'firebase/auth';
 import { AlertController } from '@ionic/angular';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+
 
 const auth = getAuth();
 
@@ -19,14 +21,19 @@ export class ProfilinfoPage implements OnInit {
 
   users: Observable<any[]>;
   essaieForm: FormGroup;
+  location = 'photoID/';
+  barStatus = false;
+  url = '';
+  imageUploads = [];
 
   constructor(
     public formBuilder: FormBuilder,
     public firestore: AngularFirestore,
     public router: Router,
     private data: DataService,
-    public alertController: AlertController
-  ) {
+    public alertController: AlertController,
+    private angularFireStorage: AngularFireStorage
+    ) {
     this.users = this.data.getUser();
   }
 
@@ -124,6 +131,58 @@ export class ProfilinfoPage implements OnInit {
 
     await alert.present();
   }
+
+///// PHOTO DE PROFIL /////
+
+  imageName() {
+    const newTime = Math.floor(Date.now() / 1000);
+    const name = Math.floor(Math.random() * 20) + newTime;
+    return name;
+}
+
+  async storeImage(imageData: any) {
+    try {
+        const imageName = this.imageName();
+        return new Promise((resolve, reject) => {
+        const pictureRef = this.angularFireStorage.ref(this.location + imageName);
+        pictureRef
+        .put(imageData)
+        // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
+        .then(function() {
+        pictureRef.getDownloadURL().subscribe((url: any) => {
+        resolve(url);
+        });
+    })
+    .catch((error) => {
+        reject(error);
+    });
+    });
+    } catch (e) {}
+    }
+
+    uploadPhoto(event) {
+      this.barStatus = true;
+      this.storeImage(event.target.files[0]).then(
+          (res: any) => {
+              if (res) {
+                  this.url = res;
+                  console.log(this.url);
+                  this.imageUploads.unshift(res);
+                  this.barStatus = false;
+          }
+      },
+      (error: any) => {
+          this.barStatus = false;
+      }
+      );
+      }
+
+      async addMike(){ // ca ajoute un bien dans la collec biens et ca ajoute aussi l'uid dans les champs
+        const photoURL = {
+          photo : this.url
+        };
+        this.data.updateItem('users', firebase.auth().currentUser.uid, photoURL );
+      }
 
 
 }

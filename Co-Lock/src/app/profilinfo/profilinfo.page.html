@@ -11,12 +11,19 @@
 <ion-content *ngFor="let user of users | async">
 
   <ion-card>
+
+    <form [formGroup]="essaieForm" (ngSubmit)="addMike()" novalidate validationUserMessage>
+
     <ion-card-header> Modifier ma photo de profil </ion-card-header>
     <div class="photoProfil">
-      <img src="../../assets/user.png">
+      <img [src]="user.photo">
     </div>
 
-    <ion-button class="primary_btn" expand="block" fill="solid"> Modifier ma photo de profil</ion-button>
+    <ion-input type="file" (change)="uploadPhoto($event)" accept=".png,.jpg"> Choisir une nouvelle image. </ion-input>
+
+    <ion-button class="primary_btn" expand="block" fill="solid" type="submit"> Modifier ma photo de profil</ion-button>
+
+  </form>
 
   </ion-card>
 
