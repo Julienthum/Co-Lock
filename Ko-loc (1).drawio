@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-18T19:05:42.453Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="DMUHHFuKwd8ZJ49KT1LV" version="15.9.1" type="github" pages="20">
+<mxfile host="app.diagrams.net" modified="2021-12-18T19:14:27.200Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="Yf9DUcqmi01hJcUGvMsj" version="15.9.1" type="github" pages="20">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel dx="2555" dy="1188" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -675,7 +675,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="5GqL1yBt6GKVH9OxMdS_" name="Hiérarchie de l&#39;appli">
-    <mxGraphModel dx="2044" dy="2050" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1391" dy="1733" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="2PtMCe5UgdZqWsswR74V-0" />
         <mxCell id="2PtMCe5UgdZqWsswR74V-1" parent="2PtMCe5UgdZqWsswR74V-0" />
@@ -844,7 +844,7 @@
         <mxCell id="2PtMCe5UgdZqWsswR74V-72" value="Biens" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="2PtMCe5UgdZqWsswR74V-1" source="2PtMCe5UgdZqWsswR74V-41" target="2PtMCe5UgdZqWsswR74V-70" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2PtMCe5UgdZqWsswR74V-73" value="Plaintes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="2PtMCe5UgdZqWsswR74V-1" source="2PtMCe5UgdZqWsswR74V-41" target="2PtMCe5UgdZqWsswR74V-67" edge="1">
+        <mxCell id="2PtMCe5UgdZqWsswR74V-73" value="Requêtes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="2PtMCe5UgdZqWsswR74V-1" source="2PtMCe5UgdZqWsswR74V-41" target="2PtMCe5UgdZqWsswR74V-67" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="580" y="500" />
