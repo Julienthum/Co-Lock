@@ -1,26 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>profilinfo</ion-title>
+    <ion-title> Profil </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content *ngFor="let user of users | async">
 
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <div class="photoProfil">
-          <img src="../../assets/user.png">
-        </div>
-      </ion-col>
-          Modifier vos informations
-      <ion-col>
-        <ion-header> </ion-header>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-card>
+    <ion-card-header> Modifier ma photo de profil </ion-card-header>
+    <div class="photoProfil">
+      <img src="../../assets/user.png">
+    </div>
 
-  <form [formGroup]="essaieForm" (ngSubmit)="uptadeItem()" novalidate validationUserMessage>
+    <ion-button class="primary_btn" expand="block" fill="solid"> Modifier ma photo de profil</ion-button>
+
+  </ion-card>
+
+
+
+  <ion-card>
+
+  <ion-card-header> Modifier vos informations </ion-card-header>
+
+  <form [formGroup]="essaieForm" (ngSubmit)="uptadeInfo()" novalidate validationUserMessage>
     <div>
       <ion-item>
         <ion-input formControlName="name" type="text" [value]="user.name" required [placeholder]="user.name">
@@ -45,6 +51,45 @@
     <ion-button class="primary_btn" expand="block" fill="solid" type="submit">Modifier les informations</ion-button>
 
   </form>
+
+  </ion-card>
+
+
+  <ion-card>
+
+    <ion-card-header> Modifier votre adresse email</ion-card-header>
+
+    <form [formGroup]="essaieForm" (ngSubmit)="presentAlertConfirmEmail()" novalidate validationUserMessage>
+
+      <ion-item>
+        <ion-input formControlName="email" type="text" required [placeholder]="user.email">
+        </ion-input>
+      </ion-item>
+
+      <ion-button class="primary_btn" expand="block" fill="solid" type="submit">Modifier l'email</ion-button>
+
+    </form>
+
+  </ion-card>
+
+
+  <ion-card>
+
+    <ion-card-header> Modifier votre mot de passe </ion-card-header>
+
+
+    <form [formGroup]="essaieForm" (ngSubmit)="presentAlertConfirmPassword()" novalidate validationUserMessage>
+
+      <ion-item>
+        <ion-input formControlName="password" type="password" required placeholder="***********">
+        </ion-input>
+      </ion-item>
+
+      <ion-button class="primary_btn" expand="block" fill="solid" type="submit">Modifier le mot de passe</ion-button>
+
+    </form>
+
+  </ion-card>
 
 
 </ion-content>

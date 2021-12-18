@@ -42,7 +42,7 @@ export class LoginPage implements OnInit {
 
       firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).get().then(( doc => {
         if( doc.data().type === 'P'){
-          this.router.navigate(['/navbar/acceuil']);
+          this.router.navigate(['/navbar/mesbiens']);
         }
         else{
           this.router.navigate(['/navbar-loc/acceuil']);
