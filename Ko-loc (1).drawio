@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-12-18T18:56:20.959Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="GSdC_abtmuzcDKXJ4B7z" version="15.9.1" type="github" pages="20">
+<mxfile host="app.diagrams.net" modified="2021-12-18T19:05:42.453Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="DMUHHFuKwd8ZJ49KT1LV" version="15.9.1" type="github" pages="20">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel dx="2555" dy="1188" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -237,7 +237,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Schéma intermédiaire" id="t6icahTjTsWDdCiCCuJ4">
-    <mxGraphModel dx="1460" dy="679" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="2086" dy="950" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="m6CoEwEthxMjb2-2efVb-0" />
         <mxCell id="m6CoEwEthxMjb2-2efVb-1" parent="m6CoEwEthxMjb2-2efVb-0" />
@@ -543,7 +543,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="qhDhASbXid03h3KdfV4-" name="Schéma relationnel">
-    <mxGraphModel dx="2555" dy="1188" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="2608" dy="1188" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="MGNAUimHkOiYEwmKtxIL-0" />
         <mxCell id="MGNAUimHkOiYEwmKtxIL-1" parent="MGNAUimHkOiYEwmKtxIL-0" />
@@ -658,12 +658,18 @@
         </mxCell>
         <mxCell id="m_0HQkUbb6ww3j28qL1H-4" value="" style="endArrow=classic;html=1;rounded=0;" parent="MGNAUimHkOiYEwmKtxIL-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1870" y="260" as="sourcePoint" />
+            <mxPoint x="1870" y="290" as="sourcePoint" />
             <mxPoint x="2050" y="480" as="targetPoint" />
             <Array as="points">
               <mxPoint x="1870" y="480" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="IraJxtvDSkDhVPmmI39P-0" value="requête" style="swimlane;fontSize=18;align=center;" vertex="1" parent="MGNAUimHkOiYEwmKtxIL-1">
+          <mxGeometry x="2338" y="526" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="IraJxtvDSkDhVPmmI39P-1" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;span&gt;Date&amp;nbsp;&lt;/span&gt;&lt;b&gt;int&lt;br&gt;&lt;/b&gt;&lt;span&gt;statut&amp;nbsp;&lt;/span&gt;&lt;b&gt;string&lt;/b&gt;&lt;br&gt;&lt;span&gt;Photos&lt;/span&gt;&lt;br&gt;&lt;span&gt;Vidéos&lt;/span&gt;&lt;br&gt;&lt;span&gt;Description&amp;nbsp;&lt;/span&gt;&lt;b&gt;string&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="IraJxtvDSkDhVPmmI39P-0">
+          <mxGeometry x="20" y="64" width="160" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
