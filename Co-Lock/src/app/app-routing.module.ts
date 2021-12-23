@@ -111,7 +111,10 @@ const routes: Routes = [
     path: 'navbar-loc',
     loadChildren: () => import('./navbar-loc/navbar-loc.module').then( m => m.NavbarLocPageModule)
   },
-
+  {
+    path: 'indexation',
+    loadChildren: () => import('./indexation/indexation.module').then( m => m.IndexationPageModule)
+  },
 
 ];
 
