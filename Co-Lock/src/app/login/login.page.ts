@@ -45,7 +45,7 @@ export class LoginPage implements OnInit {
           this.router.navigate(['/navbar/mesbiens']);
         }
         else{
-          this.router.navigate(['/navbar-loc/acceuil']);
+          this.router.navigate(['/navbar-loc/bienloc']);
         }
       }));
 
