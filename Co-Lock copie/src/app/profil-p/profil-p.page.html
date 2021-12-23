@@ -31,6 +31,52 @@
 </div>
 </div>
 
+<ion-card>
+  <img src="assets/calculatrice.png"/>
+  <ion-card-header>
+    <ion-card-title>Indexation</ion-card-title>
+    <ion-card-subtitle>Calculez votre indexation</ion-card-subtitle>
+  </ion-card-header>
+  
+
+  <ion-card-content>
+   L'application Co-Lock vous propose de calculer directement l'indexation de votre loyer via notre outil que vous retrouverez ci-dessous. Il vous suffira ainsi d'insérer " le loyer actuel ", "l'indice actuel " et " l'indice précédent ".
+  </ion-card-content>
+
+  <ion-item lines="none">
+    <ion-input placeholder="Entrez votre loyer actuel" [(ngModel)]="loyer" type="number"></ion-input>
+ </ion-item>
+ <ion-item lines="none">
+      <ion-input placeholder="Entrez l'indice actuel" [(ngModel)]="indiceActuel" type="number"></ion-input>
+ </ion-item>
+ <ion-item lines="none">
+  <ion-input placeholder="Entrez l'indice précédent" [(ngModel)]="indicePrecedent" type="number"></ion-input>
+</ion-item>
+
+<ion-item color="light" *ngIf= "operation==true">{{result.toFixed(2)}}</ion-item>
+
+<ion-button  (click)="calcul()" expand="block" color="light" class="add-button">
+  <ion-icon name="calculator" slot="start"></ion-icon>
+  Calculer l'indexation
+</ion-button>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Consulter vos indices</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+Afin de pouvoir calculer votre indexation veuillez au préalable consulter les indices santé afin de les inscrire dans le calculateur qui vous donnera le montant de l'indexation.
+  </ion-card-content>
+  <ion-button (click)="consulterIndices(urlIndice)" expand="block" color="dark" class="add-button">
+    Consulter les indices
+  </ion-button>
+</ion-card>
+
+
+
+
+ 
 
 <h2><b>Mon compte</b></h2>
 <ion-card>
