@@ -17,16 +17,16 @@
 
      </div>
 
+    </div>
+    <div class="flex">
+    <div class="bordureVerte">
+    <div class="bordureBlanche">
+    <div class="photoProfil">
+      <img [src]="user.photo">
+    </div>
   </div>
-  <div class="flex">
-  <div class="bordureVerte">
-  <div class="bordureBlanche">
-  <div class="photoProfil">
-    <img src="../../assets/user.png">
   </div>
-</div>
-</div>
-</div>
+  </div>
 
 <ion-card>
   <ion-card-header> Mon compte </ion-card-header>
@@ -42,23 +42,18 @@
   </ion-grid>
 </ion-card>
 
-<ion-card>
-  <ion-card-header> Ma location </ion-card-header>
-  <ion-item> (autre choose) nombre de biens enregistrés {{ user.name }} {{ user.prenom }} </ion-item>
-  <ion-item> {{ user.mail }} </ion-item>
-  <ion-item> ( autre chose ) Nombre de locataire  </ion-item>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-button class="update_btn" > Modifier </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+<ion-card *ngFor="let p of prop | async">
+  <ion-card-header> Information de votre propriétaire </ion-card-header>
+  <ion-item> {{ p.name }} {{ p.prenom }} </ion-item>
+  <ion-card-subtitle> Comment contacter votre propriétaire ? </ion-card-subtitle>
+  <ion-item> {{ p.email }} </ion-item>
+  <ion-item>  {{ p.mobile }} </ion-item>
+
 </ion-card>
 
 <ion-button class="secondary_btn" expand="block" fill="outline" (click)='signOut()'>Se déconnecter</ion-button>
 
-<ion-button class="secondary_btn" expand="block" fill="outline" (click)='deleteUser()' routerLink='/'>Supprimer le compte</ion-button>
+<ion-button class="primary_btn" expand="block" fill="outline" (click)='deleteUser()' routerLink='/'>Supprimer le compte</ion-button>
 
 
 
