@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Document </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="docs">
+
+  <ion-card>
+
+  <ion-card-header> Modifier vos informations </ion-card-header>
+
+  <form [formGroup]="essaieForm" (ngSubmit)="uptadeInfo()" novalidate validationUserMessage>
+    <div>
+      <ion-item>
+        <ion-input formControlName="name" type="text" [value]="docs.name" required placeholder="Modifier le titre de votre document">
+          <ion-icon name="happy-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input formControlName="description" type="text" required placeholder="Modifier la description de votre document">
+          <ion-icon name="happy-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+    </div>
+
+    <ion-button class="primary_btn" expand="block" fill="solid" type="submit">Modifier les informations</ion-button>
+
+  </form>
+
+  </ion-card>
+
+  <ion-button class="primary_btn" expand="block" fill="solid" (click)="deleteResto()">Supprimer le document</ion-button>
+
+
+
+</ion-content>

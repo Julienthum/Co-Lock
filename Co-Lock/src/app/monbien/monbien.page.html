@@ -90,10 +90,10 @@
       Cette fonctionnalité vous permet d'ajouter tous les documents utiles pour vos locataires.
     </ion-card-content>
 
-    <ion-card *ngFor="let doc of docs | async" (click)="lien(doc.url)">
+    <ion-card *ngFor="let doc of docs | async" [routerLink]="'../../docinfo/' + doc.id" >
       <img [src]= 'doc.url' class="docpres">
       <ion-card-header>
-        <ion-card-title> {{ doc.name }}</ion-card-title>
+        <ion-card-title> {{ doc.name }} </ion-card-title>
         <ion-card-subtitle> {{ doc.description }} </ion-card-subtitle>
       </ion-card-header>
     </ion-card>

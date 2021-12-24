@@ -12,7 +12,7 @@
 <form [formGroup]="essaieForm" (ngSubmit)="addMike()" novalidate>
 
     <ion-item>
-      <ion-input class='image' formControlName="image" placeholder="Ajouter une image"></ion-input>
+      <ion-input type="file" class='image' formControlName="image" placeholder="Ajouter une image" (change)="uploadPhoto($event)" accept=".png,.jpg"></ion-input>
     </ion-item>
 
     <ion-text> Description du bien </ion-text>

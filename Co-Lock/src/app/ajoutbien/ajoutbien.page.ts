@@ -8,6 +8,7 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 
 @Component({
   selector: 'app-ajoutbien',
@@ -16,7 +17,14 @@ import 'firebase/auth';
 })
 export class AjoutbienPage implements OnInit {
 
+
+  location = 'photoBien/';
+  barStatus = false;
+  url = '';
+  imageUploads = [];
+
   users: Observable<any[]>;
+
   firebaseData = {
     nomDuBien: '',
     description: '',
@@ -39,6 +47,7 @@ export class AjoutbienPage implements OnInit {
     // eslint-disable-next-line @typescript-eslint/no-shadow
     public alertController: AlertController,
     public formBuilder: FormBuilder,
+    private angularFireStorage: AngularFireStorage
   ) {
     this.users = this.firestore.collection('biens').valueChanges();
   }
@@ -102,7 +111,7 @@ export class AjoutbienPage implements OnInit {
     const superficie = this.essaieForm.value.superficie;
     const nbrePlace = this.essaieForm.value.nbrePlace;
     const prix = this.essaieForm.value.prix;
-    const image = this.essaieForm.value.image;
+    const image = this.url;
     const code = this.idGenerator();
     this.firestore.collection('biens').add({
       moi,
@@ -122,4 +131,48 @@ export class AjoutbienPage implements OnInit {
 
     console.log('ca marche');
   }
+
+  imageName() {
+    const newTime = Math.floor(Date.now() / 1000);
+    const name = Math.floor(Math.random() * 20) + newTime;
+    return name;
+}
+
+  async storeImage(imageData: any) {
+    try {
+        const imageName = this.imageName();
+        return new Promise((resolve, reject) => {
+        const pictureRef = this.angularFireStorage.ref(this.location + imageName);
+        pictureRef
+        .put(imageData)
+        // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
+        .then(function() {
+        pictureRef.getDownloadURL().subscribe((url: any) => {
+        resolve(url);
+        });
+    })
+    .catch((error) => {
+        reject(error);
+    });
+    });
+    } catch (e) {}
+    }
+
+    uploadPhoto(event) {
+      this.barStatus = true;
+      this.storeImage(event.target.files[0]).then(
+          (res: any) => {
+              if (res) {
+                  this.url = res;
+                  console.log(this.url);
+                  this.imageUploads.unshift(res);
+                  this.barStatus = false;
+          }
+      },
+      (error: any) => {
+          this.barStatus = false;
+      }
+      );
+      }
+
 }

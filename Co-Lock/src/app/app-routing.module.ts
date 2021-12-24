@@ -115,6 +115,11 @@ const routes: Routes = [
     path: 'indexation',
     loadChildren: () => import('./indexation/indexation.module').then( m => m.IndexationPageModule)
   },
+  {
+    path: 'docinfo/:id',
+    loadChildren: () => import('./docinfo/docinfo.module').then( m => m.DocinfoPageModule)
+  },
+
 
 ];
 
