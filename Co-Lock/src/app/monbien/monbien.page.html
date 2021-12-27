@@ -53,6 +53,16 @@
     <ion-card-content>
       Cette fonctionnalité vous permet de voir les différentes requetes faites par vos locataires.
     </ion-card-content>
+
+    <ion-list *ngFor="let r of req | async" [routerLink]="'../../requeteinfo/' + r.id" >
+      <ion-item [class]="r.etat" >
+        <ion-label>
+          <h2>{{r.nom}} </h2>
+          <p> {{r.description}} </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
     <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/requetes" >Ajouter une requete</ion-button>
   </ion-card>
 

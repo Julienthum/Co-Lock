@@ -20,6 +20,7 @@ import { Share } from '@capacitor/share';
 export class MonbienPage implements OnInit {
 
   docs: Observable<any[]>;
+  req: Observable<any[]>;
 
   bien;
   idBien;
@@ -36,7 +37,8 @@ export class MonbienPage implements OnInit {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
     this.data.getRestoByKey(id).subscribe((res) => (this.bien = res));
     this.data.getDocId(id);
-    this.docs = this.data.getDocs();
+    this.docs = this.data.getDocs('documents');
+    this.req = this.data.getDocs('requetes');
   }
 
   deleteResto() {

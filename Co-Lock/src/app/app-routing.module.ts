@@ -119,6 +119,15 @@ const routes: Routes = [
     path: 'docinfo/:id',
     loadChildren: () => import('./docinfo/docinfo.module').then( m => m.DocinfoPageModule)
   },
+  {
+    path: 'requeteinfo/:id',
+    loadChildren: () => import('./requeteinfo/requeteinfo.module').then( m => m.RequeteinfoPageModule)
+  },  {
+    path: 'notif',
+    loadChildren: () => import('./notif/notif.module').then( m => m.NotifPageModule)
+  },
+
+
 
 
 ];

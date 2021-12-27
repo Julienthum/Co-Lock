@@ -1,0 +1,26 @@
+ion-card{
+  width: 90%;
+  margin: 5%;
+  border-radius: 15px;
+}
+
+.Nouveau{
+  --ion-item-background: #C6FFCA;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 10px;
+}
+
+.En.cours{
+  --ion-item-background: #FFEBC0;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 10px;
+}
+
+.Terminée{
+  --ion-item-background: #FFEAE7;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 10px;
+}

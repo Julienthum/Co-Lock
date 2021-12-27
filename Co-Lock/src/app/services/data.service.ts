@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFirestore, validateEventsArray } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators';
 import { observable, Observable } from 'rxjs';
 import firebase from 'firebase/compat/app';
@@ -97,6 +97,14 @@ export class DataService {
       .valueChanges({ idField: 'id' });
    }
 
+   public getReqByKey(key) {
+    return this.firestore
+      .collection('requetes')
+      .doc(key)
+      .valueChanges({ idField: 'id' });
+   }
+
+
 
 // eslint-disable-next-line @typescript-eslint/member-ordering
 nbrbien = 0;
@@ -175,29 +183,11 @@ nbrbien = 0;
     console.log(this.docId);
   }
 
-  public getDocs(): Observable<Docs[]> {
+  public getDocs(doc): Observable<Docs[]> {
     return this.firestore
-      .collection<Docs>('documents', (ref) =>
+      .collection<Docs>(doc, (ref) =>
         ref
           .where('idBien', '==', this.docId)
-      )
-      .snapshotChanges()
-      .pipe(
-        map((actions) =>
-          actions.map((a) => {
-            const data = a.payload.doc.data() as Docs;
-            const id = a.payload.doc.id;
-            return { id, ...data };
-          })
-        )
-      );
-  }
-
-  test(v): Observable<Docs[]> {
-    return this.firestore
-      .collection<Docs>('documents', (ref) =>
-        ref
-          .where(ref.id , '==', v)
       )
       .snapshotChanges()
       .pipe(

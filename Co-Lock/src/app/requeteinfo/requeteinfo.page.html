@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>requeteinfo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="req">
+
+  <ion-card>
+    <ion-card-header> {{req.nom}} </ion-card-header>
+    <ion-card-subtitle> Statut : {{req.etat}}  </ion-card-subtitle>
+    <ion-card-content>
+      <ion-item> {{req.description}}</ion-item>
+    </ion-card-content>
+
+    <p>
+      <ion-chip (click)="statutNew()">
+        <ion-label>Nouveau</ion-label>
+      </ion-chip>
+
+      <ion-chip (click)="statutWorking()">
+        <ion-avatar>
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjYzVkYmZmIiBkPSJNMCAwaDUxMnY1MTJIMHoiLz48cGF0aCBkPSJNMjU2IDMwNGM2MS42IDAgMTEyLTUwLjQgMTEyLTExMlMzMTcuNiA4MCAyNTYgODBzLTExMiA1MC40LTExMiAxMTIgNTAuNCAxMTIgMTEyIDExMnptMCA0MGMtNzQuMiAwLTIyNCAzNy44LTIyNCAxMTJ2NTZoNDQ4di01NmMwLTc0LjItMTQ5LjgtMTEyLTIyNC0xMTJ6IiBmaWxsPSIjODJhZWZmIi8+PC9zdmc+"
+          />
+        </ion-avatar>
+        <ion-label>En cours</ion-label>
+      </ion-chip>
+
+      <ion-chip (click)="statutFinish()">
+        <ion-icon name="checkmark-circle"></ion-icon>
+        <ion-label>Terminée</ion-label>
+      </ion-chip>
+
+    </p>
+
+  </ion-card>
+
+
+</ion-content>
