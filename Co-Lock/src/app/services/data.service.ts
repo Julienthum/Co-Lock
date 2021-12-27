@@ -6,7 +6,7 @@ import { observable, Observable } from 'rxjs';
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 import { getAuth, deleteUser } from 'firebase/auth';
-import { updateDoc } from 'firebase/firestore';
+import { refEqual, updateDoc } from 'firebase/firestore';
 
 
 export interface Biens {
@@ -90,6 +90,13 @@ export class DataService {
       .doc(key)
       .valueChanges({ idField: 'id' });
    }
+   public getDocByKey(key) {
+    return this.firestore
+      .collection('documents')
+      .doc(key)
+      .valueChanges({ idField: 'id' });
+   }
+
 
 // eslint-disable-next-line @typescript-eslint/member-ordering
 nbrbien = 0;
@@ -173,6 +180,24 @@ nbrbien = 0;
       .collection<Docs>('documents', (ref) =>
         ref
           .where('idBien', '==', this.docId)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Docs;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
+  }
+
+  test(v): Observable<Docs[]> {
+    return this.firestore
+      .collection<Docs>('documents', (ref) =>
+        ref
+          .where(ref.id , '==', v)
       )
       .snapshotChanges()
       .pipe(
