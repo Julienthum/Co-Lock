@@ -8,42 +8,42 @@
   <ion-card>
     <ion-card-header> Nouvelles requetes de vos locataires </ion-card-header>
 
-    <ion-list >
-      <ion-item >
+    <ion-list *ngFor="let req of newReqs | async" [routerLink]="'../../requeteinfo/' + req.id" >
+      <ion-item [class]="req.etat" >
         <ion-label>
-          <h2></h2>
-          <p>  </p>
+          <h2>{{req.nom}} </h2>
+          <h3> {{req.bienName}} </h3>
+          <p> {{req.description}} </p>
         </ion-label>
       </ion-item>
     </ion-list>
-
   </ion-card>
 
 <ion-card>
   <ion-card-header> Requetes en cours de traitements </ion-card-header>
-  <ion-list >
-    <ion-item >
+
+  <ion-list *ngFor="let req of inprogressReqs | async" [routerLink]="'../../requeteinfo/' + req.id" >
+    <ion-item [class]="req.etat" >
       <ion-label>
-        <h2></h2>
-        <p> </p>
+        <h2>{{req.nom}} </h2>
+        <h3> {{req.bienName}} </h3>
+        <p> {{req.description}} </p>
       </ion-label>
     </ion-item>
-
   </ion-list>
-
 </ion-card>
 
 <ion-card>
   <ion-card-header> Historique de vos requetes </ion-card-header>
-  <ion-list >
-    <ion-item  >
+  <ion-list *ngFor="let req of finishReqs | async" [routerLink]="'../../requeteinfo/' + req.id" >
+    <ion-item [class]="req.etat" >
       <ion-label>
-        <h2></h2>
-        <p> </p>
+        <h2>{{req.nom}} </h2>
+        <h3> {{req.bienName}} </h3>
+        <p> {{req.description}} </p>
       </ion-label>
     </ion-item>
   </ion-list>
-
 </ion-card>
 
 </ion-content>

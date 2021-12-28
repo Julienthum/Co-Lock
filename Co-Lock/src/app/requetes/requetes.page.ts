@@ -4,6 +4,8 @@ import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 import { Observable } from 'rxjs';
 import { DataService } from '../services/data.service';
+import { getFirestore } from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 
 @Component({
   selector: 'app-requetes',
@@ -17,6 +19,10 @@ export class RequetesPage implements OnInit {
   description: string;
   etat: boolean;
   addreq: boolean;
+  user;
+  idProprio;
+  nameProprio;
+  bienName;
 
 
   constructor(
@@ -33,7 +39,11 @@ export class RequetesPage implements OnInit {
       description: this.description,
       etat: 'Nouveau',
       idBien: this.data.docId,
-      auteur: firebase.auth().currentUser.uid
+      auteur: firebase.auth().currentUser.uid,
+      idProprio: this.idProprio,
+      nameProprio: this.nameProprio,
+      bienName: this.bienName,
+      crea: firebase.firestore.FieldValue.serverTimestamp()
     });
 //ces deux lignes permettent de vider le champ après chaque ajout
     this.nom ='';
@@ -48,6 +58,18 @@ export class RequetesPage implements OnInit {
    }
 
   ngOnInit() {
+    this.getInfo();
   }
+
+    public  async  getInfo() {
+    const bien = await firebase.firestore().collection('biens').doc(this.data.docId)
+    .get().then(( ref => ref.data()));
+    const userName = await firebase.firestore().collection('users').doc(bien.moi)
+    .get().then(( ref => ref.data()));
+    this.bienName = bien.name;
+    this.idProprio = bien.moi;
+    this.nameProprio = userName.name + ' ' + userName.prenom;
+  }
+
 
 }

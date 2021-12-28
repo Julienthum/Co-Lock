@@ -22,7 +22,7 @@
   <ion-item lines="none">
   <ion-input placeholder="Décrivez votre requête" [(ngModel)]="description" type="text"></ion-input>
   </ion-item>
-  
+
   </div>
 
   <ion-button *ngIf="addreq"(click)="addRequete()" expand="block" color="light" >
@@ -34,7 +34,7 @@
     <ion-icon name="add" slot="start"></ion-icon>
     Ajouter une requête
   </ion-button>
-  
+
   <ion-button *ngIf="addreq" (click)="showFormulaire()" expand="block" color="danger" class="add-button">
     <ion-icon name="close" slot="start"></ion-icon>
     Annuler l'ajout de la requête

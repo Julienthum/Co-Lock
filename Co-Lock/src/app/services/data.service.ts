@@ -40,6 +40,19 @@ export interface Docs {
   description: string;
 }
 
+export interface Req {
+  nom: string;
+  description: string;
+  etat: string;
+  idBien: string;
+  auteur: string;
+  idProprio: string;
+  nameProprio: string;
+  crea: Date;
+  inprogress: Date;
+  finish: Date;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -83,6 +96,13 @@ export class DataService {
       }
 
 /////////////////  Modification des documents  /////////////////////////
+
+  public getUserByKey(key) {
+    return this.firestore
+      .collection('users')
+      .doc(key)
+      .valueChanges({ idField: 'id' });
+  }
 
   public getRestoByKey(key) {
     return this.firestore
@@ -194,6 +214,45 @@ nbrbien = 0;
         map((actions) =>
           actions.map((a) => {
             const data = a.payload.doc.data() as Docs;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
+  }
+
+  ////////// Requetes //////////
+
+  public getReq(type): Observable<Req[]> {
+    return this.firestore
+      .collection<Req>('requetes', (ref) =>
+        ref
+          .where('idProprio', '==', firebase.auth().currentUser.uid)
+          .where('etat', '==', type)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Req;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
+  }
+
+  public getReqType(type): Observable<Req[]> {
+    return this.firestore
+      .collection<Req>('requetes', (ref) =>
+        ref
+          .where('etat', '==', type),
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Req;
             const id = a.payload.doc.id;
             return { id, ...data };
           })

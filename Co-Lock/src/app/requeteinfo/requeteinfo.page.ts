@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../services/data.service';
-
+import firebase from 'firebase/compat/app';
 
 @Component({
   selector: 'app-requeteinfo',
@@ -25,21 +25,23 @@ export class RequeteinfoPage implements OnInit {
 
   statutNew(){
     const newItem = {
-      etat: 'Nouveau'
+      etat: 'Nouveau',
     };
     this.data.updateItem('requetes', this.req.id, newItem );
   }
 
   statutWorking(){
     const newItem = {
-      etat: 'En cours'
+      etat: 'En cours',
+      inprogress: firebase.firestore.FieldValue.serverTimestamp()
     };
     this.data.updateItem('requetes', this.req.id, newItem );
   }
 
   statutFinish(){
     const newItem = {
-      etat: 'Terminée'
+      etat: 'Terminée',
+      finish: firebase.firestore.FieldValue.serverTimestamp()
     };
     this.data.updateItem('requetes', this.req.id, newItem );
   }
