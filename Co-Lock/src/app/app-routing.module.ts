@@ -122,9 +122,14 @@ const routes: Routes = [
   {
     path: 'requeteinfo/:id',
     loadChildren: () => import('./requeteinfo/requeteinfo.module').then( m => m.RequeteinfoPageModule)
-  },  {
+  },
+  {
     path: 'notif',
     loadChildren: () => import('./notif/notif.module').then( m => m.NotifPageModule)
+  },
+  {
+    path: 'infoloc/:id',
+    loadChildren: () => import('./infoloc/infoloc.module').then( m => m.InfolocPageModule)
   },
 
 

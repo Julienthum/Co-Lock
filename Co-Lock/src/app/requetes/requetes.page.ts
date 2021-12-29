@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { DataService } from '../services/data.service';
 import { getFirestore } from 'firebase/firestore';
 import { doc, getDoc } from 'firebase/firestore';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-requetes',
@@ -29,6 +30,7 @@ export class RequetesPage implements OnInit {
   constructor(
     public firestore: AngularFirestore,
     public data: DataService,
+    public alertController: AlertController,
   ) {
    this.items = this.firestore.collection('requetes').valueChanges();
    }
@@ -47,16 +49,7 @@ export class RequetesPage implements OnInit {
       authorName: this.authorName,
       crea: firebase.firestore.FieldValue.serverTimestamp()
     });
-//ces deux lignes permettent de vider le champ après chaque ajout
-    this.nom ='';
-    this.description='';
-   }
-
-
-   showFormulaire(){
-     this.addreq=!this.addreq;
-     this.nom ='';
-     this.description='';
+    this.ajout();
    }
 
   ngOnInit() {
@@ -74,6 +67,17 @@ export class RequetesPage implements OnInit {
     this.idProprio = bien.moi;
     this.nameProprio = propName.name + ' ' + propName.prenom;
     this.authorName = author.name + ' ' + author.prenom;
+  }
+
+  async ajout(){
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Requete ajoutée !',
+      message: 'Votre requete a correctement été ajouté.',
+      buttons: ['Continuer']
+    });
+
+    await alert.present();
   }
 
 

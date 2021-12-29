@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Informations de votre locataire</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="loc">
+  <div class="header">
+    <h2 class="nomPropriétaire"> {{loc.prenom}} {{loc.name}}</h2>
+
+    </div>
+    <div class="flex">
+    <div class="bordureVerte">
+    <div class="bordureBlanche">
+    <div class="photoProfil">
+      <img [src]="loc.photo">
+    </div>
+  </div>
+  </div>
+  </div>
+
+<ion-card>
+  <ion-card-header> Information de votre locataire </ion-card-header>
+  <ion-item> Nom : {{ loc.name }} </ion-item>
+  <ion-item> Prénom : {{ loc.prenom }}</ion-item>
+  <ion-item> Email : {{ loc.email }} </ion-item>
+  <ion-item> Tel : {{ loc.mobile }} </ion-item>
+
+</ion-card>
+
+
+</ion-content>

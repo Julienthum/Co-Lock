@@ -240,14 +240,14 @@ nbrbien = 0;
       );
   }
 
-  ////////// Optenir les lcoataires ////////////
+  ////////// Optenir les locataires ////////////
 
   public getLoc(code): Observable<Users[]> {
     return this.firestore
       .collection<Users>('users', (ref) =>
         ref
-          .where('code', '==', code)
           .where('type', '==', 'L')
+          .where('code', '==', code)
       )
       .snapshotChanges()
       .pipe(

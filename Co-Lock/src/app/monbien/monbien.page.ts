@@ -5,7 +5,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 import { DataService } from '../services/data.service';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 import { Share } from '@capacitor/share';
 
@@ -36,7 +36,7 @@ export class MonbienPage implements OnInit {
     private data: DataService,
   ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
     this.data.getRestoByKey(id).subscribe((res) => (this.bien = res));
     this.data.getDocId(id);
@@ -44,6 +44,9 @@ export class MonbienPage implements OnInit {
     this.newReqs = this.data.getReq('Nouveau');
     this.inprogressReqs = this.data.getReq('En cours');
     this.finishReqs = this.data.getReq('Terminée');
+    const code = await firebase.firestore().collection('biens').doc(id)
+    .get().then(( doc => doc.data().code));
+    this.loc = this.data.getLoc(code);
   }
 
   deleteResto() {
