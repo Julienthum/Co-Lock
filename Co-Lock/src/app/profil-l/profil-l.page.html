@@ -42,12 +42,12 @@
   </ion-grid>
 </ion-card>
 
-<ion-card *ngFor="let p of prop | async">
+<ion-card >
   <ion-card-header> Information de votre propriétaire </ion-card-header>
-  <ion-item> {{ p.name }} {{ p.prenom }} </ion-item>
+  <ion-item> {{ typena }} {{ typepr }} </ion-item>
   <ion-card-subtitle> Comment contacter votre propriétaire ? </ion-card-subtitle>
-  <ion-item> {{ p.email }} </ion-item>
-  <ion-item>  {{ p.mobile }} </ion-item>
+  <ion-item> {{ typeem }} </ion-item>
+  <ion-item>  {{ typemo }} </ion-item>
 
 </ion-card>
 

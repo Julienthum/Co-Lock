@@ -63,11 +63,6 @@ export class BienlocPage implements OnInit {
     this.docs = await this.getDocs();
 
 
-    if( await this.donnee() === 'LO-5077-7957-C'){// blc
-      console.log( await this.donnee());
-      return await this.donnee();
-    } else { console.log('ca marche pas ptn ');
-    }
 
 
 
