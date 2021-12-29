@@ -20,7 +20,11 @@ import { Share } from '@capacitor/share';
 export class MonbienPage implements OnInit {
 
   docs: Observable<any[]>;
-  req: Observable<any[]>;
+  newReqs: Observable<any[]>;
+  inprogressReqs: Observable<any[]>;
+  finishReqs: Observable<any[]>;
+
+  loc: Observable<any[]>;
 
   bien;
   idBien;
@@ -30,7 +34,6 @@ export class MonbienPage implements OnInit {
     public firestore: AngularFirestore,
     private activatedRoute: ActivatedRoute,
     private data: DataService,
-    private http: HttpClient
   ) { }
 
   ngOnInit() {
@@ -38,7 +41,9 @@ export class MonbienPage implements OnInit {
     this.data.getRestoByKey(id).subscribe((res) => (this.bien = res));
     this.data.getDocId(id);
     this.docs = this.data.getDocs('documents');
-    this.req = this.data.getDocs('requetes');
+    this.newReqs = this.data.getReq('Nouveau');
+    this.inprogressReqs = this.data.getReq('En cours');
+    this.finishReqs = this.data.getReq('Terminée');
   }
 
   deleteResto() {

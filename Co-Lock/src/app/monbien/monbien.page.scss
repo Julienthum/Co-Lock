@@ -64,21 +64,24 @@ ion-card-subtitle{
 }
 
 .Nouveau{
-  --ion-item-background: #C6FFCA;
+  --ion-item-background: rgba(44, 211, 111, 0.15);
+  color: rgba(44, 211, 111, 1);
   margin-left: 5%;
   margin-right: 5%;
   border-radius: 10px;
 }
 
 .En.cours{
-  --ion-item-background: #FFEBC0;
+  --ion-item-background: rgba(254,196,9,0.15);
+  color: rgba(254,196,9,1);
   margin-left: 5%;
   margin-right: 5%;
   border-radius: 10px;
 }
 
 .Terminée{
-  --ion-item-background: #FFEAE7;
+  --ion-item-background: rgba(235,69,90,0.15);
+  color: rgb(235,69,90);
   margin-left: 5%;
   margin-right: 5%;
   border-radius: 10px;

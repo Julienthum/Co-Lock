@@ -11,6 +11,7 @@ import firebase from 'firebase/compat/app';
 export class RequeteinfoPage implements OnInit {
 
   req;
+  auteur;
 
   constructor(
     public router: Router,

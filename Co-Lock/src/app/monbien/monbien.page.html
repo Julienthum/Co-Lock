@@ -1,5 +1,6 @@
 <ion-header>
   <ion-toolbar>
+    <ion-title>Mon bien</ion-title>
     <ion-buttons slot="start">
       <ion-back-button>
       </ion-back-button>
@@ -35,6 +36,11 @@
   </ion-card>
 
   <ion-card>
+    <ion-card-title> Mes locataires </ion-card-title>
+    <ion-content *ngFor="let l of loc | async"> {{l.prenom}} </ion-content>
+  </ion-card>
+
+  <ion-card>
     <ion-item>
       <ion-icon name="notifications-outline" slot="start" ></ion-icon>
       <ion-label>Notifications</ion-label>
@@ -54,7 +60,25 @@
       Cette fonctionnalité vous permet de voir les différentes requetes faites par vos locataires.
     </ion-card-content>
 
-    <ion-list *ngFor="let r of req | async" [routerLink]="'../../requeteinfo/' + r.id" >
+    <ion-list *ngFor="let r of newReqs | async" [routerLink]="'../../requeteinfo/' + r.id" >
+      <ion-item [class]="r.etat" >
+        <ion-label>
+          <h2>{{r.nom}} </h2>
+          <p> {{r.description}} </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngFor="let r of inprogressReqs | async" [routerLink]="'../../requeteinfo/' + r.id" >
+      <ion-item [class]="r.etat" >
+        <ion-label>
+          <h2>{{r.nom}} </h2>
+          <p> {{r.description}} </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngFor="let r of finishReqs | async" [routerLink]="'../../requeteinfo/' + r.id" >
       <ion-item [class]="r.etat" >
         <ion-label>
           <h2>{{r.nom}} </h2>

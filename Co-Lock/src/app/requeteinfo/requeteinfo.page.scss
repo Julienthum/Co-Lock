@@ -22,23 +22,52 @@
   border-radius: 15px;
 }
 
+.statut{
+  text-align: center;
+}
+
+.trait_dessus{
+border-top: 1px solid #000;
+margin-left: 5%;
+width : 90%;
+}
+
+.Nouveau{
+  --ion-chip-background: #C6FFCA;
+}
+
+.En.cours{
+  --ion-item-background: #FFEBC0;
+}
+
+.Terminée{
+  --ion-item-background: #FFEAE7;
+}
+
 ion-card{
-  background-color: #bfbfc1;
   width: 90%;
   margin: 5%;
   border-radius: 15px;
 }
 
 ion-card-header{
-  color: #FFF;
+  color: #455F51;
+  text-align: left;
   font-weight: bold;
   font-size: 20px;
-  text-align: center;
-  margin-bottom: -2.5%;
+  margin-left: 6%;
+  text-transform: uppercase;
 }
 
 ion-card-subtitle{
   margin-left: 10%;
+  margin-bottom: 2%;
+  font-style: italic;
+}
+
+ion-card-content{
+  margin-left: 6%;
+  margin-top: -4%;
 }
 
 ion-item{

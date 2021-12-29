@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { ModalController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { RequeteinfoPage } from '../requeteinfo/requeteinfo.page';
 import { DataService } from '../services/data.service';
 
 export interface Req {
@@ -25,7 +27,7 @@ export class NotifPage implements OnInit {
 
   constructor(
     private firestore: AngularFirestore,
-    private data: DataService
+    private data: DataService,
   ) { }
 
   ngOnInit() {
@@ -33,5 +35,4 @@ export class NotifPage implements OnInit {
     this.inprogressReqs = this.data.getReq('En cours');
     this.finishReqs = this.data.getReq('Terminée');
   }
-
 }

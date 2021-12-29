@@ -22,7 +22,8 @@ export class RequetesPage implements OnInit {
   user;
   idProprio;
   nameProprio;
-  bienName;
+  propName;
+  authorName;
 
 
   constructor(
@@ -42,7 +43,8 @@ export class RequetesPage implements OnInit {
       auteur: firebase.auth().currentUser.uid,
       idProprio: this.idProprio,
       nameProprio: this.nameProprio,
-      bienName: this.bienName,
+      bienName: this.propName,
+      authorName: this.authorName,
       crea: firebase.firestore.FieldValue.serverTimestamp()
     });
 //ces deux lignes permettent de vider le champ après chaque ajout
@@ -64,11 +66,14 @@ export class RequetesPage implements OnInit {
     public  async  getInfo() {
     const bien = await firebase.firestore().collection('biens').doc(this.data.docId)
     .get().then(( ref => ref.data()));
-    const userName = await firebase.firestore().collection('users').doc(bien.moi)
+    const propName = await firebase.firestore().collection('users').doc(bien.moi)
     .get().then(( ref => ref.data()));
-    this.bienName = bien.name;
+    const author = await firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid)
+    .get().then(( ref => ref.data()));
+    this.propName = bien.name;
     this.idProprio = bien.moi;
-    this.nameProprio = userName.name + ' ' + userName.prenom;
+    this.nameProprio = propName.name + ' ' + propName.prenom;
+    this.authorName = author.name + ' ' + author.prenom;
   }
 
 

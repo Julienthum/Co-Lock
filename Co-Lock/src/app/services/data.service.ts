@@ -129,8 +129,6 @@ export class DataService {
 // eslint-disable-next-line @typescript-eslint/member-ordering
 nbrbien = 0;
 
-
-
    public getRestos(): Observable<Biens[]> {
     return this.firestore
       .collection<Biens>('biens', (ref) =>
@@ -242,17 +240,20 @@ nbrbien = 0;
       );
   }
 
-  public getReqType(type): Observable<Req[]> {
+  ////////// Optenir les lcoataires ////////////
+
+  public getLoc(code): Observable<Users[]> {
     return this.firestore
-      .collection<Req>('requetes', (ref) =>
+      .collection<Users>('users', (ref) =>
         ref
-          .where('etat', '==', type),
+          .where('code', '==', code)
+          .where('type', '==', 'L')
       )
       .snapshotChanges()
       .pipe(
         map((actions) =>
           actions.map((a) => {
-            const data = a.payload.doc.data() as Req;
+            const data = a.payload.doc.data() as Users;
             const id = a.payload.doc.id;
             return { id, ...data };
           })

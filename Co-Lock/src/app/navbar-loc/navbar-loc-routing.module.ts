@@ -9,10 +9,6 @@ const routes: Routes = [
     component: NavbarLocPage,
     children: [
       {
-        path: 'acceuil',
-        loadChildren: () => import('../acceuil/acceuil.module').then( m => m.AcceuilPageModule)
-      },
-      {
         path: 'bienloc',
         loadChildren: () => import('../bienloc/bienloc.module').then( m => m.BienlocPageModule)
       },

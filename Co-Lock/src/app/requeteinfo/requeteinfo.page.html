@@ -1,6 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>requeteinfo</ion-title>
+    <ion-title>A propos de la requete</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -8,31 +12,36 @@
 
   <ion-card>
     <ion-card-header> {{req.nom}} </ion-card-header>
-    <ion-card-subtitle> Statut : {{req.etat}}  </ion-card-subtitle>
-    <ion-card-content>
-      <ion-item> {{req.description}}</ion-item>
-    </ion-card-content>
+    <ion-card-subtitle> Description de la requetes </ion-card-subtitle>
+    <ion-card-content> {{req.description}} </ion-card-content>
 
-    <p>
-      <ion-chip (click)="statutNew()">
-        <ion-label>Nouveau</ion-label>
-      </ion-chip>
+    <div class="trait_dessus"><hr></div>
 
-      <ion-chip (click)="statutWorking()">
-        <ion-avatar>
-          <img
-            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjYzVkYmZmIiBkPSJNMCAwaDUxMnY1MTJIMHoiLz48cGF0aCBkPSJNMjU2IDMwNGM2MS42IDAgMTEyLTUwLjQgMTEyLTExMlMzMTcuNiA4MCAyNTYgODBzLTExMiA1MC40LTExMiAxMTIgNTAuNCAxMTIgMTEyIDExMnptMCA0MGMtNzQuMiAwLTIyNCAzNy44LTIyNCAxMTJ2NTZoNDQ4di01NmMwLTc0LjItMTQ5LjgtMTEyLTIyNC0xMTJ6IiBmaWxsPSIjODJhZWZmIi8+PC9zdmc+"
-          />
-        </ion-avatar>
-        <ion-label>En cours</ion-label>
-      </ion-chip>
+    <ion-card-subtitle> Informations à propos de la requete</ion-card-subtitle>
+      <ion-card-content> Statut : {{req.etat}} </ion-card-content>
+      <ion-card-content> Emise par {{req.authorName}} le {{req.crea.toDate()}}</ion-card-content>
+      <ion-card-content> Propriétaire du bien : {{req.nameProprio}} </ion-card-content>
+      <ion-card-content> Nom du bien : {{req.bienName}} </ion-card-content>
+      <ion-card-content> Debut du traitement : {{req.inprogress.toDate()}} </ion-card-content>
+      <ion-card-content> Fin du traitement : {{req.finish.toDate()}} </ion-card-content>
 
-      <ion-chip (click)="statutFinish()">
-        <ion-icon name="checkmark-circle"></ion-icon>
-        <ion-label>Terminée</ion-label>
-      </ion-chip>
+      <div class="trait_dessus"><hr></div>
 
-    </p>
+    <ion-card-subtitle> Modifier le statut de la requete</ion-card-subtitle>
+      <p class="statut">
+        <ion-chip (click)="statutNew()" color="success">
+          <ion-label>Nouveau</ion-label>
+        </ion-chip>
+
+        <ion-chip (click)="statutWorking()" color="warning">
+          <ion-label>En cours</ion-label>
+        </ion-chip>
+
+        <ion-chip (click)="statutFinish()" color="danger">
+          <ion-label>Terminée</ion-label>
+        </ion-chip>
+      </p>
+
 
   </ion-card>
 

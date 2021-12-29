@@ -5,9 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './navbar.page.html',
   styleUrls: ['./navbar.page.scss'],
 })
+
+
 export class NavbarPage implements OnInit {
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit() {
   }
