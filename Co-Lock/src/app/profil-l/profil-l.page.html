@@ -4,13 +4,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngFor="let user of users | async">
+<ion-content>
   <div class="header">
-    <h2 class="nomPropriétaire"> {{user.prenom}} {{user.name}}</h2>
+    <h2 class="nomPropriétaire" *ngFor="let user of users | async"> {{user.prenom}} {{user.name}}</h2>
      <div class="space-between">
        <div class="compteurbiens">
-         <ion-badge color="light" mode="ios">5</ion-badge>
-        <p>Notifications</p>
+         <ion-badge color="light" mode="ios">{{compteur}}</ion-badge>
+        <p>Requêtes en cours</p>
        </div>
 
 
@@ -21,14 +21,14 @@
     <div class="flex">
     <div class="bordureVerte">
     <div class="bordureBlanche">
-    <div class="photoProfil">
+    <div class="photoProfil" *ngFor="let user of users | async">
       <img [src]="user.photo">
     </div>
   </div>
   </div>
   </div>
 
-<ion-card>
+<ion-card *ngFor="let user of users | async">
   <ion-card-header> Mon compte </ion-card-header>
   <ion-item> {{ user.name }} {{ user.prenom }} </ion-item>
   <ion-item> {{ user.email }} </ion-item>
