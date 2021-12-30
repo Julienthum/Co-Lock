@@ -1,0 +1,29 @@
+ion-card{
+  width: 90%;
+  margin: 5%;
+  border-radius: 15px;
+}
+
+ion-card-subtitle{
+  margin-left: 10px;
+  font-style: italic;
+  font-size: medium;
+}
+
+.primary_btn{
+  --border-radius: 15px;
+  --background : #455F51;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.secondary_btn{
+  --border-radius: 15px;
+  --color: #455F51;
+  --border-color: #455F51;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 10px;
+}

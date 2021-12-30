@@ -130,7 +130,7 @@
     <ion-card-content>
       Cette fonctionnalité vous permet de calculer l'indexation de votre loyer.
     </ion-card-content>
-    <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/indexation" >Calculer l'indexation</ion-button>
+    <ion-button class="secondary_btn" expand="block" fill="outline" [routerLink]="'../../indexation/' + bien.id">Calculer l'indexation</ion-button>
   </ion-card>
 
 

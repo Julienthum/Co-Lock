@@ -10,21 +10,21 @@
 
 <ion-content>
 
- 
+
 <ion-card>
   <img src="assets/calculatrice.png"/>
   <ion-card-header>
     <ion-card-title>Indexation</ion-card-title>
     <ion-card-subtitle>Calculez votre indexation</ion-card-subtitle>
   </ion-card-header>
-  
+
 
   <ion-card-content>
-   L'application Co-Lock vous propose de calculer directement l'indexation de votre loyer via notre outil que vous retrouverez ci-dessous. Il vous suffira ainsi d'insérer " le loyer actuel ", "l'indice actuel " et " l'indice précédent ".
+   L'application Co-Lock vous propose de calculer directement l'indexation de votre loyer via notre outil que vous retrouverez ci-dessous. Il vous suffira ainsi d'insérer "l'indice actuel " et " l'indice précédent ". Le calcul se fait automatiquement et vous pouvez assigner le nouveau prix calculé directement à votre bien.
   </ion-card-content>
 
-  <ion-item lines="none">
-    <ion-input placeholder="Entrez votre loyer actuel" [(ngModel)]="loyer" type="number"></ion-input>
+  <ion-item lines="none" *ngIf="bien">
+    <ion-input [placeholder]=" 'Prix actuel : ' + bien.prix" [(ngModel)]="loyer" type="number" disabled="true"></ion-input>
  </ion-item>
  <ion-item lines="none">
       <ion-input placeholder="Entrez l'indice actuel" [(ngModel)]="indiceActuel" type="number"></ion-input>
@@ -33,12 +33,15 @@
   <ion-input placeholder="Entrez l'indice précédent" [(ngModel)]="indicePrecedent" type="number"></ion-input>
 </ion-item>
 
-<ion-item color="light" *ngIf= "operation==true">{{result.toFixed(2)}}</ion-item>
+<ion-item color="light" *ngIf="operation">{{result.toFixed(2)}}</ion-item>
 
-<ion-button  (click)="calcul()" expand="block" color="light" class="add-button">
+<ion-button  (click)="calcul()" expand="block" class="primary_btn">
   <ion-icon name="calculator" slot="start"></ion-icon>
   Calculer l'indexation
 </ion-button>
+
+<ion-button *ngIf="newPrice" (click)="updatePrice()" expand="block" fill="outline"class="secondary_btn"> Appliquer le nouveau loyer</ion-button>
+
 </ion-card>
 
 <ion-card>
@@ -48,7 +51,7 @@
   <ion-card-content>
 Afin de pouvoir calculer votre indexation veuillez au préalable consulter les indices santé afin de les inscrire dans le calculateur qui vous donnera le montant de l'indexation.
   </ion-card-content>
-  <ion-button (click)="consulterIndices(urlIndice)" expand="block" color="dark" class="add-button">
+  <ion-button (click)="consulterIndices()" expand="block" fill="outline" class="secondary_btn">
     Consulter les indices
   </ion-button>
 </ion-card>
