@@ -9,6 +9,7 @@
 
 <ion-content [fullscreen]="true" *ngFor="let bien of biens | async">
 
+
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Mon bien </ion-title>
@@ -28,34 +29,9 @@
     <ion-card-subtitle>Localisation</ion-card-subtitle>
     <ion-card-content> {{bien.rue}} {{bien.numero}}, {{bien.cp}} {{bien.ville}}, {{bien.province}}</ion-card-content>
 
-    <ion-card-subtitle>Prix et superficie</ion-card-subtitle>
-    <ion-card-content> {{bien.prix}} <br> {{bien.superficie}} m2</ion-card-content>
-
-
+    <ion-card-subtitle>Autres informations</ion-card-subtitle>
+    <ion-card-content> Nombre de lit : {{bien.nbrePlace}} <br>Prix : {{bien.prix}}/mois <br> Supperficie : {{bien.superficie}} m2 </ion-card-content>
   </ion-card>
-
-  <ion-card>
-    <ion-item>
-      <ion-icon name="notifications-outline" slot="start" ></ion-icon>
-      <ion-label>Notifications</ion-label>
-      <ion-button fill="outline" slot="end">consulter</ion-button>
-    </ion-item>
-
-    <ion-card-content>
-      Consultez la/les notification(s) relatives à votre bien via le bouton ci-dessus.
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title> Envoyez une requete a votre propriétairen</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Cette fonctionnalité vous permet d'envoyer une requete a votre propriétaire.
-    </ion-card-content>
-    <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/requetes">Ajouter une requete</ion-button>
-  </ion-card>
-
 
 
   <ion-card>
@@ -67,16 +43,13 @@
       Cette fonctionnalité vous permet de retrouver tous les documents utiles sur votre logement.
     </ion-card-content>
 
-    <ion-card *ngFor="let doc of docs | async" (click)="lien(doc.url)">
+    <ion-card *ngFor="let doc of docs | async" [routerLink]="'../../docinfoloc/' + doc.id">
       <img [src]= 'doc.url' class="docpres">
       <ion-card-header>
         <ion-card-title> {{ doc.name }}</ion-card-title>
         <ion-card-subtitle> {{ doc.description }} </ion-card-subtitle>
       </ion-card-header>
     </ion-card>
-
-    <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/docbiens">Ajouter un document</ion-button>
-
   </ion-card>
 
 </ion-content>

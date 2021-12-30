@@ -31,6 +31,10 @@ export interface Docs {
   description: string;
 }
 
+export interface Id {
+  id: any;
+}
+
 @Component({
   selector: 'app-bienloc',
   templateUrl: './bienloc.page.html',
@@ -43,74 +47,64 @@ export class BienlocPage implements OnInit {
   erreur: string;
 
   bien;
+  code;
 
   docs: Observable<any[]>;
+  req: Observable<any[]>;
 
 
   constructor(
     private data: DataService,
     public firestore: AngularFirestore,
     public router: Router,
-  ) {
-
-  }
+  ) {}
 
    async ngOnInit() { // normalement ne pas mettre de async ici mais blc
-   // this.getTest1(); marche pas
     //this.getTest().subscribe((res) => (this.bien = res)); marche pas
-    this.biens = await this.getTest(); //ca marche a  1OO% je suis trop fort
-    //(await this.getTest()).subscribe(res => this.bien = res);
-    this.docs = await this.getDocs();
+    this.code = await firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid)
+    .get().then(( doc => doc.data().code));
+    this.biens = this.getBien(this.code); //ca marche a  1OO% je suis trop fort
+    console.log(this.ptsh());
 
+  }
 
-    if( await this.donnee() === 'LO-5077-7957-C'){// blc
-      console.log( await this.donnee());
-      return await this.donnee();
-    } else { console.log('ca marche pas ptn ');
+  ptsh(){
+    firebase.firestore().collection('biens')
+      .where('code', '==', this.code)
+      .get()
+      .then(querySnapshot => { if (querySnapshot.size === 1) {
+        const snap = querySnapshot.docs[0];
+        this.docs = this.getDocs(snap.ref.id);
+        this.req = this.getReq(snap.ref.id);
+        this.data.idBien = snap.ref.id;
     }
-
-
-
+    else {
+        console.log('query result in exactly one document');
+    } });
   }
-  async donnee() {//blc
-  const jay = await firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid)
-    .get().then(( doc => doc.data().code));
-    return await jay;
 
-  }
-  public  async  getTest() {//nice
-    const jay = await    firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid)
-    .get().then(( doc => doc.data().code));
+
+  getBien(code) {
     return this.firestore
       .collection<Biens>('biens', (ref) => ref
-        .where('code', '==', jay)
+        .where('code', '==', code)
       )
       .snapshotChanges()
       .pipe(
-        map((actions) => actions.map((a) => a.payload.doc.data() as Biens)
+        map((actions) => actions.map((a) =>  {
+            const data = a.payload.doc.data() as Biens;
+            const id = a.payload.doc.id;
+            return {id, ...data};
+        })
         )
       );
   }
-  public getTest1(): Observable<Biens[]>{ // marche pas de ouf a test, sert a r en vrai
-    return this.firestore.collection<Biens>('biens', (ref) => ref
-      .where('code', '==', 'LO-5077-7957-C')
-    )
-      .valueChanges();
 
-  }
-  lien(url){
-    window.open(url, '_system');
-  }
-  deleteResto() {
-    this.data.deleteItem('biens', this.bien.id);
-  }
-  public async getDocs() {
-    const jay = await    firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid)
-    .get().then(( doc => doc.data().code));
+  getDocs(test) {
     return this.firestore
       .collection<Docs>('documents', (ref) =>
         ref
-          .where('code', '==', jay)
+          .where('idBien', '==', test)
       )
       .snapshotChanges()
       .pipe(
@@ -122,6 +116,29 @@ export class BienlocPage implements OnInit {
           })
         )
       );
+  }
+
+  getReq(test) {
+    return this.firestore
+      .collection<Docs>('requetes', (ref) =>
+        ref
+          .where('idBien', '==', test)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Docs;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
+  }
+
+
+  lien(url){
+    window.open(url, '_system');
   }
 
 }

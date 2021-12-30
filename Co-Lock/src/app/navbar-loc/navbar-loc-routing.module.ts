@@ -14,7 +14,7 @@ const routes: Routes = [
       },
       {
         path: 'requetes',
-        loadChildren: () => import('../requetes/requetes.module').then( m => m.RequetesPageModule)
+        loadChildren: () => import('../notif/notif.module').then( m => m.NotifPageModule)
       },
       {
         path: 'profil-l',

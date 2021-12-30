@@ -61,6 +61,7 @@ export class DataService {
   location = 'documents/';
   activatedRoute: any;
   docId = '';
+  idBien;
 
   constructor(
     private firestore: AngularFirestore,
@@ -226,6 +227,26 @@ nbrbien = 0;
       .collection<Req>('requetes', (ref) =>
         ref
           .where('idProprio', '==', firebase.auth().currentUser.uid)
+          .where('etat', '==', type)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Req;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
+  }
+
+
+  public getReqL(type): Observable<Req[]> {
+    return this.firestore
+      .collection<Req>('requetes', (ref) =>
+        ref
+          .where('idBien', '==', this.idBien)
           .where('etat', '==', type)
       )
       .snapshotChanges()

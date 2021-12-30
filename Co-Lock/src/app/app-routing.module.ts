@@ -131,6 +131,11 @@ const routes: Routes = [
     path: 'infoloc/:id',
     loadChildren: () => import('./infoloc/infoloc.module').then( m => m.InfolocPageModule)
   },
+  {
+    path: 'docinfoloc/:id',
+    loadChildren: () => import('./docinfoloc/docinfoloc.module').then( m => m.DocinfolocPageModule)
+  },
+
 
 
 

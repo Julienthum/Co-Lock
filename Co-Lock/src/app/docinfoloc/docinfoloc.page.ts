@@ -9,25 +9,16 @@ import { getAuth, updateEmail, updatePassword } from 'firebase/auth';
 import { AlertController } from '@ionic/angular';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 
-const auth = getAuth();
-
 
 @Component({
-  selector: 'app-docinfo',
-  templateUrl: './docinfo.page.html',
-  styleUrls: ['./docinfo.page.scss'],
+  selector: 'app-docinfoloc',
+  templateUrl: './docinfoloc.page.html',
+  styleUrls: ['./docinfoloc.page.scss'],
 })
-export class DocinfoPage implements OnInit {
-
-  doc: any;
+export class DocinfolocPage implements OnInit {
 
   docs;
   essaieForm: FormGroup;
-  info = '';
-
-  url = '';
-  barStatus = false;
-  imageUploads = [];
 
   constructor(
     public formBuilder: FormBuilder,
@@ -36,7 +27,6 @@ export class DocinfoPage implements OnInit {
     private data: DataService,
     public alertController: AlertController,
     private activatedRoute: ActivatedRoute,
-    private angularFireStorage: AngularFireStorage
   ) { }
 
   ngOnInit() {
@@ -49,43 +39,8 @@ export class DocinfoPage implements OnInit {
     });
   }
 
-  uptadeInfo(){
-    const newItem = {
-      name:  this.essaieForm.value.name,
-      description: this.essaieForm.value.description,
-    };
-    this.data.updateItem('documents', this.docs.id, newItem );
+  lien(url){
+    window.open(url, '_system');
   }
 
-  deleteResto() {
-    this.data.deleteItem('documents', this.docs.id);
-  }
-
-  uptdateDoc(){
-    const newItem = {
-      spaceRef: this.data.imageName(),
-      url: this.url,
-    };
-    this.data.updateItem('documents', this.docs.id, newItem );
-  }
-
-  uploadPhoto(event) {
-    this.barStatus = true;
-    this.data.storeImage(event.target.files[0]).then(
-        (res: any) => {
-            if (res) {
-                this.url = res;
-                this.imageUploads.unshift(res);
-                this.barStatus = false;
-        }
-    },
-    (error: any) => {
-        this.barStatus = false;
-        }
-      );
-    }
-
-    lien(url){
-      window.open(url, '_system');
-    }
 }

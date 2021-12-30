@@ -1,0 +1,26 @@
+.secondary_btn{
+  --border-radius: 15px;
+  --color: #455F51;
+  --border-color: #455F51;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.docpres{
+  border-radius: 15px;
+}
+
+ion-card{
+  width: 90%;
+  margin: 5%;
+  border-radius: 15px;
+}
+
+ion-card-header{
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: -2.5%;
+}

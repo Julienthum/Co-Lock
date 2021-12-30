@@ -5,10 +5,23 @@
 </ion-header>
 
 <ion-content>
+
+  <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/requetes">Ajouter une requete</ion-button>
+
   <ion-card>
-    <ion-card-title> Nouvelles requetes de vos locataires </ion-card-title>
+    <ion-card-title> Nouvelles requetes</ion-card-title>
 
     <ion-list *ngFor="let req of newReqs | async" [routerLink]="'../../requeteinfo/' + req.id" >
+      <ion-item [class]="req.etat" >
+        <ion-label>
+          <h2>{{req.nom}} </h2>
+          <h3> {{req.bienName}} </h3>
+          <p> {{req.description}} </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngFor="let req of newReqL | async" [routerLink]="'../../requeteinfo/' + req.id" >
       <ion-item [class]="req.etat" >
         <ion-label>
           <h2>{{req.nom}} </h2>
@@ -32,11 +45,34 @@
       </ion-label>
     </ion-item>
   </ion-list>
+
+  <ion-list *ngFor="let req of inprogressReqL | async" [routerLink]="'../../requeteinfo/' + req.id" >
+    <ion-item [class]="req.etat" >
+      <ion-label>
+        <h2>{{req.nom}} </h2>
+        <h3> {{req.bienName}} </h3>
+        <p> {{req.description}} </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-card>
+
+
 
 <ion-card>
   <ion-card-title> Historique de vos requetes </ion-card-title>
   <ion-list *ngFor="let req of finishReqs | async" [routerLink]="'../../requeteinfo/' + req.id" >
+    <ion-item [class]="req.etat" >
+      <ion-label>
+        <h2>{{req.nom}} </h2>
+        <h3> {{req.bienName}} </h3>
+        <p> {{req.description}} </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngFor="let req of finishReqL | async" [routerLink]="'../../requeteinfo/' + req.id" >
     <ion-item [class]="req.etat" >
       <ion-label>
         <h2>{{req.nom}} </h2>
