@@ -21,6 +21,7 @@ export class ProfilLPage implements OnInit {
   typepr: any[];
   typena: any[];
   typemo: any[];
+  compteur: number;
   // eslint-disable-next-line @typescript-eslint/ban-types
   datas: object;
   constructor(
@@ -32,7 +33,16 @@ export class ProfilLPage implements OnInit {
   }
   async ngOnInit() {
   await this.ptshs();
+  await this.count();
   }
+  async  count(){
+    firebase.firestore().collection('requetes')
+     .where('auteur', '==', firebase.auth().currentUser.uid)
+     .where('etat', '==', 'En cours')
+.onSnapshot(querySnapshot => {
+   this.compteur = querySnapshot.size;
+  console.log('this compteur',this.compteur);});
+}
   signOut(){
     const auth = getAuth();
     signOut(auth).then(() => {

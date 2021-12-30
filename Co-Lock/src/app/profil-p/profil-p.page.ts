@@ -18,7 +18,7 @@ export class ProfilPPage implements OnInit {
   erreur: string;
   users: Observable<any[]>;
   nbrbien: any;
-
+compteur: number;
   constructor(
     public firestore: AngularFirestore,
     public router: Router,
@@ -30,8 +30,17 @@ export class ProfilPPage implements OnInit {
   }
 
   ngOnInit() {
+    this.count();
   }
+  async  count(){
+    firebase.firestore().collection('biens')
+     .where('moi', '==', firebase.auth().currentUser.uid)
+.onSnapshot(querySnapshot => {
+   this.compteur = querySnapshot.size;
+  console.log('this compteur',this.compteur);
 
+});
+}
   signOut(){
     const auth = getAuth();
     signOut(auth).then(() => {

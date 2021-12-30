@@ -32,13 +32,4 @@ export class MesbiensPage implements OnInit {
   };
 
 
-  count(){
-    this.firestore.collection('requetes', (ref) =>
-          ref
-            .where('idProprio', '==', firebase.auth().currentUser.uid)
-            .where('etat', '==', 'Nouveau')
-        )
-        .snapshotChanges()
-        .subscribe( values => values.length);
-  }
 }

@@ -18,3 +18,12 @@ ion-tab-bar{
 ion-tab-button{
   background-color: transparent;
 }
+#cart-btn {
+  position: relative;
+}
+
+#cart-badge {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
