@@ -76,6 +76,7 @@ export class BienlocPage implements OnInit {
         const snap = querySnapshot.docs[0];
         this.docs = this.getDocs(snap.ref.id);
         this.req = this.getReq(snap.ref.id);
+        this.data.docId = snap.ref.id;
         this.data.idBien = snap.ref.id;
     }
     else {

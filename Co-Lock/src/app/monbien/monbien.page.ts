@@ -41,9 +41,9 @@ export class MonbienPage implements OnInit {
     this.data.getRestoByKey(id).subscribe((res) => (this.bien = res));
     this.data.getDocId(id);
     this.docs = this.data.getDocs('documents');
-    this.newReqs = this.data.getReq('Nouveau');
-    this.inprogressReqs = this.data.getReq('En cours');
-    this.finishReqs = this.data.getReq('Terminée');
+    this.newReqs = this.data.getReqBiens('Nouveau', id);
+    this.inprogressReqs = this.data.getReqBiens('En cours', id);
+    this.finishReqs = this.data.getReqBiens('Terminée', id);
     const code = await firebase.firestore().collection('biens').doc(id)
     .get().then(( doc => doc.data().code));
     this.loc = this.data.getLoc(code);

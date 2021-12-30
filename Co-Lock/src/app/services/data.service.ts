@@ -241,6 +241,25 @@ nbrbien = 0;
       );
   }
 
+  public getReqBiens(type, bien): Observable<Req[]> {
+    return this.firestore
+      .collection<Req>('requetes', (ref) =>
+        ref
+          .where('idBien', '==', bien)
+          .where('etat', '==', type)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Req;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
+  }
+
 
   public getReqL(type): Observable<Req[]> {
     return this.firestore

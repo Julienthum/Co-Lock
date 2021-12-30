@@ -4,8 +4,6 @@ import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 import { Observable } from 'rxjs';
 import { DataService } from '../services/data.service';
-import { getFirestore } from 'firebase/firestore';
-import { doc, getDoc } from 'firebase/firestore';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -35,23 +33,6 @@ export class RequetesPage implements OnInit {
    this.items = this.firestore.collection('requetes').valueChanges();
    }
 
-
-   addRequete(){
-    this.firestore.collection('requetes').add({
-      nom: this.nom,
-      description: this.description,
-      etat: 'Nouveau',
-      idBien: this.data.docId,
-      auteur: firebase.auth().currentUser.uid,
-      idProprio: this.idProprio,
-      nameProprio: this.nameProprio,
-      bienName: this.propName,
-      authorName: this.authorName,
-      crea: firebase.firestore.FieldValue.serverTimestamp()
-    });
-    this.ajout();
-   }
-
   ngOnInit() {
     this.getInfo();
   }
@@ -67,7 +48,23 @@ export class RequetesPage implements OnInit {
     this.idProprio = bien.moi;
     this.nameProprio = propName.name + ' ' + propName.prenom;
     this.authorName = author.name + ' ' + author.prenom;
-  }
+    }
+
+  addRequete(){
+    this.firestore.collection('requetes').add({
+      nom: this.nom,
+      description: this.description,
+      etat: 'Nouveau',
+      idBien: this.data.docId,
+      auteur: firebase.auth().currentUser.uid,
+      idProprio: this.idProprio,
+      nameProprio: this.nameProprio,
+      bienName: this.propName,
+      authorName: this.authorName,
+      crea: firebase.firestore.FieldValue.serverTimestamp()
+    });
+    this.ajout();
+   }
 
   async ajout(){
     const alert = await this.alertController.create({

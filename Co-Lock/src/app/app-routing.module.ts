@@ -135,6 +135,11 @@ const routes: Routes = [
     path: 'docinfoloc/:id',
     loadChildren: () => import('./docinfoloc/docinfoloc.module').then( m => m.DocinfolocPageModule)
   },
+  {
+    path: 'notifloc',
+    loadChildren: () => import('./notifloc/notifloc.module').then( m => m.NotiflocPageModule)
+  },
+
 
 
 
