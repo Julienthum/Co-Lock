@@ -33,7 +33,7 @@ export class ProfilLPage implements OnInit {
   }
   async ngOnInit() {
   await this.ptshs();
-  await this.count();
+   this.count();
   }
   async  count(){
     firebase.firestore().collection('requetes')
