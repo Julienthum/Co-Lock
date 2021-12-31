@@ -160,6 +160,13 @@ nbrbien = 0;
     return this.firestore.collection(collection).add(object);
   }
 
+  public deleteTest(collection) {
+    return this.firestore.collection(collection, (ref) =>
+    ref
+      .where('idBien', '==', 'Z2wotlUie69EngfFt6er')
+  ).doc().delete();
+  }
+
   ///////////////// USER Managment //////////////////////
 
 
@@ -228,6 +235,24 @@ nbrbien = 0;
         ref
           .where('idProprio', '==', firebase.auth().currentUser.uid)
           .where('etat', '==', type)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Req;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
+  }
+
+  public getAllReqBiens(bien): Observable<Req[]> {
+    return this.firestore
+      .collection<Req>('requetes', (ref) =>
+        ref
+          .where('idBien', '==', bien)
       )
       .snapshotChanges()
       .pipe(

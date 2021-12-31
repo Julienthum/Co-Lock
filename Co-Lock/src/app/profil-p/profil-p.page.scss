@@ -87,14 +87,16 @@
 
 
 ion-card{
-  background-color: #bfbfc1;
+  background-color: #F5F5F5;
+  padding: 20px;
+  box-shadow: none ;
+  border-radius: 10px;
   width: 90%;
-  margin: 5%;
-  border-radius: 15px;
+  margin-left: 5%;
 }
 
 ion-card-header{
-  color: #FFF;
+  color: #455F51;
   font-weight: bold;
   font-size: 20px;
   text-align: center;
@@ -119,7 +121,7 @@ ion-col{
 .update_btn{
   margin-top: -2.5%;
   --background: none;
-  --color: white;
+  --color: #455F51;
   --box-shadow: none;
   text-decoration: underline;
 }
