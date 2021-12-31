@@ -39,6 +39,10 @@ export class MonbienPage implements OnInit {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
     this.data.getRestoByKey(id).subscribe((res) => (this.bien = res));
     this.data.getDocId(id);
+    const itself = {
+      itself: id,
+    };
+    this.data.updateItem('biens', id, itself);
     this.docs = this.data.getDocs('documents');
     this.reqs = this.data.getAllReqBiens(id);
     this.newReqs = this.data.getReqBiens('Nouveau', id);
@@ -53,13 +57,23 @@ export class MonbienPage implements OnInit {
     this.docs.subscribe(docs => docs.forEach(element => {
       console.log(element.id);
       this.data.deleteItem('documents', element.id);
+      this.data.deleteDoc('documents', element.spaceRef);
     }));
     this.reqs.subscribe(req => req.forEach(element => {
       console.log(element.id);
       this.data.deleteItem('requetes', element.id);
     }));
+    this.data.deleteDoc('photoBien', this.bien.spaceRef);
     this.data.deleteItem('biens', this.bien.id);
   }
+
+  archive(){
+    const newItem = {
+      deleted: true
+    };
+    this.data.updateItem('biens', this.bien.id, newItem);
+  }
+
 
   async share(){
     await Share.share({

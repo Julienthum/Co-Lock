@@ -27,29 +27,22 @@ img{
   letter-spacing: 2px;
 }
 
+.primary_btn{
+  --border-radius: 15px;
+  --background : #455F51;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 15px;
+}
+
+
 .secondary_btn{
   --border-radius: 15px;
   --color: #455F51;
   --border-color: #455F51;
   width: 90%;
   margin-left: 5%;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 
-.center{
-  width: 50%;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.arch_btn{
-  --border-style: none;
-  --background: none;
-  --box-shadow: none;
-  --color: #455F51;
-  --color-hover: #455F51;
-  --color-focused: #455F51;
-  --color-activated: #455F51;
-  text-decoration: underline;
-}

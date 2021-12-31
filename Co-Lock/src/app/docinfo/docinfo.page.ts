@@ -58,6 +58,7 @@ export class DocinfoPage implements OnInit {
   }
 
   deleteResto() {
+    this.data.deleteDoc('documents', this.docs.spaceRef);
     this.data.deleteItem('documents', this.docs.id);
   }
 

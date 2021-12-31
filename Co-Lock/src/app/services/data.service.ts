@@ -23,6 +23,7 @@ export interface Biens {
   image: string;
   moi: string;
   code: string;
+  itself: string;
 }
 
 export interface Users {
@@ -35,9 +36,11 @@ export interface Users {
 }
 
 export interface Docs {
+  id: string;
   name: string;
   url: number;
   description: string;
+  spaceRef: string;
 }
 
 export interface Req {
@@ -62,6 +65,7 @@ export class DataService {
   activatedRoute: any;
   docId = '';
   idBien;
+  fileName;
 
   constructor(
     private firestore: AngularFirestore,
@@ -79,6 +83,7 @@ export class DataService {
     async storeImage(imageData: any) {
       try {
           const imageName = this.imageName();
+          this.fileName = imageName;
           return new Promise((resolve, reject) => {
           const pictureRef = this.angularFireStorage.ref(this.location + imageName);
           pictureRef
@@ -135,12 +140,32 @@ nbrbien = 0;
       .collection<Biens>('biens', (ref) =>
         ref
           .where('moi', '==', firebase.auth().currentUser.uid)
+          .where('deleted', '==', false)
       )
       .snapshotChanges()
       .pipe(
         map((actions) =>
           actions.map((a) => {
             this.nbrbien = this.nbrbien + 1;
+            const data = a.payload.doc.data() as Biens;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
+  }
+
+  public getRestosArchive(): Observable<Biens[]> {
+    return this.firestore
+      .collection<Biens>('biens', (ref) =>
+        ref
+          .where('moi', '==', firebase.auth().currentUser.uid)
+          .where('deleted', '==', true)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
             const data = a.payload.doc.data() as Biens;
             const id = a.payload.doc.id;
             return { id, ...data };
@@ -160,11 +185,8 @@ nbrbien = 0;
     return this.firestore.collection(collection).add(object);
   }
 
-  public deleteTest(collection) {
-    return this.firestore.collection(collection, (ref) =>
-    ref
-      .where('idBien', '==', 'Z2wotlUie69EngfFt6er')
-  ).doc().delete();
+  public deleteDoc(collection, id){
+    return this.angularFireStorage.ref(collection + '/' + id).delete();
   }
 
   ///////////////// USER Managment //////////////////////
@@ -326,4 +348,22 @@ nbrbien = 0;
       );
   }
 
+
+  public getAll(collection, field, value): Observable<Docs[]> {
+    return this.firestore
+      .collection<Docs>(collection, (ref) =>
+        ref
+          .where(field, '==', value)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Docs;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
+  }
 }

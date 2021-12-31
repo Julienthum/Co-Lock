@@ -25,6 +25,7 @@ export class ProfilinfoPage implements OnInit {
   barStatus = false;
   url = '';
   imageUploads = [];
+  fileName;
 
   constructor(
     public formBuilder: FormBuilder,
@@ -128,7 +129,6 @@ export class ProfilinfoPage implements OnInit {
         }
       ]
     });
-
     await alert.present();
   }
 
@@ -143,6 +143,7 @@ export class ProfilinfoPage implements OnInit {
   async storeImage(imageData: any) {
     try {
         const imageName = this.imageName();
+        this.fileName = imageName;
         return new Promise((resolve, reject) => {
         const pictureRef = this.angularFireStorage.ref(this.location + imageName);
         pictureRef
@@ -179,6 +180,7 @@ export class ProfilinfoPage implements OnInit {
 
       async addMike(){ // ca ajoute un bien dans la collec biens et ca ajoute aussi l'uid dans les champs
         const photoURL = {
+          spaceRef: this.fileName,
           photo : this.url
         };
         this.data.updateItem('users', firebase.auth().currentUser.uid, photoURL );

@@ -68,7 +68,7 @@ export class DocbiensPage implements OnInit {
 
   async addMike(){ // ca ajoute un bien dans la collec biens et ca ajoute aussi l'uid dans les champs
     const user = await firebase.auth().currentUser;
-    const spaceRef = this.dataService.imageName();
+    const spaceRef = this.dataService.fileName;
     const moi = user.uid;
     const name = this.essaieForm.value.name;
     const description = this.essaieForm.value.description;

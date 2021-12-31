@@ -5,7 +5,6 @@ import { AlertController } from '@ionic/angular/';
 
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
-import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
@@ -22,6 +21,7 @@ export class AjoutbienPage implements OnInit {
   barStatus = false;
   url = '';
   imageUploads = [];
+  fileName;
 
   users: Observable<any[]>;
 
@@ -47,7 +47,7 @@ export class AjoutbienPage implements OnInit {
     // eslint-disable-next-line @typescript-eslint/no-shadow
     public alertController: AlertController,
     public formBuilder: FormBuilder,
-    private angularFireStorage: AngularFireStorage
+    private angularFireStorage: AngularFireStorage,
   ) {
     this.users = this.firestore.collection('biens').valueChanges();
   }
@@ -70,6 +70,7 @@ export class AjoutbienPage implements OnInit {
       prix: '',
       image: '',
       code: '',
+      spaceRef: '',
       });
   }
 
@@ -113,6 +114,7 @@ export class AjoutbienPage implements OnInit {
     const prix = this.essaieForm.value.prix;
     const image = this.url;
     const code = this.idGenerator();
+    const deleted = false;
     this.firestore.collection('biens').add({
       moi,
       name,
@@ -127,6 +129,8 @@ export class AjoutbienPage implements OnInit {
       prix,
       image,
       code,
+      spaceRef: this.fileName,
+      deleted
     });
 
     console.log('ca marche');
@@ -141,6 +145,7 @@ export class AjoutbienPage implements OnInit {
   async storeImage(imageData: any) {
     try {
         const imageName = this.imageName();
+        this.fileName = imageName;
         return new Promise((resolve, reject) => {
         const pictureRef = this.angularFireStorage.ref(this.location + imageName);
         pictureRef

@@ -8,7 +8,7 @@
 
   <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/ajoutbien">Ajouter un bien</ion-button>
 
-  <ion-card *ngFor="let bien of biens | async" [routerLink]="'../../monbien/' + bien.id"  >
+  <ion-card *ngFor="let bien of biens | async" [routerLink]="'../../monbien/' + bien.id">
     <img [src]="bien.image" alt="image du bien">
     <div>
       <ion-card-title class="title"> {{ bien.name }}</ion-card-title>
@@ -19,5 +19,8 @@
     </div>
   </ion-card>
 
+  <div class="center">
+    <ion-button class="arch_btn" expand="block" fill="outline" routerLink="/biensarchive">Voir les archives</ion-button>
+  </div>
 
 </ion-content>

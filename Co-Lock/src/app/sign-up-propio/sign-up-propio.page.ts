@@ -42,8 +42,6 @@ export class SignUpPropioPage implements OnInit {
       password: ['', [Validators.required, Validators.minLength(5)]],
       type: [''],
       code: ['', [Validators.required, Validators.minLength(2)]]
-
-
     });
     this.essaieForm.controls.type.setValue('P');
 
@@ -58,8 +56,10 @@ export class SignUpPropioPage implements OnInit {
     const code = this.essaieForm.value.code;
     const type = this.essaieForm.value.type;
     // eslint-disable-next-line max-len
+    const photo = 'https://firebasestorage.googleapis.com/v0/b/co-lock-ba1fd.appspot.com/o/photoID%2Fprofil-p.png?alt=media&token=ad1a7290-b8d5-412f-bedb-78ce4c9f69fc';
+    // eslint-disable-next-line max-len
     const user = this.auth.createUserWithEmailAndPassword(email, password).then(cred => this.firestore.collection('users').doc(cred.user.uid).set({
-      name,prenom,email,mobile,code,type
+      name,prenom,email,mobile,code,type,photo
     }));
     this.router.navigate(['/login']);
     return { user };

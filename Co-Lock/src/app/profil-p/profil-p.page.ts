@@ -18,7 +18,8 @@ export class ProfilPPage implements OnInit {
   erreur: string;
   users: Observable<any[]>;
   nbrbien: any;
-compteur: number;
+  compteur: number;
+
   constructor(
     public firestore: AngularFirestore,
     public router: Router,
@@ -32,12 +33,14 @@ compteur: number;
   ngOnInit() {
     this.count();
   }
+
+
   async  count(){
     firebase.firestore().collection('biens')
-     .where('moi', '==', firebase.auth().currentUser.uid)
-.onSnapshot(querySnapshot => {
-   this.compteur = querySnapshot.size;
-  console.log('this compteur',this.compteur);
+      .where('moi', '==', firebase.auth().currentUser.uid)
+      .onSnapshot(querySnapshot => {
+        this.compteur = querySnapshot.size;
+        console.log('this compteur',this.compteur);
 
 });
 }
@@ -51,8 +54,27 @@ compteur: number;
   }
 
   deleteUser(){
-    this.data.deleteUser();
+    // delete all req of proprio
+    const req = this.data.getAll('requetes', 'idProprio',firebase.auth().currentUser.uid);
+    req.subscribe(docs => docs.forEach(element => {
+      this.data.deleteItem('requetes', element.id);
+    }));
+    // delete all doc of proprio
+    const doc = this.data.getAll('documents', 'moi',firebase.auth().currentUser.uid);
+    doc.subscribe(docs => docs.forEach(element => {
+      this.data.deleteItem('documents', element.id);
+      this.data.deleteDoc('documents', element.spaceRef);
+    }));
+    // delete all biens of proprio
+    const bien = this.data.getAll('biens', 'moi',firebase.auth().currentUser.uid);
+    bien.subscribe(docs => docs.forEach(element => {
+      this.data.deleteItem('biens', element.id);
+      this.data.deleteDoc('biens', element.spaceRef);
+    }));
+    // delete user info
     this.data.deleteItem('users', firebase.auth().currentUser.uid);
+    // delete user login info
+    this.data.deleteUser();
     this.router.navigate(['/']);
   }
 

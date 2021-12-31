@@ -56,8 +56,10 @@ export class SignUpLocatairePage implements OnInit {
     const code = this.essaieForm.value.code;
     const type = this.essaieForm.value.type;
     // eslint-disable-next-line max-len
+    const photo = 'https://firebasestorage.googleapis.com/v0/b/co-lock-ba1fd.appspot.com/o/photoID%2Fprofil-l.png?alt=media&token=33dc739b-cf88-4dbf-94a7-a8f70a3f256c';
+    // eslint-disable-next-line max-len
     const user = this.auth.createUserWithEmailAndPassword(email, password).then(cred => this.firestore.collection('users').doc(cred.user.uid).set({
-      name,prenom,email,mobile,code,type
+      name,prenom,email,mobile,code,type,photo
     }));
     this.router.navigate(['/login']);
     return { user };
