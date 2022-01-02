@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-02T10:00:39.425Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="9GKT1MNPrVZIstqpap6l" version="16.1.2" type="github" pages="20">
+<mxfile host="app.diagrams.net" modified="2022-01-02T10:06:41.792Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="G_ZQPIez_S7szsOk1sZF" version="16.1.2" type="github" pages="20">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel dx="2365" dy="1235" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1452,7 +1452,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="hNSj2YfsZkw-IOpW2Gi0" name="Enregistrement du bien">
-    <mxGraphModel dx="946" dy="494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1577" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="W6J24IK72z0Ez2wzmTgT-0" />
         <mxCell id="W6J24IK72z0Ez2wzmTgT-1" parent="W6J24IK72z0Ez2wzmTgT-0" />
@@ -1480,7 +1480,7 @@
         <mxCell id="W6J24IK72z0Ez2wzmTgT-3" value="Système" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="W6J24IK72z0Ez2wzmTgT-1" vertex="1">
           <mxGeometry x="600" y="60" width="500" height="730" as="geometry" />
         </mxCell>
-        <mxCell id="S5Qj7u5odkvrOYHJD_KM-1" value="Donner accès à la page d&#39;encodage de bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="W6J24IK72z0Ez2wzmTgT-3" vertex="1">
+        <mxCell id="S5Qj7u5odkvrOYHJD_KM-1" value="Donner accès à la page d&#39;encodage du bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="W6J24IK72z0Ez2wzmTgT-3" vertex="1">
           <mxGeometry x="190" y="140" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="S5Qj7u5odkvrOYHJD_KM-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="W6J24IK72z0Ez2wzmTgT-3" source="S5Qj7u5odkvrOYHJD_KM-3" target="S5Qj7u5odkvrOYHJD_KM-9" edge="1">
@@ -1502,7 +1502,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="LwkZdUjhaVOSle5cP505-2" value="&lt;font style=&quot;font-size: 8px&quot;&gt;[Mauvaise données]&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=7;" parent="S5Qj7u5odkvrOYHJD_KM-12" vertex="1" connectable="0">
+        <mxCell id="LwkZdUjhaVOSle5cP505-2" value="&lt;font style=&quot;font-size: 8px&quot;&gt;[Mauvaises données]&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=7;" parent="S5Qj7u5odkvrOYHJD_KM-12" vertex="1" connectable="0">
           <mxGeometry x="0.6416" relative="1" as="geometry">
             <mxPoint x="16" as="offset" />
           </mxGeometry>
@@ -1514,7 +1514,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="LwkZdUjhaVOSle5cP505-1" value="[bonne donées]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="S5Qj7u5odkvrOYHJD_KM-13" vertex="1" connectable="0">
+        <mxCell id="LwkZdUjhaVOSle5cP505-1" value="[Bonnes données]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="S5Qj7u5odkvrOYHJD_KM-13" vertex="1" connectable="0">
           <mxGeometry x="0.2195" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -1570,7 +1570,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="rbc1AosHVAB5gtbo5Ys9" name="générer un code">
-    <mxGraphModel dx="1662" dy="802" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1113" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="1XNrNm50aqZ_EkgnfmSG-0" />
         <mxCell id="1XNrNm50aqZ_EkgnfmSG-1" parent="1XNrNm50aqZ_EkgnfmSG-0" />
@@ -1595,7 +1595,7 @@
         <mxCell id="igWY9-Uf-60KvJvqFA69-9" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le propriétaire a ajouté un bien&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="lmQEjj8ZyO39zsAdjNnh-0" vertex="1">
           <mxGeometry x="130" y="510" width="240" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="n5jq2-nywBgXh4cRP9B5-0" value="système" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="1XNrNm50aqZ_EkgnfmSG-1" vertex="1">
+        <mxCell id="n5jq2-nywBgXh4cRP9B5-0" value="Système" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="1XNrNm50aqZ_EkgnfmSG-1" vertex="1">
           <mxGeometry x="600" y="60" width="500" height="540" as="geometry" />
         </mxCell>
         <mxCell id="igWY9-Uf-60KvJvqFA69-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="n5jq2-nywBgXh4cRP9B5-0" source="igWY9-Uf-60KvJvqFA69-0" target="igWY9-Uf-60KvJvqFA69-2" edge="1">
