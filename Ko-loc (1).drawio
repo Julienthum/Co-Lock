@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-02T09:37:41.185Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="nqtyfiL7NADUt5D0kb2U" version="16.1.2" type="github" pages="20">
+<mxfile host="app.diagrams.net" modified="2022-01-02T09:41:14.962Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="jzuK5ojSnkWKrKGSLL3T" version="16.1.2" type="github" pages="20">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel dx="1150" dy="1615" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -726,7 +726,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="5GqL1yBt6GKVH9OxMdS_" name="Hiérarchie de l&#39;appli">
-    <mxGraphModel dx="1317" dy="1733" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1186" dy="1594" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="2PtMCe5UgdZqWsswR74V-0" />
         <mxCell id="2PtMCe5UgdZqWsswR74V-1" parent="2PtMCe5UgdZqWsswR74V-0" />
@@ -982,11 +982,11 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Shf1PIuUm4xIgwXxTlma" name="Use Case">
-    <mxGraphModel dx="1458" dy="594" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1977" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="_1lMrd184p0aN324ZPrS-0" />
         <mxCell id="_1lMrd184p0aN324ZPrS-1" parent="_1lMrd184p0aN324ZPrS-0" />
-        <mxCell id="450I2jvUaUmtoyAgRjkF-0" value="Kô-Loc" style="swimlane;startSize=60;fillColor=default;strokeColor=default;fontColor=default;" parent="_1lMrd184p0aN324ZPrS-1" vertex="1">
+        <mxCell id="450I2jvUaUmtoyAgRjkF-0" value="Cô-Lock" style="swimlane;startSize=60;fillColor=default;strokeColor=default;fontColor=default;" parent="_1lMrd184p0aN324ZPrS-1" vertex="1">
           <mxGeometry x="330" y="90" width="1220" height="1130" as="geometry">
             <mxRectangle x="330" y="40" width="130" height="23" as="alternateBounds" />
           </mxGeometry>
