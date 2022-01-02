@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-02T10:17:55.336Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="ZPa3JK0dUhyjw7TdlPY_" version="16.1.2" type="github" pages="20">
+<mxfile host="app.diagrams.net" modified="2022-01-02T10:19:30.932Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="IrgBjyj-C86N5gqh5N3w" version="16.1.2" type="github" pages="20">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel dx="2365" dy="1235" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1634,7 +1634,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Xn57_vURIpzPOT6uY5gm" name="Envoyer code">
-    <mxGraphModel dx="946" dy="494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1455" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="1YoyUmnQHP1-ATVIWI0j-0" />
         <mxCell id="1YoyUmnQHP1-ATVIWI0j-1" parent="1YoyUmnQHP1-ATVIWI0j-0" />
@@ -1644,10 +1644,10 @@
         <mxCell id="BqVGMz9cmM88OQOIqAMT-0" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fontSize=14;fillColor=#000000;strokeColor=#FF3333;" parent="sZPv01w8gxYWlcfsA6vw-0" vertex="1">
           <mxGeometry x="165" y="60" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="mQRhMfsKqnYHON0BdScv-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le propriétaire a&amp;nbsp; ajouté un locataire&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="sZPv01w8gxYWlcfsA6vw-0" vertex="1">
+        <mxCell id="mQRhMfsKqnYHON0BdScv-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le propriétaire a ajouté un locataire&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="sZPv01w8gxYWlcfsA6vw-0" vertex="1">
           <mxGeometry x="70" y="30" width="240" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="eCiOomSUUBPX8a9D6ZTH-0" value="envoyer le code de connexion au locataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="sZPv01w8gxYWlcfsA6vw-0" vertex="1">
+        <mxCell id="eCiOomSUUBPX8a9D6ZTH-0" value="Envoyer le code de connexion au locataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="sZPv01w8gxYWlcfsA6vw-0" vertex="1">
           <mxGeometry x="125" y="280" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="sZPv01w8gxYWlcfsA6vw-2" value="Système " style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="1YoyUmnQHP1-ATVIWI0j-1" vertex="1">
@@ -1675,7 +1675,7 @@
           <mxGeometry x="170" y="430" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ZJHDDrdzasUQDDZHrGQ2-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le locataire a reçu&amp;nbsp;son code&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="sZPv01w8gxYWlcfsA6vw-3" vertex="1">
-          <mxGeometry x="65" y="480" width="240" height="20" as="geometry" />
+          <mxGeometry x="65" y="460" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="IREwO2zVVeET6t0MsmKX-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" parent="1YoyUmnQHP1-ATVIWI0j-1" source="BqVGMz9cmM88OQOIqAMT-0" target="IREwO2zVVeET6t0MsmKX-0" edge="1">
           <mxGeometry relative="1" as="geometry">
