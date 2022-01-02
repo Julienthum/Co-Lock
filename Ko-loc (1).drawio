@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-02T11:13:56.645Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="haA6HUUSKUQTnIKgfmFL" version="16.1.2" type="github" pages="20">
+<mxfile host="app.diagrams.net" modified="2022-01-02T11:16:09.654Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="L3AErJcSn24kIybjPaJq" version="16.1.2" type="github" pages="20">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel dx="2365" dy="1235" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -2403,8 +2403,8 @@
         <mxCell id="KCj5E8OHUb7Z17SmQ5DN-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="PHX2kLX9zPGX3idT9VV4-5" source="KCj5E8OHUb7Z17SmQ5DN-0" target="KCj5E8OHUb7Z17SmQ5DN-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="KCj5E8OHUb7Z17SmQ5DN-0" value="Entrer dans co-lôck" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="PHX2kLX9zPGX3idT9VV4-5" vertex="1">
-          <mxGeometry x="115" y="160" width="120" height="60" as="geometry" />
+        <mxCell id="KCj5E8OHUb7Z17SmQ5DN-0" value="Entrer dans Cô-Lock" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="PHX2kLX9zPGX3idT9VV4-5" vertex="1">
+          <mxGeometry x="115" y="130" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="KCj5E8OHUb7Z17SmQ5DN-1" value="Entrer son identifiant et mot de passe ainsi que le code du bien en question" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="PHX2kLX9zPGX3idT9VV4-5" vertex="1">
           <mxGeometry x="115" y="245" width="120" height="60" as="geometry" />
