@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-02T10:32:55.011Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="eIu4k9DLOILSR6fSa7Q9" version="16.1.2" type="github" pages="20">
+<mxfile host="app.diagrams.net" modified="2022-01-02T10:44:03.891Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="kayA1GV8W9UGsacFY2vN" version="16.1.2" type="github" pages="20">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel dx="2365" dy="1235" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1698,7 +1698,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="FZd87Ty2JIReQy1bRqUd" name="Editer bien">
-    <mxGraphModel dx="996" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="996" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="opcdLRtGwJ1gsNORYRcx-0" />
         <mxCell id="opcdLRtGwJ1gsNORYRcx-1" parent="opcdLRtGwJ1gsNORYRcx-0" />
@@ -1882,45 +1882,47 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mEO5ci3Plu-g_9Lqsa9H" name="Editer locataire">
-    <mxGraphModel dx="1662" dy="802" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1183" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="ybwF3ySPhP57nkEsxuCy-0" />
         <mxCell id="ybwF3ySPhP57nkEsxuCy-1" parent="ybwF3ySPhP57nkEsxuCy-0" />
         <mxCell id="jeeppQDsJTznm6xzOGYr-4" value="Propriétaire" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="ybwF3ySPhP57nkEsxuCy-1" vertex="1">
-          <mxGeometry y="40" width="380" height="880" as="geometry" />
+          <mxGeometry x="80" y="30" width="460" height="880" as="geometry" />
         </mxCell>
         <mxCell id="fcfa93xMMw7niGSHkDi6-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="jeeppQDsJTznm6xzOGYr-4" source="NeQlgtoRkZd6DutwKu0Q-0" target="Rl-wppvX4J5_30pCrc8b-0" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="NeQlgtoRkZd6DutwKu0Q-0" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fontSize=14;fillColor=#000000;strokeColor=#FF3333;" parent="jeeppQDsJTznm6xzOGYr-4" vertex="1">
-          <mxGeometry x="170" y="60" width="40" height="40" as="geometry" />
+          <mxGeometry x="210" y="70" width="40" height="40" as="geometry" />
         </mxCell>
         <mxCell id="sQjBup3Bq7aKuqhiS9r8-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le propriétaire souhaite éditer son espace locataire&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="jeeppQDsJTznm6xzOGYr-4" vertex="1">
-          <mxGeometry x="80" y="30" width="240" height="20" as="geometry" />
+          <mxGeometry x="110" y="40" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="Rl-wppvX4J5_30pCrc8b-0" value="Cliquer sur le bien qu&#39;il veut modifier" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-4" vertex="1">
-          <mxGeometry x="130" y="150" width="120" height="60" as="geometry" />
+          <mxGeometry x="170" y="150" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ryes0GfLKtzWsokdOM-v-0" value="Modifier les données en ajoutant un locataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-4" vertex="1">
-          <mxGeometry y="320" width="120" height="60" as="geometry" />
+          <mxGeometry x="20" y="320" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="fcfa93xMMw7niGSHkDi6-2" value="Envoyer le code au locataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-4" vertex="1">
           <mxGeometry x="130" y="580" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="fcfa93xMMw7niGSHkDi6-4" value="Modifier les données du bien en modifiant le locataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-4" vertex="1">
-          <mxGeometry x="130" y="320" width="120" height="60" as="geometry" />
+          <mxGeometry x="170" y="320" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" parent="jeeppQDsJTznm6xzOGYr-4" source="fcfa93xMMw7niGSHkDi6-7" target="ryes0GfLKtzWsokdOM-v-0" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="vwVprn27uO7SM6NB1Diw-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="jeeppQDsJTznm6xzOGYr-4" source="fcfa93xMMw7niGSHkDi6-7" target="fcfa93xMMw7niGSHkDi6-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="vwVprn27uO7SM6NB1Diw-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="jeeppQDsJTznm6xzOGYr-4" source="fcfa93xMMw7niGSHkDi6-7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="320" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="fcfa93xMMw7niGSHkDi6-7" value="" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-4" vertex="1">
-          <mxGeometry x="175" y="270" width="30" height="30" as="geometry" />
+          <mxGeometry x="215" y="270" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-0" value="Modifier les données du bien en supprimant le locataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-4" vertex="1">
-          <mxGeometry x="260" y="320" width="120" height="60" as="geometry" />
+          <mxGeometry x="320" y="320" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="jeeppQDsJTznm6xzOGYr-4" source="fcfa93xMMw7niGSHkDi6-7" target="vwVprn27uO7SM6NB1Diw-0" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -1928,19 +1930,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="jeeppQDsJTznm6xzOGYr-5" value="Système" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="ybwF3ySPhP57nkEsxuCy-1" vertex="1">
-          <mxGeometry x="380" y="40" width="380" height="880" as="geometry" />
+          <mxGeometry x="540" y="30" width="450" height="880" as="geometry" />
         </mxCell>
         <mxCell id="Rl-wppvX4J5_30pCrc8b-1" value="Afficher le bien selectionné" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry x="130" y="190" width="120" height="60" as="geometry" />
+          <mxGeometry x="130" y="200" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="jeeppQDsJTznm6xzOGYr-5" source="fcfa93xMMw7niGSHkDi6-0" target="vwVprn27uO7SM6NB1Diw-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="fcfa93xMMw7niGSHkDi6-0" value="Enregistrer les données modifiées" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry x="130" y="390" width="120" height="60" as="geometry" />
+          <mxGeometry x="165" y="390" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="fcfa93xMMw7niGSHkDi6-1" value="Enregistrer le locataire et l&#39;associer au bien en question" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry y="530" width="120" height="60" as="geometry" />
+          <mxGeometry x="20" y="530" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="jeeppQDsJTznm6xzOGYr-5" source="vwVprn27uO7SM6NB1Diw-9" target="fcfa93xMMw7niGSHkDi6-1" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -1956,54 +1958,54 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-9" value="" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry x="175" y="480" width="30" height="30" as="geometry" />
+          <mxGeometry x="210" y="480" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" parent="jeeppQDsJTznm6xzOGYr-5" source="vwVprn27uO7SM6NB1Diw-14" target="vwVprn27uO7SM6NB1Diw-21" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-14" value="Envoyer notification de modification de données au locataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry x="130" y="530" width="120" height="60" as="geometry" />
+          <mxGeometry x="165" y="530" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="iA5CuzLXMJEWJMqN5NOt-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="jeeppQDsJTznm6xzOGYr-5" source="vwVprn27uO7SM6NB1Diw-16" target="iA5CuzLXMJEWJMqN5NOt-0" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-16" value="Effacer le locataire et le déconnecter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry x="260" y="530" width="120" height="60" as="geometry" />
+          <mxGeometry x="305" y="530" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" parent="jeeppQDsJTznm6xzOGYr-5" source="vwVprn27uO7SM6NB1Diw-17" target="vwVprn27uO7SM6NB1Diw-22" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-17" value="Envoyer message d&#39;erreur au locataire pour informer de sa suppresion" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry x="260" y="695" width="120" height="60" as="geometry" />
+          <mxGeometry x="305" y="695" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-20" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=12;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry x="45" y="710" width="30" height="30" as="geometry" />
+          <mxGeometry x="60" y="780" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-21" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=12;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry x="175" y="710" width="30" height="30" as="geometry" />
+          <mxGeometry x="210" y="780" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-22" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=12;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry x="305" y="770" width="30" height="30" as="geometry" />
+          <mxGeometry x="350" y="780" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-23" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le locataire a été ajouté&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry x="-10" y="760" width="140" height="20" as="geometry" />
+          <mxGeometry x="5" y="820" width="140" height="20" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-24" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;le locataire a été modifié&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry x="115" y="760" width="140" height="20" as="geometry" />
+          <mxGeometry x="155" y="820" width="140" height="20" as="geometry" />
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-25" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le locataire a été supprimé&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry x="250" y="810" width="140" height="20" as="geometry" />
+          <mxGeometry x="295" y="820" width="140" height="20" as="geometry" />
         </mxCell>
         <mxCell id="iA5CuzLXMJEWJMqN5NOt-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" parent="jeeppQDsJTznm6xzOGYr-5" source="iA5CuzLXMJEWJMqN5NOt-0" target="vwVprn27uO7SM6NB1Diw-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iA5CuzLXMJEWJMqN5NOt-0" value="Résilier le contrat&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="jeeppQDsJTznm6xzOGYr-5" vertex="1">
-          <mxGeometry x="260" y="610" width="120" height="60" as="geometry" />
+          <mxGeometry x="305" y="610" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="fcfa93xMMw7niGSHkDi6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="ybwF3ySPhP57nkEsxuCy-1" source="Rl-wppvX4J5_30pCrc8b-0" target="Rl-wppvX4J5_30pCrc8b-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="570" y="220" />
+              <mxPoint x="730" y="210" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -2013,21 +2015,21 @@
         <mxCell id="vwVprn27uO7SM6NB1Diw-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="ybwF3ySPhP57nkEsxuCy-1" source="ryes0GfLKtzWsokdOM-v-0" target="fcfa93xMMw7niGSHkDi6-0" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="60" y="460" />
+              <mxPoint x="160" y="450" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="ybwF3ySPhP57nkEsxuCy-1" source="fcfa93xMMw7niGSHkDi6-4" target="fcfa93xMMw7niGSHkDi6-0" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="190" y="460" />
+              <mxPoint x="310" y="450" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="vwVprn27uO7SM6NB1Diw-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="ybwF3ySPhP57nkEsxuCy-1" source="vwVprn27uO7SM6NB1Diw-0" target="fcfa93xMMw7niGSHkDi6-0" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="320" y="460" />
+              <mxPoint x="460" y="450" />
             </Array>
           </mxGeometry>
         </mxCell>
