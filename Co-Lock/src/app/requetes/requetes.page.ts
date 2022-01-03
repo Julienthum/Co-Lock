@@ -5,6 +5,7 @@ import 'firebase/auth';
 import { Observable } from 'rxjs';
 import { DataService } from '../services/data.service';
 import { AlertController } from '@ionic/angular';
+import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-requetes',
@@ -23,11 +24,14 @@ export class RequetesPage implements OnInit {
   nameProprio;
   propName;
   authorName;
+  reqForm: FormGroup;
+  isSubmitted = false;
 
 
   constructor(
     public firestore: AngularFirestore,
     public data: DataService,
+    public formBuilder: FormBuilder,
     public alertController: AlertController,
   ) {
    this.items = this.firestore.collection('requetes').valueChanges();
@@ -35,6 +39,10 @@ export class RequetesPage implements OnInit {
 
   ngOnInit() {
     this.getInfo();
+    this.reqForm = this.formBuilder.group({
+      nom: ['', [Validators.required]],
+      description: ['', [Validators.required]],
+      });
   }
 
     public  async  getInfo() {
@@ -49,22 +57,53 @@ export class RequetesPage implements OnInit {
     this.nameProprio = propName.name + ' ' + propName.prenom;
     this.authorName = author.name + ' ' + author.prenom;
     }
+    get errorControl() {
+      return this.reqForm.controls;
+    }
+    async presentAlert() {
+      const alert = await this.alertController.create({
+        cssClass: 'my-custom-class',
+        header: 'Requete ajoutée !',
+        message: 'Votre requête à correctement été ajouté.',
+        buttons: ['Continuer']
+      });
 
+      await alert.present();
+    };
+    async presentNegative() {
+      const alert = await this.alertController.create({
+        cssClass: 'my-custom-class',
+        header: 'Oops !',
+        message: 'Vous avez oublié certains champs obligatoires !',
+        buttons: ['Continuer']
+      });
+
+      await alert.present();
+    };
   addRequete(){
-    this.firestore.collection('requetes').add({
-      nom: this.nom,
-      description: this.description,
-      etat: 'Nouveau',
-      idBien: this.data.docId,
-      auteur: firebase.auth().currentUser.uid,
-      idProprio: this.idProprio,
-      nameProprio: this.nameProprio,
-      bienName: this.propName,
-      authorName: this.authorName,
-      crea: firebase.firestore.FieldValue.serverTimestamp(),
-      deleted: false,
-    });
-    this.ajout();
+    this.isSubmitted = true;
+    if (!this.reqForm.valid) {
+      console.log('manques des champs la!');
+      this.presentNegative();
+      return false;
+    } else {
+      console.log('ca marche');
+      this.presentAlert();
+      this.firestore.collection('requetes').add({
+        nom: this.reqForm.value.nom,
+        description: this.reqForm.value.description,
+        etat: 'Nouveau',
+        idBien: this.data.docId,
+        auteur: firebase.auth().currentUser.uid,
+        idProprio: this.idProprio,
+        nameProprio: this.nameProprio,
+        bienName: this.propName,
+        authorName: this.authorName,
+        crea: firebase.firestore.FieldValue.serverTimestamp(),
+        deleted: false,
+      });
+    }
+
    }
 
   async ajout(){

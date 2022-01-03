@@ -7,7 +7,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 import { getAuth, deleteUser } from 'firebase/auth';
 import { refEqual, updateDoc } from 'firebase/firestore';
-import { ActionSheetController } from '@ionic/angular';
+import { ActionSheetController, AlertController } from '@ionic/angular';
 
 
 export interface Biens {
@@ -71,6 +71,7 @@ export class DataService {
   constructor(
     private firestore: AngularFirestore,
     private angularFireStorage: AngularFireStorage,
+    public alertController: AlertController,
     public actionSheetController: ActionSheetController
     ) { };
 
