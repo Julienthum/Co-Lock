@@ -32,6 +32,8 @@
 
     <ion-card-subtitle>Autres informations</ion-card-subtitle>
     <ion-card-content> Nombre de lit : {{bien.nbrePlace}} <br>Prix : {{bien.prix}}/mois <br> Supperficie : {{bien.superficie}} m2 </ion-card-content>
+    <ion-button class="secondary_btn" expand="block" fill="outline" [routerLink]="'../../update-biens/' + bien.id ">Modifier votre bien</ion-button>
+
 
 
   </ion-card>

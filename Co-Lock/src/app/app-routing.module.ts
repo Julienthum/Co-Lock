@@ -138,9 +138,14 @@ const routes: Routes = [
   {
     path: 'notifloc',
     loadChildren: () => import('./notifloc/notifloc.module').then( m => m.NotiflocPageModule)
-  },  {
+  },
+  {
     path: 'biensarchive',
     loadChildren: () => import('./biensarchive/biensarchive.module').then( m => m.BiensarchivePageModule)
+  },
+  {
+    path: 'update-biens/:id',
+    loadChildren: () => import('./update-biens/update-biens.module').then( m => m.UpdateBiensPageModule)
   },
 
 

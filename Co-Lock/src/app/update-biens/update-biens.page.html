@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Modificaion des données de votre bien </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="bien">
+
+  <ion-card>
+
+    <form [formGroup]="essaieForm" (ngSubmit)="addMike()" novalidate validationUserMessage>
+
+    <ion-card-header> Modifier la photo de votre bien </ion-card-header>
+    <div class="photoProfil">
+      <img [src]="bien.image">
+    </div>
+
+    <ion-input type="file" (change)="uploadPhoto($event)" accept=".png,.jpg"> Choisir une nouvelle image. </ion-input>
+
+    <ion-button class="primary_btn" expand="block" fill="solid" type="submit">la photo de mon bien</ion-button>
+
+  </form>
+
+  </ion-card>
+
+
+
+  <ion-card>
+
+  <ion-card-header> Modifier les informations de mon bien </ion-card-header>
+
+  <form [formGroup]="essaieForm" (ngSubmit)="uptadeInfo()" novalidate validationUserMessage>
+    <ion-text> Description du bien </ion-text>
+
+    <ion-item>
+      <ion-label position="floating">Nom du bien</ion-label>
+      <ion-input formControlName="nomDuBien" placeholder="nom"></ion-input>
+    </ion-item>
+
+    <ion-item class="enditem">
+      <ion-label position="floating">Description</ion-label>
+      <ion-input  formControlName="description" placeholder="Description"></ion-input>
+    </ion-item>
+
+
+    <ion-text> Adresse du bien</ion-text>
+
+    <ion-item>
+      <ion-label position="floating">rue</ion-label>
+      <ion-input formControlName="rue" placeholder="Rue"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Numéro</ion-label>
+      <ion-input type='number' formControlName="numero" placeholder="Numéro"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ville</ion-label>
+      <ion-input formControlName="ville" placeholder="Ville"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Code postal</ion-label>
+      <ion-input formControlName="codepostal" placeholder="Code postal"></ion-input>
+    </ion-item>
+
+    <ion-item class="enditem">
+      <ion-label position="floating">Province</ion-label>
+      <ion-input formControlName="province" placeholder="Province"></ion-input>
+    </ion-item>
+
+
+    <ion-text> Information du bien</ion-text>
+
+    <ion-item>
+
+      <ion-label position="floating">superficie</ion-label>
+      <ion-input type='number' formControlName="superficie" placeholder="Superficie"></ion-input>
+    </ion-item>
+
+    <ion-item class="enditem">
+      <ion-label position="floating">Nombre de place</ion-label>
+      <ion-input type='number' formControlName="nbrePlace" placeholder="Nombre de place disponible"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" class="primary_btn" expand="block" [routerLink]="'../../monbien/' + bien.id" fill="solid">Modifier les infos</ion-button>
+
+  </form>
+
+  </ion-card>
+
+
+
+</ion-content>
