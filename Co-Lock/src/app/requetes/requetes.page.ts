@@ -61,7 +61,8 @@ export class RequetesPage implements OnInit {
       nameProprio: this.nameProprio,
       bienName: this.propName,
       authorName: this.authorName,
-      crea: firebase.firestore.FieldValue.serverTimestamp()
+      crea: firebase.firestore.FieldValue.serverTimestamp(),
+      deleted: false,
     });
     this.ajout();
    }

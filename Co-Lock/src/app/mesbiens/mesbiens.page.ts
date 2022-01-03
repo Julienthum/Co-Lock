@@ -31,5 +31,4 @@ export class MesbiensPage implements OnInit {
   ngOnInit() {
   };
 
-
 }

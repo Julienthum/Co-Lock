@@ -21,4 +21,12 @@ export class InfolocPage implements OnInit {
     this.data.getUserByKey(id).subscribe((res) => this.loc = res);
   }
 
+  delete(){
+    const newItem = {
+      code : '',
+    };
+    console.log(this.loc.id);
+    this.data.updateItem('users', this.loc.id, newItem);
+  }
+
 }

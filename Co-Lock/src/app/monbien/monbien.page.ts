@@ -71,6 +71,9 @@ export class MonbienPage implements OnInit {
     const newItem = {
       deleted: true
     };
+    this.reqs.subscribe(req => req.forEach(element => {
+      this.data.updateItem('requetes', element.id, newItem);
+    }));
     this.data.updateItem('biens', this.bien.id, newItem);
   }
 
@@ -86,3 +89,4 @@ export class MonbienPage implements OnInit {
     window.open(url, '_system');
   }
 }
+

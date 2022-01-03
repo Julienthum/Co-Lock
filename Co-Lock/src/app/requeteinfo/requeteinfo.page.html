@@ -42,6 +42,8 @@
         </ion-chip>
       </p>
 
+      <ion-button class="primary_btn" fill="block" *ngIf="req.auteur === currentUser" (click)="deleted()"> Supprimer cette requete</ion-button>
+
 
   </ion-card>
 

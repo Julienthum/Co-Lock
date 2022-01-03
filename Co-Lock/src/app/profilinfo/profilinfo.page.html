@@ -98,5 +98,24 @@
 
   </ion-card>
 
+  <ion-card *ngIf="user.type === 'L' ">
+
+    <ion-card-header> Changer de bien </ion-card-header>
+
+    <ion-card-content> Attention, si vous changer le code d'acces au bien en location pour un nouveau, vous serrez rediriger vers la page de connection.</ion-card-content>
+
+    <form [formGroup]="essaieForm" (ngSubmit)="handleButtonClick('Voulez vous changez de code ?')" novalidate validationUserMessage>
+
+      <ion-item>
+        <ion-input formControlName="code" type="text" required placeholder="Nouveau code">
+        </ion-input>
+      </ion-item>
+
+      <ion-button class="primary_btn" expand="block" fill="solid" type="submit">Modifier le code</ion-button>
+
+    </form>
+
+  </ion-card>
+
 
 </ion-content>

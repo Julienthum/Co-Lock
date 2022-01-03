@@ -7,6 +7,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 import { getAuth, deleteUser } from 'firebase/auth';
 import { refEqual, updateDoc } from 'firebase/firestore';
+import { ActionSheetController } from '@ionic/angular';
 
 
 export interface Biens {
@@ -70,6 +71,7 @@ export class DataService {
   constructor(
     private firestore: AngularFirestore,
     private angularFireStorage: AngularFireStorage,
+    public actionSheetController: ActionSheetController
     ) { };
 
 /////////////////  Import d'image dans Storage  /////////////////////////
@@ -257,6 +259,7 @@ nbrbien = 0;
         ref
           .where('idProprio', '==', firebase.auth().currentUser.uid)
           .where('etat', '==', type)
+          .where('deleted', '==', false)
       )
       .snapshotChanges()
       .pipe(
@@ -365,5 +368,30 @@ nbrbien = 0;
           })
         )
       );
+  }
+
+
+  /////////// Confirmation //////
+
+  async handleButtonClick(test, autre) {
+    const actionSheet = await this.actionSheetController.create({
+      header: test,
+      buttons: [
+        { text: 'Delete',
+          role: 'destructive',
+          handler: () => {
+            console.log('Delete');
+
+          }
+      },
+        { text: 'Cancel', role: 'cancel',
+        handler: () => {
+          console.log('Cancel');
+
+        } },
+      ],
+    });
+
+    await actionSheet.present();
   }
 }

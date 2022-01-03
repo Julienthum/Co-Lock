@@ -6,7 +6,7 @@ import { DataService } from '../services/data.service';
 import firebase from 'firebase/compat/app';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { getAuth, updateEmail, updatePassword } from 'firebase/auth';
-import { AlertController } from '@ionic/angular';
+import { ActionSheetController, AlertController } from '@ionic/angular';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 
 
@@ -33,7 +33,9 @@ export class ProfilinfoPage implements OnInit {
     public router: Router,
     private data: DataService,
     public alertController: AlertController,
-    private angularFireStorage: AngularFireStorage
+    private angularFireStorage: AngularFireStorage,
+    public actionSheetController: ActionSheetController
+
     ) {
     this.users = this.data.getUser();
   }
@@ -45,6 +47,7 @@ export class ProfilinfoPage implements OnInit {
       mobile: ['', [Validators.required, Validators.pattern('^[0-9]+$'), Validators.minLength(10)]],
       email: [],
       password: [],
+      code: [],
     });
   }
 
@@ -53,6 +56,35 @@ export class ProfilinfoPage implements OnInit {
       name :  this.essaieForm.value.name,
       prenom : this.essaieForm.value.prenom,
       mobile :  this.essaieForm.value.mobile,
+    };
+    this.data.updateItem('users', firebase.auth().currentUser.uid, newItem );
+  }
+
+  async handleButtonClick(test) {
+    const actionSheet = await this.actionSheetController.create({
+      header: test,
+      buttons: [
+        { text: 'Delete',
+          role: 'destructive',
+          handler: () => {
+            this.updateCode();
+
+          }
+      },
+        { text: 'Cancel', role: 'cancel',
+        handler: () => {
+          console.log('Cancel');
+
+        } },
+      ],
+    });
+
+    await actionSheet.present();
+  }
+
+  updateCode(){
+    const newItem = {
+      code :  this.essaieForm.value.code,
     };
     this.data.updateItem('users', firebase.auth().currentUser.uid, newItem );
   }

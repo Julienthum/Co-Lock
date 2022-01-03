@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> Document </ion-title>
+    <ion-title> Mon bien </ion-title>
     <ion-buttons slot="start">
       <ion-back-button>
       </ion-back-button>
@@ -9,8 +9,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" *ngFor="let bien of biens | async">
-
-
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Mon bien </ion-title>
@@ -18,39 +16,51 @@
   </ion-header>
   <br>
 
-  <ion-card>
-    <img [src]="bien.image"/>
-    <ion-card-header>
-      <ion-card-title>{{bien.name}}</ion-card-title>
-    </ion-card-header>
 
-    <ion-card-subtitle>Description du bien</ion-card-subtitle>
-    <ion-card-content> {{bien.description}} </ion-card-content>
-
-    <ion-card-subtitle>Localisation</ion-card-subtitle>
-    <ion-card-content> {{bien.rue}} {{bien.numero}}, {{bien.cp}} {{bien.ville}}, {{bien.province}}</ion-card-content>
-
-    <ion-card-subtitle>Autres informations</ion-card-subtitle>
-    <ion-card-content> Nombre de lit : {{bien.nbrePlace}} <br>Prix : {{bien.prix}}/mois <br> Supperficie : {{bien.superficie}} m2 </ion-card-content>
+  <ion-card *ngIf="bien.deleted === true" id="sup">
+    <div id="content">
+      <ion-card-title color="danger"> Oups</ion-card-title>
+      <ion-card-subtitle class="spacer"> Une erreur est survenue...</ion-card-subtitle>
+      <ion-text> Il semblerait que votre propriétaire a supprimé son bien de l'application... Veilliez le contacter pour en savoir plus.</ion-text>
+    </div>
   </ion-card>
 
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title> Documents relatifs au bien </ion-card-title>
-      <ion-card-subtitle> Toutes les infos à savoir concernant votre bien </ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      Cette fonctionnalité vous permet de retrouver tous les documents utiles sur votre logement.
-    </ion-card-content>
-
-    <ion-card *ngFor="let doc of docs | async" [routerLink]="'../../docinfoloc/' + doc.id">
-      <img [src]= 'doc.url' class="docpres">
+    <div *ngIf="bien.deleted === false">
+    <ion-card>
+      <img [src]="bien.image"/>
       <ion-card-header>
-        <ion-card-title> {{ doc.name }}</ion-card-title>
-        <ion-card-subtitle> {{ doc.description }} </ion-card-subtitle>
+        <ion-card-title>{{bien.name}}</ion-card-title>
       </ion-card-header>
+
+      <ion-card-subtitle>Description du bien</ion-card-subtitle>
+      <ion-card-content> {{bien.description}} </ion-card-content>
+
+      <ion-card-subtitle>Localisation</ion-card-subtitle>
+      <ion-card-content> {{bien.rue}} {{bien.numero}}, {{bien.cp}} {{bien.ville}}, {{bien.province}}</ion-card-content>
+
+      <ion-card-subtitle>Autres informations</ion-card-subtitle>
+      <ion-card-content> Nombre de lit : {{bien.nbrePlace}} <br>Prix : {{bien.prix}}/mois <br> Supperficie : {{bien.superficie}} m2 </ion-card-content>
     </ion-card>
-  </ion-card>
+
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title> Documents relatifs au bien </ion-card-title>
+        <ion-card-subtitle> Toutes les infos à savoir concernant votre bien </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        Cette fonctionnalité vous permet de retrouver tous les documents utiles sur votre logement.
+      </ion-card-content>
+
+      <ion-card *ngFor="let doc of docs | async" [routerLink]="'../../docinfoloc/' + doc.id">
+        <img [src]= 'doc.url' class="docpres">
+        <ion-card-header>
+          <ion-card-title> {{ doc.name }}</ion-card-title>
+          <ion-card-subtitle> {{ doc.description }} </ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </ion-card>
+  </div>
 
 </ion-content>
