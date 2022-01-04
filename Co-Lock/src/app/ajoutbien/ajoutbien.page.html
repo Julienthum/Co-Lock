@@ -18,48 +18,56 @@
     <ion-text> Description du bien </ion-text>
 
     <ion-item>
-      <ion-input formControlName="nomDuBien" placeholder="Mon Bien"></ion-input>
+      <ion-input formControlName="nomDuBien"  placeholder="Mon Bien"></ion-input>
     </ion-item>
 
     <ion-item class="enditem">
-      <ion-input id='description' formControlName="description" placeholder="Description"></ion-input>
+      <ion-input id='description' formControlName="description"  placeholder="Description"></ion-input>
     </ion-item>
+
 
 
     <ion-text> Adresse du bien</ion-text>
 
     <ion-item>
-      <ion-input formControlName="rue" placeholder="Rue"></ion-input>
+      <ion-input formControlName="rue"  placeholder="Rue"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-input type='number' formControlName="numero" placeholder="Numéro"></ion-input>
-    </ion-item>
 
     <ion-item>
-      <ion-input formControlName="ville" placeholder="Ville"></ion-input>
+      <ion-input type='number' formControlName="numero"  placeholder="Numéro"></ion-input>
     </ion-item>
 
+
     <ion-item>
-      <ion-input formControlName="codepostal" placeholder="Code postal"></ion-input>
+      <ion-input formControlName="ville"  placeholder="Ville"></ion-input>
     </ion-item>
+
+
+    <ion-item>
+      <ion-input formControlName="codepostal"  placeholder="Code postal"></ion-input>
+    </ion-item>
+
 
     <ion-item class="enditem">
-      <ion-input formControlName="province" placeholder="Province"></ion-input>
+      <ion-input formControlName="province"  placeholder="Province"></ion-input>
     </ion-item>
+
 
 
     <ion-text> Information du bien</ion-text>
 
     <ion-item>
       <ion-input type='number' formControlName="superficie" placeholder="Superficie"></ion-input>
+
     </ion-item>
 
     <ion-item class="enditem">
-      <ion-input type='number' formControlName="nbrePlace" placeholder="Nombre de place disponible"></ion-input>
+      <ion-input type='number' formControlName="nbrePlace"  placeholder="Nombre de place disponible"></ion-input>
     </ion-item>
 
-    <ion-button type="submit" class="primary_btn" expand="block" fill="solid" (click)="presentAlert()">Ajouter</ion-button>
+
+    <ion-button type="submit" class="primary_btn" expand="block" fill="solid" >Ajouter</ion-button>
 
   </form>
 

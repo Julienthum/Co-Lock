@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/member-ordering */
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, } from '@angular/forms';
 import { AlertController, LoadingController } from '@ionic/angular/';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
@@ -29,7 +29,7 @@ export class DocbiensPage implements OnInit {
     description: '',
     doc: ''
   };
-  essaieForm: any;
+  essaieForm: FormGroup;
   activatedRoute: any;
 
 
@@ -48,15 +48,28 @@ export class DocbiensPage implements OnInit {
   url = '';
   barStatus = false;
   imageUploads = [];
+  isSubmitted = false;
 
   ngOnInit(){
     this.essaieForm = this.formBuilder.group({
-      name: '',
-      description: '',
-      doc: '',
+      name: ['', [Validators.required]],
+      description: ['', [Validators.required]],
+      doc: ['', [Validators.required]],
       });
   }
+  get errorControl() {
+    return this.essaieForm.controls;
+  }
+  async presentNegative() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Oops !',
+      message: 'Vous avez oublié certains champs obligatoires !',
+      buttons: ['Continuer']
+    });
 
+    await alert.present();
+  };
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Document ajouté !',
@@ -71,7 +84,9 @@ export class DocbiensPage implements OnInit {
     await alert.present();
   }
 
+
   async addMike(){ // ca ajoute un bien dans la collec biens et ca ajoute aussi l'uid dans les champs
+    this.isSubmitted = true;
     const user = await firebase.auth().currentUser;
     const spaceRef = this.dataService.fileName;
     const moi = user.uid;
@@ -79,14 +94,23 @@ export class DocbiensPage implements OnInit {
     const description = this.essaieForm.value.description;
     const url = this.url;
     const idBien = this.dataService.docId;
-    this.firestore.collection('documents').add({
-      moi,
-      name,
-      description,
-      spaceRef,
-      url,
-      idBien
-    });
+    if (!this.essaieForm.valid) {
+      console.log('manques des champs la!');
+      this.presentNegative();
+      return false;
+    } else {
+      console.log('ca marche');
+      this.presentAlert();
+      this.firestore.collection('documents').add({
+        moi,
+        name,
+        description,
+        spaceRef,
+        url,
+        idBien
+      });
+    }
+
 
     console.log('ca marche');
   }

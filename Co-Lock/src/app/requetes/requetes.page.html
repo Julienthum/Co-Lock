@@ -15,8 +15,10 @@
     <ion-card-subtitle> Pourquoi ajouter une requete ?</ion-card-subtitle>
     <ion-card-content> L'ajout d'une requete permet de notifier un point d'attention concernant le bien. Celle-ci sera visible par le propriétaire et le locataire.
       Tous deux pourront rapidement voir si la requete a été prise en charge et à quel moment. Un fois terminée, la requete reste enregistrée pour avoir une vue de l'historique. </ion-card-content>
-
+      <form [formGroup]="reqForm" (ngSubmit)="addRequete()" novalidate>
     <div>
+
+
       <ion-card-subtitle> J'ajoute ma requete</ion-card-subtitle>
 
       <ion-item lines="none">
@@ -24,22 +26,22 @@
       </ion-item>
 
       <ion-item lines="none">
-        <ion-input placeholder="Nommez votre requête" [(ngModel)]="nom" type="text"></ion-input>
+        <ion-input placeholder="Nommez votre requête" formControlName="nom" type="text"></ion-input>
       </ion-item>
 
       <ion-item lines="none">
-        <ion-textarea placeholder="Décrivez votre requête" [(ngModel)]="description" class="field"></ion-textarea>
+        <ion-textarea placeholder="Décrivez votre requête" formControlName="description" class="field"></ion-textarea>
       </ion-item>
 
 
 
     </div>
 
-    <ion-button (click)="addRequete()" expand="block" class="primary_btn">
+    <ion-button  type="submit "expand="block" class="primary_btn">
       <ion-icon name="add-circle-outline" slot="start"></ion-icon>
       Enregistrer la requête
     </ion-button>
-
+      </form>
 </ion-card>
 
 
