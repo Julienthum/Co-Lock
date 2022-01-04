@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-01-02T11:28:24.899Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="vu6NwgderW-KNGeEmQe0" version="16.1.2" type="github" pages="20">
+<mxfile host="app.diagrams.net" modified="2022-01-04T11:16:04.748Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="o-7Ebh0r7tfEu2cqYKZ7" version="16.1.2" type="github" pages="20">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
-    <mxGraphModel dx="2365" dy="1235" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1455" dy="848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -726,7 +726,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="5GqL1yBt6GKVH9OxMdS_" name="Hiérarchie de l&#39;appli">
-    <mxGraphModel dx="946" dy="1594" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="946" dy="1651" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="2PtMCe5UgdZqWsswR74V-0" />
         <mxCell id="2PtMCe5UgdZqWsswR74V-1" parent="2PtMCe5UgdZqWsswR74V-0" />
@@ -982,7 +982,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Shf1PIuUm4xIgwXxTlma" name="Use Case">
-    <mxGraphModel dx="2365" dy="1235" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1720" dy="1002" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="_1lMrd184p0aN324ZPrS-0" />
         <mxCell id="_1lMrd184p0aN324ZPrS-1" parent="_1lMrd184p0aN324ZPrS-0" />
@@ -1282,7 +1282,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mbYWFbN_cdZY_N83J7wT" name="Se connecter proprio">
-    <mxGraphModel dx="1455" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1034" dy="994" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="9pGWvyXPYpFsfe8EcuzT-0" />
         <mxCell id="9pGWvyXPYpFsfe8EcuzT-1" parent="9pGWvyXPYpFsfe8EcuzT-0" />
@@ -1452,7 +1452,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="hNSj2YfsZkw-IOpW2Gi0" name="Enregistrement du bien">
-    <mxGraphModel dx="1261" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="916" dy="1292" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="W6J24IK72z0Ez2wzmTgT-0" />
         <mxCell id="W6J24IK72z0Ez2wzmTgT-1" parent="W6J24IK72z0Ez2wzmTgT-0" />
@@ -1573,7 +1573,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="rbc1AosHVAB5gtbo5Ys9" name="générer un code">
-    <mxGraphModel dx="1113" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="916" dy="1292" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="1XNrNm50aqZ_EkgnfmSG-0" />
         <mxCell id="1XNrNm50aqZ_EkgnfmSG-1" parent="1XNrNm50aqZ_EkgnfmSG-0" />
@@ -1583,7 +1583,7 @@
         <mxCell id="lmQEjj8ZyO39zsAdjNnh-3" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fontSize=14;fillColor=#000000;strokeColor=#FF3333;" parent="lmQEjj8ZyO39zsAdjNnh-0" vertex="1">
           <mxGeometry x="230" y="60" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Q7Wqpr_vNcir51mTx5ul-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le propriétaire a ajouté un bien&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="lmQEjj8ZyO39zsAdjNnh-0" vertex="1">
+        <mxCell id="Q7Wqpr_vNcir51mTx5ul-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le propriétaire a consulte son bien&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="lmQEjj8ZyO39zsAdjNnh-0" vertex="1">
           <mxGeometry x="130" y="30" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="n5jq2-nywBgXh4cRP9B5-11" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=12;" parent="lmQEjj8ZyO39zsAdjNnh-0" vertex="1">
@@ -1595,7 +1595,7 @@
         <mxCell id="igWY9-Uf-60KvJvqFA69-4" value="Consulter le code" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="lmQEjj8ZyO39zsAdjNnh-0" vertex="1">
           <mxGeometry x="190" y="380" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="igWY9-Uf-60KvJvqFA69-9" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le propriétaire a ajouté un bien&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="lmQEjj8ZyO39zsAdjNnh-0" vertex="1">
+        <mxCell id="igWY9-Uf-60KvJvqFA69-9" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Un code est attribué au bien&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="lmQEjj8ZyO39zsAdjNnh-0" vertex="1">
           <mxGeometry x="130" y="510" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="n5jq2-nywBgXh4cRP9B5-0" value="Système" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="1XNrNm50aqZ_EkgnfmSG-1" vertex="1">
@@ -1634,7 +1634,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Xn57_vURIpzPOT6uY5gm" name="Envoyer code">
-    <mxGraphModel dx="1455" dy="848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="705" dy="994" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="1YoyUmnQHP1-ATVIWI0j-0" />
         <mxCell id="1YoyUmnQHP1-ATVIWI0j-1" parent="1YoyUmnQHP1-ATVIWI0j-0" />
@@ -1644,55 +1644,49 @@
         <mxCell id="BqVGMz9cmM88OQOIqAMT-0" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fontSize=14;fillColor=#000000;strokeColor=#FF3333;" parent="sZPv01w8gxYWlcfsA6vw-0" vertex="1">
           <mxGeometry x="165" y="60" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="mQRhMfsKqnYHON0BdScv-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le propriétaire a ajouté un locataire&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="sZPv01w8gxYWlcfsA6vw-0" vertex="1">
-          <mxGeometry x="70" y="30" width="240" height="20" as="geometry" />
+        <mxCell id="mQRhMfsKqnYHON0BdScv-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le contrat entre les 2 parties a été conclus&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="sZPv01w8gxYWlcfsA6vw-0" vertex="1">
+          <mxGeometry x="45" y="30" width="280" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="eCiOomSUUBPX8a9D6ZTH-0" value="Envoyer le code de connexion au locataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="sZPv01w8gxYWlcfsA6vw-0" vertex="1">
-          <mxGeometry x="125" y="280" width="120" height="60" as="geometry" />
+        <mxCell id="IREwO2zVVeET6t0MsmKX-0" value="Envoyer le code au locataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="sZPv01w8gxYWlcfsA6vw-0" vertex="1">
+          <mxGeometry x="125" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IREwO2zVVeET6t0MsmKX-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" parent="sZPv01w8gxYWlcfsA6vw-0" source="BqVGMz9cmM88OQOIqAMT-0" target="IREwO2zVVeET6t0MsmKX-0" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="sZPv01w8gxYWlcfsA6vw-2" value="Système " style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="1YoyUmnQHP1-ATVIWI0j-1" vertex="1">
           <mxGeometry x="410" y="80" width="370" height="530" as="geometry" />
         </mxCell>
-        <mxCell id="IREwO2zVVeET6t0MsmKX-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="sZPv01w8gxYWlcfsA6vw-2" source="IREwO2zVVeET6t0MsmKX-0" target="IREwO2zVVeET6t0MsmKX-1" edge="1">
+        <mxCell id="nV480MW9-uYtSbLboYF2-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="sZPv01w8gxYWlcfsA6vw-2" source="eCiOomSUUBPX8a9D6ZTH-0" target="nV480MW9-uYtSbLboYF2-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="IREwO2zVVeET6t0MsmKX-0" value="Enregistrer un nouveau locataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="sZPv01w8gxYWlcfsA6vw-2" vertex="1">
-          <mxGeometry x="115" y="100" width="120" height="60" as="geometry" />
+        <mxCell id="eCiOomSUUBPX8a9D6ZTH-0" value="Envoyer le code de connexion au locataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="sZPv01w8gxYWlcfsA6vw-2" vertex="1">
+          <mxGeometry x="125" y="210" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="IREwO2zVVeET6t0MsmKX-1" value="Associer le nouveau locataire au bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="sZPv01w8gxYWlcfsA6vw-2" vertex="1">
-          <mxGeometry x="115" y="190" width="120" height="60" as="geometry" />
+        <mxCell id="nV480MW9-uYtSbLboYF2-1" value="Associer le nouveau locataire à un bien&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="sZPv01w8gxYWlcfsA6vw-2">
+          <mxGeometry x="125" y="320" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="sZPv01w8gxYWlcfsA6vw-3" value="Locataire" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;startSize=23;" parent="1YoyUmnQHP1-ATVIWI0j-1" vertex="1">
           <mxGeometry x="780" y="80" width="370" height="530" as="geometry" />
         </mxCell>
-        <mxCell id="ZJHDDrdzasUQDDZHrGQ2-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" parent="sZPv01w8gxYWlcfsA6vw-3" source="eCiOomSUUBPX8a9D6ZTH-2" target="Q8H_ymmtdwE5x_tY2umL-0" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="eCiOomSUUBPX8a9D6ZTH-2" value="Consulter et tester le code de connexion" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="sZPv01w8gxYWlcfsA6vw-3" vertex="1">
-          <mxGeometry x="125" y="320" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="Q8H_ymmtdwE5x_tY2umL-0" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=12;" parent="sZPv01w8gxYWlcfsA6vw-3" vertex="1">
           <mxGeometry x="170" y="430" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZJHDDrdzasUQDDZHrGQ2-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le locataire a reçu&amp;nbsp;son code&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="sZPv01w8gxYWlcfsA6vw-3" vertex="1">
+        <mxCell id="ZJHDDrdzasUQDDZHrGQ2-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le locataire a accès au bien&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="sZPv01w8gxYWlcfsA6vw-3" vertex="1">
           <mxGeometry x="65" y="460" width="240" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="IREwO2zVVeET6t0MsmKX-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" parent="1YoyUmnQHP1-ATVIWI0j-1" source="BqVGMz9cmM88OQOIqAMT-0" target="IREwO2zVVeET6t0MsmKX-0" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="225" y="210" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="IREwO2zVVeET6t0MsmKX-1" value="Recevoir le code et tester son accès à son bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="sZPv01w8gxYWlcfsA6vw-3" vertex="1">
+          <mxGeometry x="130" y="140" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="eCiOomSUUBPX8a9D6ZTH-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="1YoyUmnQHP1-ATVIWI0j-1" source="IREwO2zVVeET6t0MsmKX-1" target="eCiOomSUUBPX8a9D6ZTH-0" edge="1">
+        <mxCell id="IREwO2zVVeET6t0MsmKX-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="1YoyUmnQHP1-ATVIWI0j-1" source="IREwO2zVVeET6t0MsmKX-0" target="IREwO2zVVeET6t0MsmKX-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="eCiOomSUUBPX8a9D6ZTH-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="1YoyUmnQHP1-ATVIWI0j-1" source="eCiOomSUUBPX8a9D6ZTH-0" target="eCiOomSUUBPX8a9D6ZTH-2" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="230" y="430" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="nV480MW9-uYtSbLboYF2-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1YoyUmnQHP1-ATVIWI0j-1" source="IREwO2zVVeET6t0MsmKX-1" target="eCiOomSUUBPX8a9D6ZTH-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nV480MW9-uYtSbLboYF2-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1YoyUmnQHP1-ATVIWI0j-1" source="nV480MW9-uYtSbLboYF2-1" target="Q8H_ymmtdwE5x_tY2umL-0">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
