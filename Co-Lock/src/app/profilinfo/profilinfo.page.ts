@@ -210,7 +210,7 @@ export class ProfilinfoPage implements OnInit {
       );
       }
 
-      async addMike(){ // ca ajoute un bien dans la collec biens et ca ajoute aussi l'uid dans les champs
+      async addMike(){
         const photoURL = {
           spaceRef: this.fileName,
           photo : this.url

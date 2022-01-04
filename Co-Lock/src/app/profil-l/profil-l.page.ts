@@ -8,6 +8,7 @@ import { getAuth, signOut } from 'firebase/auth';
 import { DataService } from '../services/data.service';
 import { Observable, } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { ActionSheetController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-profil-l',
@@ -28,6 +29,8 @@ export class ProfilLPage implements OnInit {
     public firestore: AngularFirestore,
     public router: Router,
     private data: DataService,
+    private alertController: AlertController,
+    private actionSheetController: ActionSheetController
   ) {
     this.users = this.data.getUser();
   }
@@ -54,7 +57,10 @@ export class ProfilLPage implements OnInit {
   deleteUser(){
     this.data.deleteUser();
     this.data.deleteItem('users', firebase.auth().currentUser.uid);
+    this.router.navigate(['/']);
   }
+
+
  async ptshs(){// Lien entre trois tables qui affiche les données du proprio au locataire
   const jay =  await firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid)
   .get().then(( doc => doc.data().code));
@@ -69,4 +75,57 @@ export class ProfilLPage implements OnInit {
         this.typena = doc.data().name,
         this.typepr = doc.data().prenom;} );
 }
+
+
+  //////////// CONFIRMATION DE L'ACTION /////////////
+
+
+  // 1° Suppression du compte
+
+  async handleButtonClick() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Etes vous sûr de vouloir supprimer votre compte ?',
+      // eslint-disable-next-line max-len
+      subHeader: 'La suppression du compte entraine la suppression de toutes les données liés à celui-ci (biens, documents, requetes...). Cette action est irréversible.',
+      buttons: [
+        { text: 'Supprimer',
+          role: 'destructive',
+          handler: () => {
+            this.deleteUser();
+
+          }
+      },
+        { text: 'Annuler', role: 'cancel',
+        handler: () => {
+          console.log('Cancel');
+
+        } },
+      ],
+    });
+
+    await actionSheet.present();
+  }
+
+
+  // 2° Déconnexion
+
+  async confirmSignOut() {
+    const alert = await this.alertController.create({
+      header: 'Déconnexion',
+      subHeader: 'Etes vous sur de vouloir vous déconnecter ? ',
+      buttons: [
+        { text: 'Déconnexion',
+          handler: () => {
+            this.signOut();
+          }
+      },
+        { text: 'Annuler', role: 'cancel',
+          handler: () => {
+            console.log('Cancel');
+        } },
+      ],
+    });
+
+    await alert.present();
+  }
 }

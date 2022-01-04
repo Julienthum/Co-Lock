@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 import { DataService } from '../services/data.service';
 import { Observable } from 'rxjs';
 import { Share } from '@capacitor/share';
+import { AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -33,6 +34,8 @@ export class MonbienPage implements OnInit {
     public firestore: AngularFirestore,
     private activatedRoute: ActivatedRoute,
     private data: DataService,
+    private alertController: AlertController,
+    public router: Router,
   ) { }
 
   async ngOnInit() {
@@ -87,6 +90,31 @@ export class MonbienPage implements OnInit {
 
   lien(url){
     window.open(url, '_system');
+  }
+
+
+  ///////// CONFIRMATION DE L'ACTION /////////
+
+  async confirmArchive() {
+    const alert = await this.alertController.create({
+      header: 'Archivage',
+      subHeader: 'Etes vous sur de vouloir archiver ce bien ? ',
+      message: 'Tous bien archivé pour etre récupéré dans le section \'archive\' sur le page d’accueil.',
+      buttons: [
+        { text: 'Archiver',
+          handler: () => {
+            this.archive();
+            this.router.navigate(['/navbar/mesbiens']);
+          }
+      },
+        { text: 'Annuler', role: 'cancel',
+          handler: () => {
+            console.log('Cancel');
+        } },
+      ],
+    });
+
+    await alert.present();
   }
 }
 

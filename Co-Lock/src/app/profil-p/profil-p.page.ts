@@ -6,7 +6,7 @@ import firebase from 'firebase/compat/app';
 import { getAuth, signOut } from 'firebase/auth';
 import { DataService } from '../services/data.service';
 import { Observable } from 'rxjs';
-import { AlertController } from '@ionic/angular';
+import { ActionSheetController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-profil-p',
@@ -24,7 +24,8 @@ export class ProfilPPage implements OnInit {
     public firestore: AngularFirestore,
     public router: Router,
     private data: DataService,
-    public alertController: AlertController
+    public alertController: AlertController,
+    private actionSheetController: ActionSheetController,
   ) {
     this.users = this.data.getUser();
     this.nbrbien = this.data.nbrbien;
@@ -58,6 +59,7 @@ export class ProfilPPage implements OnInit {
     const req = this.data.getAll('requetes', 'idProprio',firebase.auth().currentUser.uid);
     req.subscribe(docs => docs.forEach(element => {
       this.data.deleteItem('requetes', element.id);
+      this.data.deleteDoc('requetes', element.spaceRef);
     }));
     // delete all doc of proprio
     const doc = this.data.getAll('documents', 'moi',firebase.auth().currentUser.uid);
@@ -78,27 +80,54 @@ export class ProfilPPage implements OnInit {
     this.router.navigate(['/']);
   }
 
-  async presentAlertConfirm() {
-    const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      header: 'Confirm!',
+
+  //////////// CONFIRMATION DE L'ACTION /////////////
+
+
+  // 1° Suppression du compte
+
+  async handleButtonClick() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Etes vous sûr de vouloir supprimer votre compte ?',
       // eslint-disable-next-line max-len
-      message: 'Vous etes sur le point de supprimer votre compte. Une fois cette action réalisée, toutes vos données seront supprimés. Etes vous sur de vouloir continuer ? ',
+      subHeader: 'La suppression du compte entraine la suppression de toutes les données liés à celui-ci (biens, documents, requetes...). Cette action est irréversible.',
       buttons: [
-        {
-          text: 'Annuler',
-          role: 'cancel',
-          cssClass: 'secondary',
-          handler: (blah) => {
-            console.log('Confirm Cancel: blah');
-          }
-        }, {
-          text: 'Confirmer',
+        { text: 'Supprimer',
+          role: 'destructive',
           handler: () => {
             this.deleteUser();
+
           }
-        }
-      ]
+      },
+        { text: 'Annuler', role: 'cancel',
+        handler: () => {
+          console.log('Cancel');
+
+        } },
+      ],
+    });
+
+    await actionSheet.present();
+  }
+
+
+  // 2° Déconnexion
+
+  async confirmSignOut() {
+    const alert = await this.alertController.create({
+      header: 'Déconnexion',
+      subHeader: 'Etes vous sur de vouloir vous déconnecter ? ',
+      buttons: [
+        { text: 'Déconnexion',
+          handler: () => {
+            this.signOut();
+          }
+      },
+        { text: 'Annuler', role: 'cancel',
+          handler: () => {
+            console.log('Cancel');
+        } },
+      ],
     });
 
     await alert.present();

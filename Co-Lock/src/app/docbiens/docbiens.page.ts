@@ -61,7 +61,12 @@ export class DocbiensPage implements OnInit {
     const alert = await this.alertController.create({
       header: 'Document ajouté !',
       message: 'Votre document à correctement été ajouté.',
-      buttons: ['Continuer']
+      buttons: [
+        { text: 'OK',
+          handler: () => {
+            this.router.navigate(['./monbien/'+ this.dataService.docId]);
+      }
+  },]
     });
     await alert.present();
   }

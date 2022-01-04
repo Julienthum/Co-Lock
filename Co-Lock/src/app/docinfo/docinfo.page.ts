@@ -89,4 +89,26 @@ export class DocinfoPage implements OnInit {
     lien(url){
       window.open(url, '_system');
     }
+
+
+    async confirmDelete() {
+      const alert = await this.alertController.create({
+        header: 'Suppression',
+        subHeader: 'Etes vous sur de vouloir supprimer ce locataire ? ',
+        buttons: [
+          { text: 'Supprimer',
+            handler: () => {
+              this.deleteResto();
+              this.router.navigate(['./monbien/'+ this.data.docId]);
+            }
+        },
+          { text: 'Annuler', role: 'cancel',
+            handler: () => {
+              console.log('Cancel');
+          } },
+        ],
+      });
+
+      await alert.present();
+    }
 }

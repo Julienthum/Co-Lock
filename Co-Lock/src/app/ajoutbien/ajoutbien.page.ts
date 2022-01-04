@@ -8,6 +8,7 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ajoutbien',
@@ -48,6 +49,7 @@ export class AjoutbienPage implements OnInit {
     public alertController: AlertController,
     public formBuilder: FormBuilder,
     private angularFireStorage: AngularFireStorage,
+    private router: Router,
   ) {
     this.users = this.firestore.collection('biens').valueChanges();
   }
@@ -79,7 +81,12 @@ export class AjoutbienPage implements OnInit {
       cssClass: 'my-custom-class',
       header: 'Bien Ajouté !',
       message: 'Votre bien à correctement été ajouté.',
-      buttons: ['Continuer']
+      buttons: [
+        {text: 'Continuer',
+        handler: () => {
+        this.router.navigate(['/navbar/mesbiens']);
+        }
+      }]
     });
 
     await alert.present();
@@ -136,6 +143,8 @@ export class AjoutbienPage implements OnInit {
     console.log('ca marche');
   }
 
+/////////////// Upload Image ////////////
+
   imageName() {
     const newTime = Math.floor(Date.now() / 1000);
     const name = Math.floor(Math.random() * 20) + newTime;
@@ -179,5 +188,4 @@ export class AjoutbienPage implements OnInit {
       }
       );
       }
-
 }

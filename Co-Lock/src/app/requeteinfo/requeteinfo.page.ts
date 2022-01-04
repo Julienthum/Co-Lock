@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 import firebase from 'firebase/compat/app';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-requeteinfo',
@@ -18,6 +19,7 @@ export class RequeteinfoPage implements OnInit {
     public router: Router,
     private activatedRoute: ActivatedRoute,
     private data: DataService,
+    private alertController: AlertController
   ) { }
 
   ngOnInit() {
@@ -54,5 +56,27 @@ export class RequeteinfoPage implements OnInit {
       deleted: true
     };
     this.data.updateItem('requetes', this.req.id, newItem);
+  }
+
+
+  async confirmDelete() {
+    const alert = await this.alertController.create({
+      header: 'Suppression',
+      subHeader: 'Etes vous sur de vouloir supprimer la requete ? ',
+      buttons: [
+        { text: 'Supprimer',
+          handler: () => {
+            this.deleted();
+            this.router.navigate(['./monbien/'+ this.req.idBien]);
+          }
+      },
+        { text: 'Annuler', role: 'cancel',
+          handler: () => {
+            console.log('Cancel');
+        } },
+      ],
+    });
+
+    await alert.present();
   }
 }

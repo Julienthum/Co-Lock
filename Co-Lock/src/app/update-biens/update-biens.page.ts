@@ -33,6 +33,8 @@ export interface Biens {
   styleUrls: ['./update-biens.page.scss'],
 })
 export class UpdateBiensPage implements OnInit {
+
+
   essaieForm: FormGroup;
   location = 'photoBien/';
   barStatus = false;
@@ -41,6 +43,9 @@ export class UpdateBiensPage implements OnInit {
   bien;
   id: any;
   users: Observable<any[]>;
+  spaceRef;
+
+
   constructor(public firestore: AngularFirestore,
     // eslint-disable-next-line @typescript-eslint/no-shadow
     public alertController: AlertController,
@@ -100,9 +105,11 @@ export class UpdateBiensPage implements OnInit {
 
     await alert.present();
   };
+
   getTask(id) {
     return this.firestore.collection('biens').doc(id).valueChanges();
   }
+
   uptadeInfo(){
     const newItem = {
       nomDuBien :  this.essaieForm.value.nomDuBien,
@@ -121,7 +128,10 @@ export class UpdateBiensPage implements OnInit {
     this.data.updateItem('biens', this.bien.id, this.essaieForm.value );
 
   }
-// POur l'image ---------------------------------
+
+
+// Pour l'image ---------------------------------
+
 imageName() {
   const newTime = Math.floor(Date.now() / 1000);
   const name = Math.floor(Math.random() * 20) + newTime;
@@ -131,6 +141,7 @@ imageName() {
 async storeImage(imageData: any) {
   try {
       const imageName = this.imageName();
+      this.spaceRef = imageName;
       return new Promise((resolve, reject) => {
       const pictureRef = this.angularFireStorage.ref(this.location + imageName);
       pictureRef
@@ -165,9 +176,11 @@ async storeImage(imageData: any) {
     );
     }
 
-    async addMike(){ // ca ajoute un bien dans la collec biens et ca ajoute aussi l'uid dans les champs
+    async addMike(){
+      this.data.deleteDoc('biens', this.bien.spaceRef);
       const photoURL = {
-        photo : this.url
+        image: this.url,
+        spaceRef: this.spaceRef
       };
       this.data.updateItem('biens', this.bien.id, photoURL );
     }

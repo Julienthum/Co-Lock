@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 import { DataService } from '../services/data.service';
+import { ActionSheetController } from '@ionic/angular';
 @Component({
   selector: 'app-biensarchive',
   templateUrl: './biensarchive.page.html',
@@ -25,7 +26,8 @@ export class BiensarchivePage implements OnInit {
   constructor(
     public firestore: AngularFirestore,
     public router: Router,
-    private data: DataService
+    private data: DataService,
+    private actionSheetController: ActionSheetController
   ) {
     this.biens = this.data.getRestosArchive();
   }
@@ -51,9 +53,35 @@ export class BiensarchivePage implements OnInit {
     this.reqs.subscribe(req => req.forEach(element => {
       console.log(element.id);
       this.data.deleteItem('requetes', element.id);
+      this.data.deleteDoc('requetes', element.spaceRef);
     }));
     this.data.deleteDoc('photoBien', spaceRef);
     this.data.deleteItem('biens', id);
   }
+
+  //////////// Confirmation de la suppression //////////////
+
+async handleButtonClick(id, spaceRef) {
+  const actionSheet = await this.actionSheetController.create({
+    header: 'Etes vous sûr de vouloir supprimer votre compte ?',
+    // eslint-disable-next-line max-len
+    subHeader: 'La suppression du compte entraine la suppression de toutes les données liés à celui-ci (biens, documents, requetes...). Cette action est irréversible.',
+    buttons: [
+      { text: 'Supprimer',
+        role: 'destructive',
+        handler: () => {
+          this.delete(id, spaceRef);
+        }
+    },
+      { text: 'Annuler', role: 'cancel',
+      handler: () => {
+        console.log('Cancel');
+
+      } },
+    ],
+  });
+
+  await actionSheet.present();
+}
 
 }

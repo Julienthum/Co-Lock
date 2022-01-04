@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -13,7 +14,9 @@ export class InfolocPage implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private data: DataService
+    private data: DataService,
+    private alertController: AlertController,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -25,8 +28,28 @@ export class InfolocPage implements OnInit {
     const newItem = {
       code : '',
     };
-    console.log(this.loc.id);
     this.data.updateItem('users', this.loc.id, newItem);
+  }
+
+  async confirmDelete() {
+    const alert = await this.alertController.create({
+      header: 'Suppression',
+      subHeader: 'Etes vous sur de vouloir supprimer ce locataire ? ',
+      buttons: [
+        { text: 'Supprimer',
+          handler: () => {
+            this.delete();
+            this.router.navigate(['./monbien/'+ this.data.docId]);
+          }
+      },
+        { text: 'Annuler', role: 'cancel',
+          handler: () => {
+            console.log('Cancel');
+        } },
+      ],
+    });
+
+    await alert.present();
   }
 
 }
