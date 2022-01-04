@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-01-04T13:59:33.568Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="N8yNiXpvbGE__Q0b6fOc" version="16.1.2" type="github" pages="20">
+<mxfile host="app.diagrams.net" modified="2022-01-04T14:10:09.794Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="5yhtLzxan3fwmDVT94nW" version="16.1.2" type="github" pages="20">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
-    <mxGraphModel dx="1455" dy="848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1034" dy="994" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2550,14 +2550,14 @@
     </mxGraphModel>
   </diagram>
   <diagram id="e2U_4L_Uc0UZnkNTMuHk" name="Faire une requête">
-    <mxGraphModel dx="1351" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="960" dy="923" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="4FnnVqdCoPJqPLyLUks5-0" />
         <mxCell id="4FnnVqdCoPJqPLyLUks5-1" parent="4FnnVqdCoPJqPLyLUks5-0" />
         <mxCell id="IgT5QsKJjPnPi5cm5gFl-6" value="Propriétaire" style="swimlane;fontSize=14;strokeColor=#000000;fillColor=#FFFFFF;startSize=23;" parent="4FnnVqdCoPJqPLyLUks5-1" vertex="1">
           <mxGeometry x="40" y="50" width="350" height="510" as="geometry" />
         </mxCell>
-        <mxCell id="MUHxtN_Frz1RovkuYLxH-1" value="&lt;span style=&quot;font-size: 12px&quot;&gt;Le propriétaire reçoit&amp;nbsp;une notification de requête&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="IgT5QsKJjPnPi5cm5gFl-6" vertex="1">
+        <mxCell id="MUHxtN_Frz1RovkuYLxH-1" value="&lt;span style=&quot;font-size: 12px&quot;&gt;Le propriétaire reçoit&amp;nbsp;une notification de la requête&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="IgT5QsKJjPnPi5cm5gFl-6" vertex="1">
           <mxGeometry x="55" y="460" width="240" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9oWxD46jc50RPgZpYHyx-0" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=12;" parent="IgT5QsKJjPnPi5cm5gFl-6" vertex="1">
@@ -2602,7 +2602,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Régler la requête" id="xwPaD5fzchMRzmg7swor">
-    <mxGraphModel dx="1261" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="672" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="W2l0sGHgCA5iIa-g2eqn-0" />
         <mxCell id="W2l0sGHgCA5iIa-g2eqn-1" parent="W2l0sGHgCA5iIa-g2eqn-0" />
