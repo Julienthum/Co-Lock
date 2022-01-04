@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-04T13:03:05.882Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="jtaiRN1UBSb4s-a54y0W" version="16.1.2" type="github" pages="20">
+<mxfile host="app.diagrams.net" modified="2022-01-04T13:59:33.568Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="N8yNiXpvbGE__Q0b6fOc" version="16.1.2" type="github" pages="20">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
     <mxGraphModel dx="1455" dy="848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -2148,7 +2148,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fVTnZu-0Q78shC0gxB6s" name="Vérifier le loyer">
-    <mxGraphModel dx="1351" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="672" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="goh1zdvP6LU6e4MuHIoU-0" />
         <mxCell id="goh1zdvP6LU6e4MuHIoU-1" parent="goh1zdvP6LU6e4MuHIoU-0" />
@@ -2255,7 +2255,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="3ks9HHOrE2TVvvzmzb2T" name="Envoyer notification de retard">
-    <mxGraphModel dx="1892" dy="988" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="791" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="PzlF3XHPNdAf8z-jb93f-0" />
         <mxCell id="PzlF3XHPNdAf8z-jb93f-1" parent="PzlF3XHPNdAf8z-jb93f-0" />
@@ -2321,7 +2321,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mqDsWyJz3_S0ffohp0EU" name="Indexation">
-    <mxGraphModel dx="946" dy="494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="960" dy="923" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="xEt2Be7uvU0AeItyBvwK-0" />
         <mxCell id="xEt2Be7uvU0AeItyBvwK-1" parent="xEt2Be7uvU0AeItyBvwK-0" />
@@ -2384,7 +2384,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="9MekELn8XsM3_B3_sqW3" name="Se connecter / loc">
-    <mxGraphModel dx="1183" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="960" dy="923" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="UJH5DGKI4x2WUhmZaYtp-0" />
         <mxCell id="UJH5DGKI4x2WUhmZaYtp-1" parent="UJH5DGKI4x2WUhmZaYtp-0" />
@@ -2403,7 +2403,7 @@
         <mxCell id="-qsgAKRdbszGv-V479pd-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" parent="cpnFq7p6cLgTuHNEpf-4-0" source="zGK-GsJWh3dNVRjZQEAr-0" target="-qsgAKRdbszGv-V479pd-0" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MnwqDPSQ3zk05onGapcr-0" value="Pas encore de compte" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" vertex="1" connectable="0" parent="-qsgAKRdbszGv-V479pd-13">
+        <mxCell id="MnwqDPSQ3zk05onGapcr-0" value="Pas encore de compte" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="-qsgAKRdbszGv-V479pd-13" vertex="1" connectable="0">
           <mxGeometry x="-0.0496" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -2414,7 +2414,7 @@
         <mxCell id="-qsgAKRdbszGv-V479pd-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" parent="cpnFq7p6cLgTuHNEpf-4-0" source="zGK-GsJWh3dNVRjZQEAr-0" target="-qsgAKRdbszGv-V479pd-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RKOGXCnxt9wa9qTyTKuB-0" value="Déjà un compte mais nouveau bien" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" vertex="1" connectable="0" parent="-qsgAKRdbszGv-V479pd-15">
+        <mxCell id="RKOGXCnxt9wa9qTyTKuB-0" value="Déjà un compte mais nouveau bien" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" parent="-qsgAKRdbszGv-V479pd-15" vertex="1" connectable="0">
           <mxGeometry x="-0.3605" relative="1" as="geometry">
             <mxPoint x="14" as="offset" />
           </mxGeometry>
@@ -2431,7 +2431,7 @@
         <mxCell id="-qsgAKRdbszGv-V479pd-7" value="Entrer son identifiant et mot de passe et le nouveau code" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="cpnFq7p6cLgTuHNEpf-4-0" vertex="1">
           <mxGeometry x="340" y="210" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RKOGXCnxt9wa9qTyTKuB-2" value="Déja un compte" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" vertex="1" parent="cpnFq7p6cLgTuHNEpf-4-0">
+        <mxCell id="RKOGXCnxt9wa9qTyTKuB-2" value="Déja un compte" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;" parent="cpnFq7p6cLgTuHNEpf-4-0" vertex="1">
           <mxGeometry x="211" y="180" width="80" height="20" as="geometry" />
         </mxCell>
         <mxCell id="cpnFq7p6cLgTuHNEpf-4-1" value="Système" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="UJH5DGKI4x2WUhmZaYtp-1" vertex="1">
@@ -2489,7 +2489,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fStM0deNS-2vfcIvlyAi" name="Consulter informations du bien">
-    <mxGraphModel dx="946" dy="494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="672" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="kfP_-s6xxSPjrz9gFPp0-0" />
         <mxCell id="kfP_-s6xxSPjrz9gFPp0-1" parent="kfP_-s6xxSPjrz9gFPp0-0" />
@@ -2511,7 +2511,7 @@
         <mxCell id="KCj5E8OHUb7Z17SmQ5DN-0" value="Entrer dans Cô-Lock" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="PHX2kLX9zPGX3idT9VV4-5" vertex="1">
           <mxGeometry x="115" y="130" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="KCj5E8OHUb7Z17SmQ5DN-1" value="Entrer son identifiant et mot de passe ainsi que le code du bien en question" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="PHX2kLX9zPGX3idT9VV4-5" vertex="1">
+        <mxCell id="KCj5E8OHUb7Z17SmQ5DN-1" value="Connecter et cliquer sur son bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="PHX2kLX9zPGX3idT9VV4-5" vertex="1">
           <mxGeometry x="115" y="245" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="pQgx_VJXcH2J1eJ4OZ1N-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="PHX2kLX9zPGX3idT9VV4-5" source="b9ymRv3hVcUzROBCNz6o-0" target="pQgx_VJXcH2J1eJ4OZ1N-0" edge="1">
@@ -2529,7 +2529,7 @@
         <mxCell id="PHX2kLX9zPGX3idT9VV4-6" value="Système" style="swimlane;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="kfP_-s6xxSPjrz9gFPp0-1" vertex="1">
           <mxGeometry x="540" y="150" width="350" height="590" as="geometry" />
         </mxCell>
-        <mxCell id="KCj5E8OHUb7Z17SmQ5DN-2" value="Vérifier données enregistrées et le connecter au bien correspondant au code" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="PHX2kLX9zPGX3idT9VV4-6" vertex="1">
+        <mxCell id="KCj5E8OHUb7Z17SmQ5DN-2" value="Donner accès au bien et aux informations de celui-ci" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="PHX2kLX9zPGX3idT9VV4-6" vertex="1">
           <mxGeometry x="110" y="290" width="125" height="75" as="geometry" />
         </mxCell>
         <mxCell id="KCj5E8OHUb7Z17SmQ5DN-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="kfP_-s6xxSPjrz9gFPp0-1" source="KCj5E8OHUb7Z17SmQ5DN-1" target="KCj5E8OHUb7Z17SmQ5DN-2" edge="1">
