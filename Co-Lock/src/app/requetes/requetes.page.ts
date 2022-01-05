@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { DataService } from '../services/data.service';
 import { AlertController } from '@ionic/angular';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-requetes',
@@ -26,6 +27,9 @@ export class RequetesPage implements OnInit {
   propName;
   authorName;
 
+  reqForm: FormGroup;
+  isSubmitted = false;
+
   // Variable pour ajout photo
   fileName;
   url;
@@ -37,13 +41,18 @@ export class RequetesPage implements OnInit {
     public firestore: AngularFirestore,
     public data: DataService,
     public alertController: AlertController,
-    private angularFireStorage: AngularFireStorage
+    private angularFireStorage: AngularFireStorage,
+    public formBuilder: FormBuilder,
   ) {
    this.items = this.firestore.collection('requetes').valueChanges();
    }
 
   ngOnInit() {
     this.getInfo();
+    this.reqForm = this.formBuilder.group({
+      nom: ['', [Validators.required]],
+      description: ['', [Validators.required]],
+      });
   }
 
     public  async  getInfo() {
@@ -59,23 +68,53 @@ export class RequetesPage implements OnInit {
     this.authorName = author.name + ' ' + author.prenom;
     }
 
+    get errorControl() {
+      return this.reqForm.controls;
+    }
+    async presentAlert() {
+      const alert = await this.alertController.create({
+        cssClass: 'my-custom-class',
+        header: 'Requete ajoutée !',
+        message: 'Votre requête à correctement été ajouté.',
+        buttons: ['Continuer']
+      });
+
+      await alert.present();
+    };
+    async presentNegative() {
+      const alert = await this.alertController.create({
+        cssClass: 'my-custom-class',
+        header: 'Oops !',
+        message: 'Vous avez oublié certains champs obligatoires !',
+        buttons: ['Continuer']
+      });
+
+      await alert.present();
+    };
+
   addRequete(){
-    this.firestore.collection('requetes').add({
-      nom: this.nom,
-      description: this.description,
-      etat: 'Nouveau',
-      spaceRef: this.fileName,
-      url: this.url,
-      idBien: this.data.docId,
-      auteur: firebase.auth().currentUser.uid,
-      idProprio: this.idProprio,
-      nameProprio: this.nameProprio,
-      bienName: this.propName,
-      authorName: this.authorName,
-      crea: firebase.firestore.FieldValue.serverTimestamp(),
-      deleted: false,
-    });
-    this.ajout();
+    this.isSubmitted = true;
+    if (!this.reqForm.valid) {
+      console.log('manques des champs la!');
+      this.presentNegative();
+      return false;
+    } else {
+      console.log('ca marche');
+      this.presentAlert();
+      this.firestore.collection('requetes').add({
+        nom: this.reqForm.value.nom,
+        description: this.reqForm.value.description,
+        etat: 'Nouveau',
+        idBien: this.data.docId,
+        auteur: firebase.auth().currentUser.uid,
+        idProprio: this.idProprio,
+        nameProprio: this.nameProprio,
+        bienName: this.propName,
+        authorName: this.authorName,
+        crea: firebase.firestore.FieldValue.serverTimestamp(),
+        deleted: false,
+      });
+    }
    }
 
   async ajout(){

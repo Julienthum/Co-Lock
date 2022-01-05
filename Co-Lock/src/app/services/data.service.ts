@@ -298,6 +298,7 @@ nbrbien = 0;
         ref
           .where('idBien', '==', bien)
           .where('etat', '==', type)
+          .where('deleted', '==', false)
       )
       .snapshotChanges()
       .pipe(
@@ -318,6 +319,7 @@ nbrbien = 0;
         ref
           .where('idBien', '==', this.idBien)
           .where('etat', '==', type)
+          .where('deleted', '==', false)
       )
       .snapshotChanges()
       .pipe(

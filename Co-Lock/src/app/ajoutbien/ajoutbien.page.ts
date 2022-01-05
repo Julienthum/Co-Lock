@@ -24,6 +24,8 @@ export class AjoutbienPage implements OnInit {
   imageUploads = [];
   fileName;
 
+  isSubmitted = false;
+
   users: Observable<any[]>;
 
   firebaseData = {
@@ -40,7 +42,8 @@ export class AjoutbienPage implements OnInit {
     image: '',
     code: '',
   };
-  essaieForm: any;
+
+  essaieForm: FormGroup;
 
 
   constructor(
@@ -60,20 +63,24 @@ export class AjoutbienPage implements OnInit {
 
   ngOnInit() {
     this.essaieForm = this.formBuilder.group({
-      nomDuBien: '',
-      description: '',
-      rue: '',
-      numero: '',
-      ville: '',
-      codepostal: '',
-      province: '',
+      nomDuBien: ['', [Validators.required]],
+      description: ['', [Validators.required]],
+      rue: ['', [Validators.required]],
+      numero: ['', [Validators.required]],
+      ville: ['', [Validators.required]],
+      codepostal: ['', [Validators.required]],
+      province: ['', [Validators.required]],
       superficie: '',
-      nbrePlace: '',
+      nbrePlace: ['', [Validators.required]],
       prix: '',
       image: '',
       code: '',
       spaceRef: '',
       });
+  }
+
+  get errorControl() {
+    return this.essaieForm.controls;
   }
 
   async presentAlert() {
@@ -87,6 +94,18 @@ export class AjoutbienPage implements OnInit {
         this.router.navigate(['/navbar/mesbiens']);
         }
       }]
+    });
+
+    await alert.present();
+  };
+
+
+  async presentNegative() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Oops !',
+      message: 'Vous avez oublié certains champs obligatoires !',
+      buttons: ['Continuer']
     });
 
     await alert.present();
@@ -107,6 +126,7 @@ export class AjoutbienPage implements OnInit {
   }
 
   async addMike(){ // ca ajoute un bien dans la collec biens et ca ajoute aussi l'uid dans les champs
+    this.isSubmitted = true;
     const user = await firebase.auth().currentUser;
     const moi = user.uid;
     const name = this.essaieForm.value.nomDuBien;
@@ -122,25 +142,32 @@ export class AjoutbienPage implements OnInit {
     const image = this.url;
     const code = this.idGenerator();
     const deleted = false;
-    this.firestore.collection('biens').add({
-      moi,
-      name,
-      description,
-      rue,
-      numero,
-      ville,
-      cp,
-      province,
-      superficie,
-      nbrePlace,
-      prix,
-      image,
-      code,
-      spaceRef: this.fileName,
-      deleted
-    });
-
-    console.log('ca marche');
+    if (!this.essaieForm.valid) {
+      console.log('manques des champs la!');
+      this.presentNegative();
+      return false;
+    } else {
+      console.log('ca marche');
+      this.presentAlert();
+      this.router.navigate(['/navbar/mesbiens']);
+        this.firestore.collection('biens').add({
+        moi,
+        name,
+        description,
+        rue,
+        numero,
+        ville,
+        cp,
+        province,
+        superficie,
+        nbrePlace,
+        prix,
+        image,
+        code,
+        spaceRef: this.fileName,
+        deleted
+      });
+    }
   }
 
 /////////////// Upload Image ////////////
