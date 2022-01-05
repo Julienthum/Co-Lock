@@ -22,7 +22,7 @@
       <ion-card-subtitle> J'ajoute ma requete</ion-card-subtitle>
 
       <ion-item lines="none">
-        <ion-input type="file" class='image' [(ngModel)]="file" placeholder="Ajouter une image" (change)="uploadPhoto($event)" accept=".png,.jpg"></ion-input>
+        <ion-input type="file" class='image' formControlName="file" placeholder="Ajouter une image" (change)="uploadPhoto($event)" accept=".png,.jpg"></ion-input>
       </ion-item>
 
       <ion-item lines="none">
