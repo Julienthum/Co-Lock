@@ -27,19 +27,19 @@
       <ion-card-content *ngIf="req.inprogress"> Debut du traitement : {{req.inprogress.toDate()}} </ion-card-content>
       <ion-card-content *ngIf="req.finish"> Fin du traitement : {{req.finish.toDate()}} </ion-card-content>
 
-      <div class="trait_dessus"><hr></div>
+      <div class="trait_dessus" *ngIf="!req.finish"><hr></div>
 
-    <ion-card-subtitle> Modifier le statut de la requete</ion-card-subtitle>
+    <ion-card-subtitle *ngIf="!req.finish"> Modifier le statut de la requete</ion-card-subtitle>
       <p class="statut">
-        <ion-chip (click)="statutNew()" color="success">
+        <ion-chip (click)="statutNew()" color="success" *ngIf="!req.crea">
           <ion-label>Nouveau</ion-label>
         </ion-chip>
 
-        <ion-chip (click)="statutWorking()" color="warning">
+        <ion-chip (click)="confirmInprogress()" color="warning" *ngIf="!req.inprogress">
           <ion-label>En cours</ion-label>
         </ion-chip>
 
-        <ion-chip (click)="statutFinish()" color="danger">
+        <ion-chip (click)="confirmFinish()" color="danger" *ngIf="!req.finish">
           <ion-label>Terminée</ion-label>
         </ion-chip>
       </p>

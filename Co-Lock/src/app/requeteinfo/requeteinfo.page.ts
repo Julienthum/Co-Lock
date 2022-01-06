@@ -81,4 +81,46 @@ export class RequeteinfoPage implements OnInit {
 
     await alert.present();
   }
+
+  async confirmInprogress() {
+    const alert = await this.alertController.create({
+      header: 'Changement d\'avancement',
+      subHeader: 'Etes vous sur de vouloir changer le statut de votre requete ? ',
+      message: 'Le changement de statut de votre requetes ne vous permettra pas de revenir au précedent.',
+      buttons: [
+        { text: 'Changer',
+          handler: () => {
+            this.statutWorking();
+          }
+      },
+        { text: 'Annuler', role: 'cancel',
+          handler: () => {
+            console.log('Cancel');
+        } },
+      ],
+    });
+
+    await alert.present();
+  }
+
+  async confirmFinish() {
+    const alert = await this.alertController.create({
+      header: 'Changement d\'avancement',
+      subHeader: 'Etes vous sur de vouloir changer le statut de votre requete ? ',
+      message: 'Le changement de statut de votre requetes ne vous permettra pas de revenir au précedent.',
+      buttons: [
+        { text: 'Changer',
+          handler: () => {
+            this.statutFinish();
+          }
+      },
+        { text: 'Annuler', role: 'cancel',
+          handler: () => {
+            console.log('Cancel');
+        } },
+      ],
+    });
+
+    await alert.present();
+  }
 }
