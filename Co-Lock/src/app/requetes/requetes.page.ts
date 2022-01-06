@@ -34,7 +34,7 @@ export class RequetesPage implements OnInit {
 
   // Variable pour ajout photo
   fileName;
-  url;
+  url = '';
   barStatus = false;
   imageUploads = [];
 
@@ -81,7 +81,6 @@ export class RequetesPage implements OnInit {
 
     async presentNegative() {
       const alert = await this.alertController.create({
-        cssClass: 'my-custom-class',
         header: 'Oops !',
         message: 'Vous avez oublié certains champs obligatoires !',
         buttons: ['Continuer']
@@ -96,8 +95,26 @@ export class RequetesPage implements OnInit {
       console.log('manques des champs la!');
       this.presentNegative();
       return false;
-    } else {
-      console.log('ca marche');
+    } if(this.url === '') {
+      console.log('un fichier');
+      this.ajout();
+      this.firestore.collection('requetes').add({
+        nom: this.reqForm.value.nom,
+        description: this.reqForm.value.description,
+        file: this.reqForm.value.file,
+        etat: 'Nouveau',
+        idBien: this.data.docId,
+        auteur: firebase.auth().currentUser.uid,
+        idProprio: this.idProprio,
+        nameProprio: this.nameProprio,
+        bienName: this.propName,
+        authorName: this.authorName,
+        crea: firebase.firestore.FieldValue.serverTimestamp(),
+        deleted: false,
+        perso: this.reqForm.value.perso
+      });
+    }else{
+      console.log('pas de fichier');
       this.ajout();
       this.firestore.collection('requetes').add({
         nom: this.reqForm.value.nom,

@@ -13,7 +13,9 @@
   <ion-card>
 
     <ion-card-header> {{req.nom}} </ion-card-header>
-    <ion-card-content> <img [src]="req.url"/> </ion-card-content>
+    <ion-card-content *ngIf="req.url">
+       <img [src]="req.url"/>
+    </ion-card-content>
     <ion-card-subtitle> Description de la requetes </ion-card-subtitle>
     <ion-card-content> {{req.description}} </ion-card-content>
 
