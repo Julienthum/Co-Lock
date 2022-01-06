@@ -26,6 +26,8 @@ export class RequeteinfoPage implements OnInit {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
     this.data.getReqByKey(id).subscribe((res) => this.req = res);
     this.currentUser = firebase.auth().currentUser.uid;
+    console.log(this.currentUser);
+
   }
 
   statutNew(){

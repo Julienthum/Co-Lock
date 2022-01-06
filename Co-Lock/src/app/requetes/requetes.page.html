@@ -22,7 +22,7 @@
       <ion-card-subtitle> J'ajoute ma requete</ion-card-subtitle>
 
       <ion-item lines="none">
-        <ion-input type="file" class='image' [(ngModel)]="file" placeholder="Ajouter une image" (change)="uploadPhoto($event)" accept=".png,.jpg"></ion-input>
+        <ion-input type="file" class='image' formControlName="file" placeholder="Ajouter une image" (change)="uploadPhoto($event)" accept=".png,.jpg"></ion-input>
       </ion-item>
 
       <ion-item lines="none">
@@ -33,13 +33,17 @@
         <ion-textarea placeholder="Décrivez votre requête" formControlName="description" class="field"></ion-textarea>
       </ion-item>
 
+        <ion-item lines="none">
+          <ion-label>Enregistrer en temps que Reminder </ion-label>
+          <ion-checkbox checked="true" formControlName="perso"></ion-checkbox>
+        </ion-item>
 
 
     </div>
 
     <ion-button  type="submit "expand="block" class="primary_btn">
       <ion-icon name="add-circle-outline" slot="start"></ion-icon>
-        Enregistrer la requête
+        Enregistrer
     </ion-button>
       </form>
 </ion-card>

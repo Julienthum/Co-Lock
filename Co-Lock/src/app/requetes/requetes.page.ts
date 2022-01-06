@@ -7,6 +7,7 @@ import { DataService } from '../services/data.service';
 import { AlertController } from '@ionic/angular';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { FormBuilder, FormGroup,Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-requetes',
@@ -43,6 +44,7 @@ export class RequetesPage implements OnInit {
     public alertController: AlertController,
     private angularFireStorage: AngularFireStorage,
     public formBuilder: FormBuilder,
+    private router: Router
   ) {
    this.items = this.firestore.collection('requetes').valueChanges();
    }
@@ -52,7 +54,10 @@ export class RequetesPage implements OnInit {
     this.reqForm = this.formBuilder.group({
       nom: ['', [Validators.required]],
       description: ['', [Validators.required]],
+      file: [''],
+      perso: [true],
       });
+    console.log(this.reqForm.value.perso);
   }
 
     public  async  getInfo() {
@@ -71,16 +76,7 @@ export class RequetesPage implements OnInit {
     get errorControl() {
       return this.reqForm.controls;
     }
-    async presentAlert() {
-      const alert = await this.alertController.create({
-        cssClass: 'my-custom-class',
-        header: 'Requete ajoutée !',
-        message: 'Votre requête à correctement été ajouté.',
-        buttons: ['Continuer']
-      });
 
-      await alert.present();
-    };
     async presentNegative() {
       const alert = await this.alertController.create({
         cssClass: 'my-custom-class',
@@ -100,7 +96,7 @@ export class RequetesPage implements OnInit {
       return false;
     } else {
       console.log('ca marche');
-      this.presentAlert();
+      this.ajout();
       this.firestore.collection('requetes').add({
         nom: this.reqForm.value.nom,
         description: this.reqForm.value.description,
@@ -113,19 +109,45 @@ export class RequetesPage implements OnInit {
         authorName: this.authorName,
         crea: firebase.firestore.FieldValue.serverTimestamp(),
         deleted: false,
+        url: this.url,
+        spaceRef: this.fileName,
+        perso: this.reqForm.value.perso
       });
     }
    }
 
   async ajout(){
+    if(this.reqForm.value.perso === true){
     const alert = await this.alertController.create({
-      header: 'Requete ajoutée !',
-      message: 'Votre requete a correctement été ajouté.',
-      buttons: ['Continuer']
+      header: 'Reminder ajoutée !',
+      message: 'Votre reminder a correctement été ajouté.',
+      buttons: [
+        { text: 'Continuer',
+          handler: () => {
+            this.router.navigate(['/monbien/' + this.data.docId]);
+          }
+        },
+        ]
     });
 
     await alert.present();
   }
+  else{
+    const alert = await this.alertController.create({
+      header: 'Requete ajoutée !',
+      message: 'Votre requete a correctement été ajouté.',
+      buttons: [
+        { text: 'Continuer',
+          handler: () => {
+            this.router.navigate(['./monbien/' + this.data.docId]);
+          }
+        },
+        ]
+    });
+
+    await alert.present();
+  }
+}
 
 
   ///////// Ajout photo //////////

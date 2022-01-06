@@ -19,10 +19,16 @@ import { AlertController } from '@ionic/angular';
 export class MonbienPage implements OnInit {
 
   docs: Observable<any[]>;
+
   newReqs: Observable<any[]>;
   inprogressReqs: Observable<any[]>;
   finishReqs: Observable<any[]>;
+
   reqs: Observable<any[]>;
+
+  newRem: Observable<any[]>;
+  inprogressRem: Observable<any[]>;
+  finishRem: Observable<any[]>;
 
   loc: Observable<any[]>;
 
@@ -51,6 +57,10 @@ export class MonbienPage implements OnInit {
     this.newReqs = this.data.getReqBiens('Nouveau', id);
     this.inprogressReqs = this.data.getReqBiens('En cours', id);
     this.finishReqs = this.data.getReqBiens('Terminée', id);
+    this.newRem = this.data.getReminder('Nouveau', id);
+    this.inprogressRem = this.data.getReminder('En cours', id);
+    this.finishRem = this.data.getReminder('Terminée', id);
+
     const code = await firebase.firestore().collection('biens').doc(id)
     .get().then(( ref => ref.data().code));
     this.loc = this.data.getLoc(code);

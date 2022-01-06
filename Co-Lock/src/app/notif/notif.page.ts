@@ -22,6 +22,10 @@ export class NotifPage implements OnInit {
   inprogressReqs: Observable<any[]>;
   finishReqs: Observable<any[]>;
 
+  newRem: Observable<any[]>;
+  inprogressRem: Observable<any[]>;
+  finishRem: Observable<any[]>;
+
   constructor(
     private firestore: AngularFirestore,
     private data: DataService,
@@ -31,5 +35,8 @@ export class NotifPage implements OnInit {
     this.newReqs = this.data.getReq('Nouveau');
     this.inprogressReqs = this.data.getReq('En cours');
     this.finishReqs = this.data.getReq('Terminée');
+    this.newRem = this.data.getAllRem('Nouveau');
+    this.inprogressRem = this.data.getAllRem('En cours');
+    this.finishRem = this.data.getAllRem('Terminée');
   }
 }

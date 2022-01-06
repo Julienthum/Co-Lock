@@ -11,9 +11,10 @@
 <ion-content *ngIf="req">
 
   <ion-card>
+
     <ion-card-header> {{req.nom}} </ion-card-header>
-    <ion-card-subtitle> Description de la requetes </ion-card-subtitle>
     <ion-card-content> <img [src]="req.url"/> </ion-card-content>
+    <ion-card-subtitle> Description de la requetes </ion-card-subtitle>
     <ion-card-content> {{req.description}} </ion-card-content>
 
     <div class="trait_dessus"><hr></div>
@@ -23,8 +24,8 @@
       <ion-card-content> Emise par {{req.authorName}} le {{req.crea.toDate()}}</ion-card-content>
       <ion-card-content> Propriétaire du bien : {{req.nameProprio}} </ion-card-content>
       <ion-card-content> Nom du bien : {{req.bienName}} </ion-card-content>
-      <ion-card-content> Debut du traitement : {{req.inprogress.toDate()}} </ion-card-content>
-      <ion-card-content> Fin du traitement : {{req.finish.toDate()}} </ion-card-content>
+      <ion-card-content *ngIf="req.inprogress"> Debut du traitement : {{req.inprogress.toDate()}} </ion-card-content>
+      <ion-card-content *ngIf="req.finish"> Fin du traitement : {{req.finish.toDate()}} </ion-card-content>
 
       <div class="trait_dessus"><hr></div>
 
@@ -43,10 +44,9 @@
         </ion-chip>
       </p>
 
-      <ion-button class="primary_btn" fill="block" *ngIf="req.auteur === currentUser" (click)="confirmDelete()"> Supprimer cette requete</ion-button>
+    <ion-button class="primary_btn" fill="block" *ngIf="req.auteur === currentUser" (click)="confirmDelete()"> Supprimer cette requete</ion-button>
 
 
   </ion-card>
-
 
 </ion-content>

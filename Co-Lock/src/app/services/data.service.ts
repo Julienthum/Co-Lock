@@ -261,6 +261,7 @@ nbrbien = 0;
           .where('idProprio', '==', firebase.auth().currentUser.uid)
           .where('etat', '==', type)
           .where('deleted', '==', false)
+          .where('perso', '==', false)
       )
       .snapshotChanges()
       .pipe(
@@ -299,6 +300,7 @@ nbrbien = 0;
           .where('idBien', '==', bien)
           .where('etat', '==', type)
           .where('deleted', '==', false)
+          .where('perso', '==', false)
       )
       .snapshotChanges()
       .pipe(
@@ -312,7 +314,6 @@ nbrbien = 0;
       );
   }
 
-
   public getReqL(type): Observable<Req[]> {
     return this.firestore
       .collection<Req>('requetes', (ref) =>
@@ -320,6 +321,49 @@ nbrbien = 0;
           .where('idBien', '==', this.idBien)
           .where('etat', '==', type)
           .where('deleted', '==', false)
+          .where('perso', '==', false)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Req;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
+  }
+
+  public getReminder(type, bien): Observable<Req[]> {
+    return this.firestore
+      .collection<Req>('requetes', (ref) =>
+        ref
+          .where('idBien', '==', bien)
+          .where('etat', '==', type)
+          .where('deleted', '==', false)
+          .where('perso', '==', true)
+      )
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Req;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
+  }
+
+  public getAllRem(type): Observable<Req[]> {
+    return this.firestore
+      .collection<Req>('requetes', (ref) =>
+        ref
+          .where('idProprio', '==', firebase.auth().currentUser.uid)
+          .where('etat', '==', type)
+          .where('deleted', '==', false)
+          .where('perso', '==', true)
       )
       .snapshotChanges()
       .pipe(

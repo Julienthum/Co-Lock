@@ -7,7 +7,8 @@
 <ion-content>
 
   <ion-card>
-    <ion-card-title> Nouvelles requetes</ion-card-title>
+    <ion-card-title> Requetes </ion-card-title>
+    <ion-card-subtitle class="sub"> Nouvelles </ion-card-subtitle>
 
     <ion-list *ngFor="let req of newReqs | async" [routerLink]="'../../requeteinfo/' + req.id" >
       <ion-item [class]="req.etat" >
@@ -19,10 +20,7 @@
       </ion-item>
     </ion-list>
 
-  </ion-card>
-
-<ion-card>
-  <ion-card-title> Requetes en cours de traitements </ion-card-title>
+  <ion-card-subtitle class="sub">  En cours de traitement </ion-card-subtitle>
 
   <ion-list *ngFor="let req of inprogressReqs | async" [routerLink]="'../../requeteinfo/' + req.id" >
     <ion-item [class]="req.etat" >
@@ -34,12 +32,8 @@
     </ion-item>
   </ion-list>
 
-</ion-card>
+  <ion-card-subtitle class="sub"> Terminées </ion-card-subtitle>
 
-
-
-<ion-card>
-  <ion-card-title> Historique de vos requetes </ion-card-title>
   <ion-list *ngFor="let req of finishReqs | async" [routerLink]="'../../requeteinfo/' + req.id" >
     <ion-item [class]="req.etat" >
       <ion-label>
@@ -49,6 +43,47 @@
       </ion-label>
     </ion-item>
   </ion-list>
+</ion-card>
+
+
+
+<ion-card>
+  <ion-card-title> Reminders </ion-card-title>
+  <ion-card-subtitle class="sub"> Nouvelles </ion-card-subtitle>
+
+  <ion-list *ngFor="let req of newRem | async" [routerLink]="'../../requeteinfo/' + req.id" >
+    <ion-item [class]="req.etat" >
+      <ion-label>
+        <h2>{{req.nom}} </h2>
+        <h3> {{req.bienName}} </h3>
+        <p> {{req.description}} </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+<ion-card-subtitle class="sub">  En cours de traitement </ion-card-subtitle>
+
+<ion-list *ngFor="let req of inprogressRem | async" [routerLink]="'../../requeteinfo/' + req.id" >
+  <ion-item [class]="req.etat" >
+    <ion-label>
+      <h2>{{req.nom}} </h2>
+      <h3> {{req.bienName}} </h3>
+      <p> {{req.description}} </p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
+<ion-card-subtitle class="sub"> Terminées </ion-card-subtitle>
+
+<ion-list *ngFor="let req of finishRem | async" [routerLink]="'../../requeteinfo/' + req.id" >
+  <ion-item [class]="req.etat" >
+    <ion-label>
+      <h2>{{req.nom}} </h2>
+      <h3> {{req.bienName}} </h3>
+      <p> {{req.description}} </p>
+    </ion-label>
+  </ion-item>
+</ion-list>
 </ion-card>
 
 </ion-content>
