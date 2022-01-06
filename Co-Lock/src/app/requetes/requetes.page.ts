@@ -54,13 +54,9 @@ export class RequetesPage implements OnInit {
     this.reqForm = this.formBuilder.group({
       nom: ['', [Validators.required]],
       description: ['', [Validators.required]],
-<<<<<<< HEAD
       file: [''],
       perso: [true],
-=======
-     file: '',
 
->>>>>>> 4f29117a539f34a2036e840bd95d2aa26a344fcc
       });
     console.log(this.reqForm.value.perso);
   }
