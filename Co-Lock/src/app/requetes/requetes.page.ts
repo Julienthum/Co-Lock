@@ -27,6 +27,7 @@ export class RequetesPage implements OnInit {
   nameProprio;
   propName;
   authorName;
+  type;
 
   reqForm: FormGroup;
   isSubmitted = false;
@@ -58,7 +59,6 @@ export class RequetesPage implements OnInit {
       perso: [true],
 
       });
-    console.log(this.reqForm.value.perso);
   }
 
     public  async  getInfo() {
@@ -72,6 +72,7 @@ export class RequetesPage implements OnInit {
     this.idProprio = bien.moi;
     this.nameProprio = propName.name + ' ' + propName.prenom;
     this.authorName = author.name + ' ' + author.prenom;
+    this.type = author.type;
     }
 
     get errorControl() {

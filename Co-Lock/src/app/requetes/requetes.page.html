@@ -33,7 +33,7 @@
         <ion-textarea placeholder="Décrivez votre requête" formControlName="description" class="field"></ion-textarea>
       </ion-item>
 
-        <ion-item lines="none">
+        <ion-item *ngIf="type === 'P'" lines="none">
           <ion-label>Enregistrer en temps que Reminder </ion-label>
           <ion-checkbox checked="true" formControlName="perso"></ion-checkbox>
         </ion-item>
