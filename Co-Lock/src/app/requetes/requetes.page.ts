@@ -27,7 +27,7 @@ export class RequetesPage implements OnInit {
   nameProprio;
   propName;
   authorName;
-  type;
+  type: string;
 
   reqForm: FormGroup;
   isSubmitted = false;
@@ -56,7 +56,7 @@ export class RequetesPage implements OnInit {
       nom: ['', [Validators.required]],
       description: ['', [Validators.required]],
       file: [''],
-      perso: [true],
+      perso: [false],
 
       });
   }
@@ -137,6 +137,7 @@ export class RequetesPage implements OnInit {
    }
 
   async ajout(){
+
     if(this.reqForm.value.perso === true){
     const alert = await this.alertController.create({
       header: 'Reminder ajoutée !',
@@ -158,9 +159,17 @@ export class RequetesPage implements OnInit {
       message: 'Votre requete a correctement été ajouté.',
       buttons: [
         { text: 'Continuer',
-          handler: () => {
+          handler: ( ) => { if( this.type === 'P'){
+            console.log('type',this.type);
             this.router.navigate(['./monbien/' + this.data.docId]);
-          }
+            console.log('type2',this.type);
+
+           }else{
+            console.log('loc type',this.type);
+
+            this.router.navigate(['./navbar-loc/bienloc']);
+
+           } }
         },
         ]
     });
