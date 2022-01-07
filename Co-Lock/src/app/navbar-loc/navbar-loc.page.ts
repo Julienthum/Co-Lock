@@ -21,7 +21,7 @@ compteur: number;
   async  count(){
     firebase.firestore().collection('requetes')
      .where('auteur', '==', firebase.auth().currentUser.uid)
-     .where('etat', '==', 'En cours')
+     .where('etat', '==', 'En cours').where('deleted', '==', false)
 .onSnapshot(querySnapshot => {
    this.compteur = querySnapshot.size;
   console.log('this compteur',this.compteur);

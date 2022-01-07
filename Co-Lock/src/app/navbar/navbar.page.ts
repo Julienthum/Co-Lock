@@ -28,7 +28,7 @@ export class NavbarPage implements OnInit {
   async  count(){
     firebase.firestore().collection('requetes')
      .where('idProprio', '==', firebase.auth().currentUser.uid)
-     .where('etat', '==', 'Nouveau')
+     .where('etat', '==', 'Nouveau').where('deleted', '==', false)
 .onSnapshot(querySnapshot => {
    this.compteur = querySnapshot.size;
   console.log('this compteur',this.compteur);
