@@ -73,7 +73,7 @@ export class AjoutbienPage implements OnInit {
       superficie: '',
       nbrePlace: ['', [Validators.required]],
       prix: '',
-      image: '',
+      image: ['', [Validators.required]],
       code: '',
       spaceRef: '',
       });
