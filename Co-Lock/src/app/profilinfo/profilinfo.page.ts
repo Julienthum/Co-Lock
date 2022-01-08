@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/dot-notation */
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
@@ -38,6 +39,15 @@ export class ProfilinfoPage implements OnInit {
 
     ) {
     this.users = this.data.getUser();
+    this.getTask().subscribe((dala) => {
+      this.essaieForm = this.formBuilder.group({
+        // eslint-disable-next-line @typescript-eslint/dot-notation
+        name: [dala['name']],
+        // eslint-disable-next-line @typescript-eslint/dot-notation
+        prenom: [dala['prenom']],
+        mobile: [dala['mobile']],
+      });
+    });
   }
 
   ngOnInit() {
@@ -50,7 +60,9 @@ export class ProfilinfoPage implements OnInit {
       code: [],
     });
   }
-
+  getTask() {
+    return this.firestore.collection('users').doc(firebase.auth().currentUser.uid).valueChanges();
+  }
   uptadeInfo(){
     const newItem = {
       name :  this.essaieForm.value.name,
