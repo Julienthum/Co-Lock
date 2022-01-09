@@ -68,10 +68,7 @@ const routes: Routes = [
     path: 'ajoutbien',
     loadChildren: () => import('./ajoutbien/ajoutbien.module').then( m => m.AjoutbienPageModule)
   },
-  {
-    path: 'acceuilproprio',
-    loadChildren: () => import('./acceuilproprio/acceuilproprio.module').then( m => m.AcceuilproprioPageModule)
-  },
+
   {
     path: 'profil-l',
     loadChildren: () => import('./profil-l/profil-l.module').then( m => m.ProfilLPageModule)
@@ -80,10 +77,7 @@ const routes: Routes = [
     path: 'id-generator',
     loadChildren: () => import('./id-generator/id-generator.module').then( m => m.IdGeneratorPageModule)
   },
-  {
-    path: 'accueillocataire',
-    loadChildren: () => import('./accueillocataire/accueillocataire.module').then( m => m.AccueillocatairePageModule)
-  },
+
   {
     path: 'monbien/:id',
     loadChildren: () =>
