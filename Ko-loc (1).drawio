@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-01-11T14:34:16.401Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="YBmI9Ivpz1ns0N-ei0LP" version="16.1.2" type="github" pages="20">
+<mxfile host="app.diagrams.net" modified="2022-01-17T22:46:52.896Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="iL4FyZeCt6Rxk9OMGJQt" version="16.2.4" type="github" pages="20">
   <diagram id="aEuiQMqjnmJGIBwZCXug" name="Schéma entités-associations">
-    <mxGraphModel dx="1038" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="2324" dy="995" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1691,7 +1691,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="FZd87Ty2JIReQy1bRqUd" name="Editer bien">
-    <mxGraphModel dx="1826" dy="781" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1704" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="opcdLRtGwJ1gsNORYRcx-0" />
         <mxCell id="opcdLRtGwJ1gsNORYRcx-1" parent="opcdLRtGwJ1gsNORYRcx-0" />
@@ -1816,7 +1816,7 @@
         <mxCell id="qKBi-1ozyT1edft9wFNm-11" value="Enregistrer l&#39;archivage du bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="J5m-JwJaBose2PmdBf5O-2" vertex="1">
           <mxGeometry x="420" y="520.5" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="SL6MJ1crxDY89M4kEcET-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="J5m-JwJaBose2PmdBf5O-2" source="qKBi-1ozyT1edft9wFNm-13" target="qKBi-1ozyT1edft9wFNm-18">
+        <mxCell id="SL6MJ1crxDY89M4kEcET-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="J5m-JwJaBose2PmdBf5O-2" source="qKBi-1ozyT1edft9wFNm-13" target="qKBi-1ozyT1edft9wFNm-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="qKBi-1ozyT1edft9wFNm-13" value="Envoyer notification au propriétaire de confirmation de l&#39;archivage du bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="J5m-JwJaBose2PmdBf5O-2" vertex="1">
@@ -1831,7 +1831,7 @@
         <mxCell id="qKBi-1ozyT1edft9wFNm-15" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le bien a été archivé&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="J5m-JwJaBose2PmdBf5O-2" vertex="1">
           <mxGeometry x="455" y="980.5" width="180" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="SL6MJ1crxDY89M4kEcET-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="J5m-JwJaBose2PmdBf5O-2" source="qKBi-1ozyT1edft9wFNm-18" target="qKBi-1ozyT1edft9wFNm-14">
+        <mxCell id="SL6MJ1crxDY89M4kEcET-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="J5m-JwJaBose2PmdBf5O-2" source="qKBi-1ozyT1edft9wFNm-18" target="qKBi-1ozyT1edft9wFNm-14" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="545" y="826" />
@@ -1917,7 +1917,7 @@
         <mxCell id="DkqaKHOfLJ0mp65gP5sg-16" value="Le propriétaire encode son bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="opcdLRtGwJ1gsNORYRcx-1" vertex="1">
           <mxGeometry x="410" y="436" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_B9XZpL9SnBiWDBR2kbz-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="opcdLRtGwJ1gsNORYRcx-1" source="DkqaKHOfLJ0mp65gP5sg-4" target="qKBi-1ozyT1edft9wFNm-11">
+        <mxCell id="_B9XZpL9SnBiWDBR2kbz-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="opcdLRtGwJ1gsNORYRcx-1" source="DkqaKHOfLJ0mp65gP5sg-4" target="qKBi-1ozyT1edft9wFNm-11" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="630" y="570" />
@@ -1937,7 +1937,7 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SL6MJ1crxDY89M4kEcET-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="opcdLRtGwJ1gsNORYRcx-1" source="qKBi-1ozyT1edft9wFNm-18" target="qKBi-1ozyT1edft9wFNm-4">
+        <mxCell id="SL6MJ1crxDY89M4kEcET-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="opcdLRtGwJ1gsNORYRcx-1" source="qKBi-1ozyT1edft9wFNm-18" target="qKBi-1ozyT1edft9wFNm-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="980" y="830" as="sourcePoint" />
             <Array as="points">
@@ -1945,7 +1945,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="SL6MJ1crxDY89M4kEcET-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="opcdLRtGwJ1gsNORYRcx-1" source="qKBi-1ozyT1edft9wFNm-18" target="qKBi-1ozyT1edft9wFNm-26">
+        <mxCell id="SL6MJ1crxDY89M4kEcET-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="opcdLRtGwJ1gsNORYRcx-1" source="qKBi-1ozyT1edft9wFNm-18" target="qKBi-1ozyT1edft9wFNm-26" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1040" y="900" />
@@ -1953,14 +1953,14 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="SL6MJ1crxDY89M4kEcET-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="opcdLRtGwJ1gsNORYRcx-1" source="qKBi-1ozyT1edft9wFNm-26" target="qKBi-1ozyT1edft9wFNm-21">
+        <mxCell id="SL6MJ1crxDY89M4kEcET-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="opcdLRtGwJ1gsNORYRcx-1" source="qKBi-1ozyT1edft9wFNm-26" target="qKBi-1ozyT1edft9wFNm-21" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="mEO5ci3Plu-g_9Lqsa9H" name="Editer locataire">
-    <mxGraphModel dx="946" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1420" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="ybwF3ySPhP57nkEsxuCy-0" />
         <mxCell id="ybwF3ySPhP57nkEsxuCy-1" parent="ybwF3ySPhP57nkEsxuCy-0" />
@@ -2070,7 +2070,7 @@
         <mxCell id="vwVprn27uO7SM6NB1Diw-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="ybwF3ySPhP57nkEsxuCy-1" source="ryes0GfLKtzWsokdOM-v-0" target="fcfa93xMMw7niGSHkDi6-0" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="160" y="450" />
+              <mxPoint x="160" y="460" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -2091,7 +2091,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fVTnZu-0Q78shC0gxB6s" name="Vérifier le loyer">
-    <mxGraphModel dx="946" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1278" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="goh1zdvP6LU6e4MuHIoU-0" />
         <mxCell id="goh1zdvP6LU6e4MuHIoU-1" parent="goh1zdvP6LU6e4MuHIoU-0" />
@@ -2493,7 +2493,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="e2U_4L_Uc0UZnkNTMuHk" name="Faire une requête">
-    <mxGraphModel dx="946" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="510" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="4FnnVqdCoPJqPLyLUks5-0" />
         <mxCell id="4FnnVqdCoPJqPLyLUks5-1" parent="4FnnVqdCoPJqPLyLUks5-0" />
@@ -2545,7 +2545,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Régler la requête" id="xwPaD5fzchMRzmg7swor">
-    <mxGraphModel dx="946" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1278" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="W2l0sGHgCA5iIa-g2eqn-0" />
         <mxCell id="W2l0sGHgCA5iIa-g2eqn-1" parent="W2l0sGHgCA5iIa-g2eqn-0" />
@@ -2597,10 +2597,10 @@
           <mxGeometry x="110" y="180" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="yGXUvHjGb8Bd0bkuxwYA-0" value="Enregistrer le fait que le propriétaire à résolu la requête" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="W2l0sGHgCA5iIa-g2eqn-5" vertex="1">
-          <mxGeometry x="60" y="570" width="120" height="60" as="geometry" />
+          <mxGeometry x="50" y="570" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="yGXUvHjGb8Bd0bkuxwYA-12" value="Enregistrer prestataires et envoyer au locataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="W2l0sGHgCA5iIa-g2eqn-5" vertex="1">
-          <mxGeometry x="110" y="400" width="120" height="60" as="geometry" />
+          <mxGeometry x="90" y="400" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="yGXUvHjGb8Bd0bkuxwYA-19" value="Enregistrer le résolution de la requête par le locataire" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="W2l0sGHgCA5iIa-g2eqn-5" vertex="1">
           <mxGeometry x="200" y="570" width="120" height="60" as="geometry" />
@@ -2621,7 +2621,7 @@
           <mxGeometry x="110" y="401" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="yGXUvHjGb8Bd0bkuxwYA-16" value="Encoder résolution de la requête" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="W2l0sGHgCA5iIa-g2eqn-9" vertex="1">
-          <mxGeometry x="110" y="481" width="120" height="60" as="geometry" />
+          <mxGeometry x="110" y="511" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="q-clYfHluQOoaPY2HlPf-2" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=12;" parent="W2l0sGHgCA5iIa-g2eqn-9" vertex="1">
           <mxGeometry x="165" y="641" width="30" height="30" as="geometry" />
@@ -2678,7 +2678,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nqRNg5miREVGiElpUxLB" name="Payer loyer">
-    <mxGraphModel dx="946" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="510" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="bN-92SJGXMYupbHsQBX7-0" />
         <mxCell id="bN-92SJGXMYupbHsQBX7-1" parent="bN-92SJGXMYupbHsQBX7-0" />
@@ -2797,7 +2797,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="ijX35E7XR__xNzpD-qAk" name="Recevoir confirmation">
-    <mxGraphModel dx="729" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1278" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="_wU3OUk7j735kMn8_oOG-0" />
         <mxCell id="_wU3OUk7j735kMn8_oOG-1" parent="_wU3OUk7j735kMn8_oOG-0" />
