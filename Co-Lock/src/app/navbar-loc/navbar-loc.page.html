@@ -1,4 +1,4 @@
-<ion-tabs>
+<ion-tabs *ngFor="let user of users | async">
   <ion-tab-bar slot="bottom">
 
     <ion-tab-button tab="bienloc">
@@ -7,7 +7,7 @@
 
     <ion-tab-button tab="requetes">
       <ion-icon name="notifications-outline" id="cart-btn"></ion-icon>
-      <ion-badge>{{compteur}}</ion-badge>
+      <ion-badge *ngIf="user.code">{{compteur}}</ion-badge>
 
     </ion-tab-button>
 

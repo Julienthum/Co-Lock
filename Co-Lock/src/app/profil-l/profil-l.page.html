@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngFor="let user of users | async">
   <div class="header">
     <h2 class="nomPropriétaire" *ngFor="let user of users | async"> {{user.prenom}} {{user.name}}</h2>
      <div class="space-between">
@@ -42,13 +42,16 @@
   </ion-grid>
 </ion-card>
 
-<ion-card >
+<ion-card *ngIf="user.code">
   <ion-card-header> Information de votre propriétaire </ion-card-header>
   <ion-item> {{ typena }} {{ typepr }} </ion-item>
   <ion-card-subtitle> Comment contacter votre propriétaire ? </ion-card-subtitle>
   <ion-item> {{ typeem }} </ion-item>
   <ion-item>  {{ typemo }} </ion-item>
 
+</ion-card>
+<ion-card *ngIf="user.code === ''">
+  <ion-card-header> Oops ! Il semble que votre proriétaire vous a supprimé <br> Si vous en avez un, vous pouvez rajoutez un code dans la modification de votre profil et continuer a utiliser l'app ! </ion-card-header>
 </ion-card>
 
 <ion-button class="secondary_btn" expand="block" fill="outline" (click)='confirmSignOut()'>Se déconnecter</ion-button>

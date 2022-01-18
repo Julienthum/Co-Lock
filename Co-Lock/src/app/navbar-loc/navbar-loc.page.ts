@@ -6,6 +6,7 @@ import { getAuth, signOut } from 'firebase/auth';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import firebase from 'firebase/compat/app';
+import { DataService } from '../services/data.service';
 @Component({
   selector: 'app-navbar-loc',
   templateUrl: './navbar-loc.page.html',
@@ -13,7 +14,11 @@ import firebase from 'firebase/compat/app';
 })
 export class NavbarLocPage implements OnInit {
 compteur: number;
-  constructor() { }
+users: Observable<any[]>;
+
+  constructor( private data: DataService,
+    ) {this.users = this.data.getUser();
+  }
 
   ngOnInit() {
     this.count();
