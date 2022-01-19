@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-01-19T21:55:42.366Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="YSVKcD7t9yhBXl7bxI49" version="16.4.0" type="github" pages="23">
+<mxfile host="app.diagrams.net" modified="2022-01-19T21:58:40.834Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="0Y81hKQSHHwulbz03aua" version="16.4.0" type="github" pages="23">
   <diagram id="1YrJPD1da77HuaxjmG4S" name="(+ ) Schéma entités-associations">
-    <mxGraphModel dx="3725" dy="1094" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="3725" dy="978" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="Vv6xs7ufTuOnFgJjhK8O-0" />
         <mxCell id="Vv6xs7ufTuOnFgJjhK8O-1" parent="Vv6xs7ufTuOnFgJjhK8O-0" />
@@ -511,7 +511,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="(+) Schéma intermédiaire" id="BeVW-4vvJPSlICKKIU9k">
-    <mxGraphModel dx="3725" dy="1094" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="3725" dy="978" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="zbDh45oFtb67FiRi7edI-0" />
         <mxCell id="zbDh45oFtb67FiRi7edI-1" parent="zbDh45oFtb67FiRi7edI-0" />
