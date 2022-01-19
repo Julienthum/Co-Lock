@@ -130,7 +130,7 @@ export class ProfilinfoPage implements OnInit {
       cssClass: 'my-custom-class',
       header: 'Attention',
       // eslint-disable-next-line max-len
-      message: 'Vous etes sur le point de modifier l\'un de vos identifiant de connexion. Etes vous sur de vouloir continuer ? Une fois cette action effectué vous devrez vous reconnecter.',
+      message: 'Vous êtes sur le point de modifier l\'un de vos identifiant de connexion. Êtes-vous sur de vouloir continuer ? Une fois cette action effectué vous devrez vous reconnecter.',
       buttons: [
         {
           text: 'Annuler',
@@ -156,7 +156,7 @@ export class ProfilinfoPage implements OnInit {
       cssClass: 'my-custom-class',
       header: 'Attention',
       // eslint-disable-next-line max-len
-      message: 'Vous etes sur le point de modifier l\'un de vos identifiant de connexion. Etes vous sur de vouloir continuer. ',
+      message: 'Vous êtes sur le point de modifier l\'un de vos identifiant de connexion. Êtes-vous sur de vouloir continuer. ',
       buttons: [
         {
           text: 'Annuler',

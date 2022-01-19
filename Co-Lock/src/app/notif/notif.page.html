@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Requetes</ion-title>
+    <ion-title>Requêtes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
   <ion-card>
-    <ion-card-title> Requetes </ion-card-title>
+    <ion-card-title> Requêtes </ion-card-title>
     <ion-card-subtitle class="sub"> Nouvelles </ion-card-subtitle>
 
     <ion-list *ngFor="let req of newReqs | async" [routerLink]="'../../requeteinfo/' + req.id" >

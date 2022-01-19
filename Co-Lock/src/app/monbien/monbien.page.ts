@@ -108,7 +108,7 @@ export class MonbienPage implements OnInit {
   async confirmArchive() {
     const alert = await this.alertController.create({
       header: 'Archivage',
-      subHeader: 'Etes vous sur de vouloir archiver ce bien ? ',
+      subHeader: 'Êtes-vous sur de vouloir archiver ce bien ? ',
       message: 'Tous bien archivé pour etre récupéré dans le section \'archive\' sur le page d’accueil.',
       buttons: [
         { text: 'Archiver',

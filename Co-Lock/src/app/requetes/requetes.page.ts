@@ -155,8 +155,8 @@ export class RequetesPage implements OnInit {
   }
   else{
     const alert = await this.alertController.create({
-      header: 'Requete ajoutée !',
-      message: 'Votre requete a correctement été ajouté.',
+      header: 'Requête ajoutée !',
+      message: 'Votre requête a correctement été ajoutée.',
       buttons: [
         { text: 'Continuer',
           handler: ( ) => { if( this.type === 'P'){

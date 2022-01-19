@@ -2,7 +2,8 @@
   <ion-toolbar>
     <ion-title>Mon bien</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button>
+      <ion-back-button text="Retour">
+
       </ion-back-button>
     </ion-buttons>
   </ion-toolbar>
@@ -31,7 +32,7 @@
     <ion-card-content> {{bien.rue}} {{bien.numero}}, {{bien.cp}} {{bien.ville}}, {{bien.province}}</ion-card-content>
 
     <ion-card-subtitle>Autres informations</ion-card-subtitle>
-    <ion-card-content> Nombre de lit : {{bien.nbrePlace}} <br>Loyer : {{bien.prix}}€/mois <br> Supperficie : {{bien.superficie}} m2 </ion-card-content>
+    <ion-card-content> Nombre de lit(s) : {{bien.nbrePlace}} <br>Loyer : {{bien.prix}}€/mois <br> Superficie : {{bien.superficie}} m2 </ion-card-content>
     <ion-button class="secondary_btn" expand="block" fill="outline" [routerLink]="'../../update-biens/' + bien.id ">Modifier votre bien</ion-button>
 
 
@@ -40,11 +41,11 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title> Requetes & Reminder</ion-card-title>
+      <ion-card-title> Requêtes & Reminder</ion-card-title>
     </ion-card-header>
 
-    <ion-card-subtitle> Requetes </ion-card-subtitle>
-    <ion-card-content> Cette fonctionnalité vous permet de voir les différentes requetes faites par vos locataires. </ion-card-content>
+    <ion-card-subtitle> Requêtes </ion-card-subtitle>
+    <ion-card-content> Cette fonctionnalité vous permet de voir les différentes requêtes faites par vos locataires. </ion-card-content>
 
     <ion-list *ngFor="let r of newReqs | async" [routerLink]="'../../requeteinfo/' + r.id" >
       <ion-item [class]="r.etat" >
@@ -76,7 +77,7 @@
     <div class="trait_dessus"><hr></div>
 
     <ion-card-subtitle> Reminder </ion-card-subtitle>
-    <ion-card-content> Cette fonctionnalité vous permet d'ajouter des tâches à réaliser pour votre bien. Un reminder n'est pas visible par vos locataire. </ion-card-content>
+    <ion-card-content> Cette fonctionnalité vous permet d'ajouter des tâches à réaliser pour votre bien. Un reminder n'est pas visible par vos locataires. </ion-card-content>
 
     <ion-list *ngFor="let r of newRem | async" [routerLink]="'../../requeteinfo/' + r.id" >
       <ion-item [class]="r.etat" >
@@ -106,7 +107,7 @@
     </ion-list>
 
 
-    <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/requetes" >Ajouter une requete / un reminder</ion-button>
+    <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/requetes" >Ajouter une requête / un reminder</ion-button>
   </ion-card>
 
   <ion-card>
@@ -136,15 +137,15 @@
       <ion-card-subtitle> {{ bien.code }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      Grâce au code lié à votre bien, vous pouvez inviter vos locataire à rejoindre votre bien.
+      Grâce au code lié à votre bien, vous pouvez inviter vos locataires à rejoindre votre bien.
     </ion-card-content>
 
     <ion-button class="secondary_btn" expand="block" fill="outline" (click)="share()">Partager le code</ion-button>
 
-    <ion-card-subtitle> Locataire déjà enregistré </ion-card-subtitle>
+    <ion-card-subtitle> Locataire(s) déjà enregistré </ion-card-subtitle>
     <ion-card-content>
       Vous trouverez ci-dessous tous les locataires liés à votre bien.
-      Ils ont accès à toutes les informations utiles liées à votre bien : informations, documents, requetes...
+      Ils ont accès à toutes les informations utiles liées à votre bien : informations, documents, requêtes...
     </ion-card-content>
 
     <ion-list>

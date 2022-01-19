@@ -64,7 +64,7 @@ export class RequeteinfoPage implements OnInit {
   async confirmDelete() {
     const alert = await this.alertController.create({
       header: 'Suppression',
-      subHeader: 'Etes vous sur de vouloir supprimer la requete ? ',
+      subHeader: 'Êtes-vous sur de vouloir supprimer la requête ? ',
       buttons: [
         { text: 'Supprimer',
           handler: () => {
@@ -85,8 +85,8 @@ export class RequeteinfoPage implements OnInit {
   async confirmInprogress() {
     const alert = await this.alertController.create({
       header: 'Changement d\'avancement',
-      subHeader: 'Etes vous sur de vouloir changer le statut de votre requete ? ',
-      message: 'Le changement de statut de votre requetes ne vous permettra pas de revenir au précedent.',
+      subHeader: 'Êtes-vous sur de vouloir changer le statut de votre requête ? ',
+      message: 'Le changement de statut de votre requêtes ne vous permettra pas de revenir au précedent.',
       buttons: [
         { text: 'Changer',
           handler: () => {
@@ -106,8 +106,8 @@ export class RequeteinfoPage implements OnInit {
   async confirmFinish() {
     const alert = await this.alertController.create({
       header: 'Changement d\'avancement',
-      subHeader: 'Etes vous sur de vouloir changer le statut de votre requete ? ',
-      message: 'Le changement de statut de votre requetes ne vous permettra pas de revenir au précedent.',
+      subHeader: 'Êtes-vous sur de vouloir changer le statut de votre requête ? ',
+      message: 'Le changement de statut de votre requêtes ne vous permettra pas de revenir au précedent.',
       buttons: [
         { text: 'Changer',
           handler: () => {

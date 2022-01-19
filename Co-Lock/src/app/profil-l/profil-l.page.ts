@@ -86,9 +86,9 @@ export class ProfilLPage implements OnInit {
 
   async handleButtonClick() {
     const actionSheet = await this.actionSheetController.create({
-      header: 'Etes vous sûr de vouloir supprimer votre compte ?',
+      header: 'Êtes-vous sûr de vouloir supprimer votre compte ?',
       // eslint-disable-next-line max-len
-      subHeader: 'La suppression du compte entraine la suppression de toutes les données liés à celui-ci (biens, documents, requetes...). Cette action est irréversible.',
+      subHeader: 'La suppression du compte entraine la suppression de toutes les données liés à celui-ci (biens, documents, requêtes...). Cette action est irréversible.',
       buttons: [
         { text: 'Supprimer',
           role: 'destructive',
@@ -114,7 +114,7 @@ export class ProfilLPage implements OnInit {
   async confirmSignOut() {
     const alert = await this.alertController.create({
       header: 'Déconnexion',
-      subHeader: 'Etes vous sur de vouloir vous déconnecter ? ',
+      subHeader: 'Êtes-vous sur de vouloir vous déconnecter ? ',
       buttons: [
         { text: 'Déconnexion',
           handler: () => {

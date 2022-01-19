@@ -1,14 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Requetes</ion-title>
+    <ion-title>Requêtes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/requetes">Ajouter une requete</ion-button>
+  <ion-button class="secondary_btn" expand="block" fill="outline" routerLink="/requetes">Ajouter une requête</ion-button>
 
   <ion-card>
-    <ion-card-title> Nouvelles requetes</ion-card-title>
+    <ion-card-title> Nouvelles requêtes</ion-card-title>
     <ion-list *ngFor="let req of newReqL | async" [routerLink]="'../../requeteinfo/' + req.id" >
       <ion-item [class]="req.etat" >
         <ion-label>
@@ -22,7 +22,7 @@
   </ion-card>
 
 <ion-card>
-  <ion-card-title> Requetes en cours de traitements </ion-card-title>
+  <ion-card-title> Requêtes en cours de traitements </ion-card-title>
   <ion-list *ngFor="let req of inprogressReqL | async" [routerLink]="'../../requeteinfo/' + req.id" >
     <ion-item [class]="req.etat" >
       <ion-label>
@@ -38,7 +38,7 @@
 
 
 <ion-card>
-  <ion-card-title> Historique de vos requetes </ion-card-title>
+  <ion-card-title> Historique de vos requêtes </ion-card-title>
   <ion-list *ngFor="let req of finishReqL | async" [routerLink]="'../../requeteinfo/' + req.id" >
     <ion-item [class]="req.etat" >
       <ion-label>

@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Ajouter une requete</ion-title>
+    <ion-title>Ajouter une requête</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button>
+      <ion-back-button text="Retour">
       </ion-back-button>
     </ion-buttons>
   </ion-toolbar>
@@ -12,14 +12,14 @@
 
   <ion-card>
 
-    <ion-card-subtitle> Pourquoi ajouter une requete ?</ion-card-subtitle>
-    <ion-card-content> L'ajout d'une requete permet de notifier un point d'attention concernant le bien. Celle-ci sera visible par le propriétaire et le locataire.
-      Tous deux pourront rapidement voir si la requete a été prise en charge et à quel moment. Un fois terminée, la requete reste enregistrée pour avoir une vue de l'historique. </ion-card-content>
+    <ion-card-subtitle> Pourquoi ajouter une requête ?</ion-card-subtitle>
+    <ion-card-content> L'ajout d'une requête permet de notifier un point d'attention concernant le bien. Celle-ci sera visible par le propriétaire et le locataire.
+      Tous deux pourront rapidement voir si la requête a été prise en charge et à quel moment. Un fois terminée, la requête reste enregistrée pour avoir une vue de l'historique. </ion-card-content>
       <form [formGroup]="reqForm" (ngSubmit)="addRequete()" novalidate>
     <div>
 
 
-      <ion-card-subtitle> J'ajoute ma requete</ion-card-subtitle>
+      <ion-card-subtitle> J'ajoute ma requête</ion-card-subtitle>
 
       <ion-item lines="none">
         <ion-input type="file" class='image' formControlName="file" placeholder="Ajouter une image" (change)="uploadPhoto($event)" accept=".png,.jpg"></ion-input>

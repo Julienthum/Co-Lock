@@ -94,7 +94,7 @@ export class DocinfoPage implements OnInit {
     async confirmDelete() {
       const alert = await this.alertController.create({
         header: 'Suppression',
-        subHeader: 'Etes vous sur de vouloir supprimer ce locataire ? ',
+        subHeader: 'Êtes-vous sur de vouloir supprimer ce locataire ? ',
         buttons: [
           { text: 'Supprimer',
             handler: () => {
