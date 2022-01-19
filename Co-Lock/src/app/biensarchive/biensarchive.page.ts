@@ -65,7 +65,7 @@ async handleButtonClick(id, spaceRef) {
   const actionSheet = await this.actionSheetController.create({
     header: 'Êtes-vous sûr de vouloir supprimer votre compte ?',
     // eslint-disable-next-line max-len
-    subHeader: 'La suppression du compte entraine la suppression de toutes les données liés à celui-ci (biens, documents, requetes...). Cette action est irréversible.',
+    subHeader: 'La suppression du compte entraine la suppression de toutes les données liés à celui-ci (biens, documents, requêtes...). Cette action est irréversible.',
     buttons: [
       { text: 'Supprimer',
         role: 'destructive',
