@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-01-19T17:23:08.377Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="11q6WUTR6vH2yGh2bY2Z" version="16.3.0" type="github" pages="21">
+<mxfile host="app.diagrams.net" modified="2022-01-19T19:01:41.251Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="RGFfxMt13z7T9SolI8Fd" version="16.4.0" type="github" pages="21">
   <diagram id="1YrJPD1da77HuaxjmG4S" name="NEW">
-    <mxGraphModel dx="2355" dy="560" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="3543" dy="1089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="Vv6xs7ufTuOnFgJjhK8O-0" />
         <mxCell id="Vv6xs7ufTuOnFgJjhK8O-1" parent="Vv6xs7ufTuOnFgJjhK8O-0" />
@@ -1896,7 +1896,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Xn57_vURIpzPOT6uY5gm" name="Envoyer code">
-    <mxGraphModel dx="1186" dy="560" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1278" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="1YoyUmnQHP1-ATVIWI0j-0" />
         <mxCell id="1YoyUmnQHP1-ATVIWI0j-1" parent="1YoyUmnQHP1-ATVIWI0j-0" />
@@ -1954,7 +1954,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="FZd87Ty2JIReQy1bRqUd" name="Editer bien">
-    <mxGraphModel dx="1186" dy="560" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1278" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="opcdLRtGwJ1gsNORYRcx-0" />
         <mxCell id="opcdLRtGwJ1gsNORYRcx-1" parent="opcdLRtGwJ1gsNORYRcx-0" />
@@ -2222,8 +2222,8 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="mEO5ci3Plu-g_9Lqsa9H" name="Editer locataire">
-    <mxGraphModel dx="1186" dy="503" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <diagram id="mEO5ci3Plu-g_9Lqsa9H" name="(o)Editer locataire">
+    <mxGraphModel dx="1278" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="ybwF3ySPhP57nkEsxuCy-0" />
         <mxCell id="ybwF3ySPhP57nkEsxuCy-1" parent="ybwF3ySPhP57nkEsxuCy-0" />
@@ -2589,8 +2589,8 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9MekELn8XsM3_B3_sqW3" name="Se connecter / loc">
-    <mxGraphModel dx="946" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <diagram id="9MekELn8XsM3_B3_sqW3" name="(o)Se connecter / loc">
+    <mxGraphModel dx="1662" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="UJH5DGKI4x2WUhmZaYtp-0" />
         <mxCell id="UJH5DGKI4x2WUhmZaYtp-1" parent="UJH5DGKI4x2WUhmZaYtp-0" />
@@ -2807,7 +2807,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="Régler la requête" id="xwPaD5fzchMRzmg7swor">
+  <diagram name="(o) Régler la requête" id="xwPaD5fzchMRzmg7swor">
     <mxGraphModel dx="1278" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="W2l0sGHgCA5iIa-g2eqn-0" />
