@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-19T19:24:56.333Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="bjka5OVsAwwParBonSd4" version="16.4.0" type="github" pages="21">
+<mxfile host="app.diagrams.net" modified="2022-01-19T19:54:04.134Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="jSswv4lxiTrD9GREYdxh" version="16.4.0" type="github" pages="21">
   <diagram id="1YrJPD1da77HuaxjmG4S" name="NEW">
     <mxGraphModel dx="3543" dy="1089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1895,7 +1895,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="Xn57_vURIpzPOT6uY5gm" name="( l) Envoyer code">
+  <diagram id="Xn57_vURIpzPOT6uY5gm" name="( +) Envoyer code">
     <mxGraphModel dx="1278" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="1YoyUmnQHP1-ATVIWI0j-0" />
@@ -1935,8 +1935,8 @@
         <mxCell id="Q8H_ymmtdwE5x_tY2umL-0" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=12;" parent="sZPv01w8gxYWlcfsA6vw-3" vertex="1">
           <mxGeometry x="170" y="430" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZJHDDrdzasUQDDZHrGQ2-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le locataire a accès au bien&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="sZPv01w8gxYWlcfsA6vw-3" vertex="1">
-          <mxGeometry x="65" y="460" width="240" height="20" as="geometry" />
+        <mxCell id="ZJHDDrdzasUQDDZHrGQ2-0" value="&lt;font color=&quot;#1a1a1a&quot; face=&quot;calibri, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 14.6667px&quot;&gt;Le locataire est associé et&amp;nbsp; a accès au bien&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="sZPv01w8gxYWlcfsA6vw-3" vertex="1">
+          <mxGeometry x="65" y="470" width="240" height="20" as="geometry" />
         </mxCell>
         <mxCell id="IREwO2zVVeET6t0MsmKX-1" value="Recevoir le code et tester son accès à son bien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" parent="sZPv01w8gxYWlcfsA6vw-3" vertex="1">
           <mxGeometry x="130" y="140" width="120" height="60" as="geometry" />
@@ -2222,7 +2222,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="(l) Supprimer le Locataire " id="ax7YevijXBPq2hyKEbQv">
+  <diagram name="(+) Supprimer le Locataire " id="ax7YevijXBPq2hyKEbQv">
     <mxGraphModel dx="1278" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="zw__9SIvg67YuCQA-hMK-0" />
@@ -2260,7 +2260,7 @@
         <mxCell id="zw__9SIvg67YuCQA-hMK-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="zw__9SIvg67YuCQA-hMK-13" source="zw__9SIvg67YuCQA-hMK-24" target="zw__9SIvg67YuCQA-hMK-26">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="zw__9SIvg67YuCQA-hMK-24" value="Envoyer message d&#39;erreur au locataire pour informer de sa suppresion" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="zw__9SIvg67YuCQA-hMK-13">
+        <mxCell id="zw__9SIvg67YuCQA-hMK-24" value="Envoyer message d&#39;erreur au locataire pour l&#39;informer de sa suppression" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="zw__9SIvg67YuCQA-hMK-13">
           <mxGeometry x="70" y="650" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="zw__9SIvg67YuCQA-hMK-26" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;fontSize=12;" vertex="1" parent="zw__9SIvg67YuCQA-hMK-13">
@@ -2552,7 +2552,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9MekELn8XsM3_B3_sqW3" name="(o)Se connecter / loc">
+  <diagram id="9MekELn8XsM3_B3_sqW3" name="(+) Se connecter / loc">
     <mxGraphModel dx="1278" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="UJH5DGKI4x2WUhmZaYtp-0" />
@@ -2646,8 +2646,8 @@
         <mxCell id="-qsgAKRdbszGv-V479pd-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="UJH5DGKI4x2WUhmZaYtp-1" source="-qsgAKRdbszGv-V479pd-6" target="-qsgAKRdbszGv-V479pd-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="340" y="350" />
-              <mxPoint x="830" y="350" />
+              <mxPoint x="340" y="360" />
+              <mxPoint x="830" y="360" />
             </Array>
           </mxGeometry>
         </mxCell>
