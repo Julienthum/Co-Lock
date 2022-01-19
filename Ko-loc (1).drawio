@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" modified="2022-01-19T21:53:26.068Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="UfgwVSAHYyZWgvHlCvAq" version="16.4.0" type="github" pages="23">
-  <diagram id="1YrJPD1da77HuaxjmG4S" name="1">
+<mxfile host="app.diagrams.net" modified="2022-01-19T21:55:42.366Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="YSVKcD7t9yhBXl7bxI49" version="16.4.0" type="github" pages="23">
+  <diagram id="1YrJPD1da77HuaxjmG4S" name="(+ ) Schéma entités-associations">
     <mxGraphModel dx="3725" dy="1094" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="Vv6xs7ufTuOnFgJjhK8O-0" />
@@ -510,7 +510,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="2" id="BeVW-4vvJPSlICKKIU9k">
+  <diagram name="(+) Schéma intermédiaire" id="BeVW-4vvJPSlICKKIU9k">
     <mxGraphModel dx="3725" dy="1094" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="zbDh45oFtb67FiRi7edI-0" />
@@ -1088,7 +1088,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="3" id="JofnlzjJ7Zus6q1fx9xT">
+  <diagram name="(+) Schéma relationnel" id="JofnlzjJ7Zus6q1fx9xT">
     <mxGraphModel dx="2130" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="LNdYGDViAT6RJhRNeru6-0" />
